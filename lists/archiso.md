@@ -220,7 +220,6 @@ edk2-ovmf
 - qt6gtk2: https://aur.archlinux.org/packages/qt6gtk2/
 - brisk-menu: https://aur.archlinux.org/packages/brisk-menu/
 - gtk3-nocsd-git: https://aur.archlinux.org/packages/gtk3-nocsd-git/
-- humanity-icon-theme: https://aur.archlinux.org/packages/humanity-icon-theme/
 - mate-tweak: https://github.com/mekatronik-achmadi/archmate/tree/master/pkgbuilds/custom/mate-tweak/
 - bluementa-icon-theme: https://github.com/mekatronik-achmadi/archmate/tree/master/pkgbuilds/custom/bluementa-icon/
 
