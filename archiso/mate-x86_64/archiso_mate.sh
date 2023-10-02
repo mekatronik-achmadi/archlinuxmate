@@ -76,21 +76,21 @@ sed -i "s#archiso_pxe_common archiso_pxe_nbd archiso_pxe_http archiso_pxe_nfs#co
 sed -i "s#memdisk archiso_shutdown archiso#memdisk archiso#g" airootfs/etc/mkinitcpio.conf
 sed -i "s#archiso_kms#kms#g" airootfs/etc/mkinitcpio.conf
 
-echo "archlive" > airootfs/etc/hostname
+echo "archlive" | tee airootfs/etc/hostname
 
-echo "LANG=en_US.UTF-8" > airootfs/etc/locale.conf
-echo "en_US ISO-8859-1" >> airootfs/etc/locale.gen
-echo "en_US.UTF-8 UTF-8" >> airootfs/etc/locale.gen
+echo "LANG=en_US.UTF-8" | tee airootfs/etc/locale.conf
+echo "en_US ISO-8859-1" | tee -a airootfs/etc/locale.gen
+echo "en_US.UTF-8 UTF-8" | tee -a airootfs/etc/locale.gen
 
 echo "FONT=ter-112n
 FONT_MAP=8859-2
-" > airootfs/etc/vconsole.conf
+" | tee airootfs/etc/vconsole.conf
 
 echo "root ALL=(ALL) ALL
 %wheel ALL=(ALL) NOPASSWD: ALL
 
 @includedir /etc/sudoers.d
-" > airootfs/etc/sudoers
+" | tee airootfs/etc/sudoers
 
 mkdir -pv airootfs/etc/ssh
 echo "
@@ -105,7 +105,7 @@ X11Forwarding yes
 X11UseLocalhost yes
 X11DisplayOffset 10
 AllowTcpForwarding yes
-" > airootfs/etc/ssh/sshd_config
+" | tee airootfs/etc/ssh/sshd_config
 
 export SYSTEMD='airootfs/etc/systemd/system/multi-user.target.wants'
 mkdir -pv ${SYSTEMD}
@@ -136,7 +136,7 @@ ln -svf /run/NetworkManager/resolv.conf airootfs/etc/resolv.conf
 mkdir -pv airootfs/etc/systemd/system/getty@tty1.service.d/
 echo "[Service]
 TTYVTDisallocate=no
-" > airootfs/etc/systemd/system/getty@tty1.service.d/noclear.conf
+" | tee airootfs/etc/systemd/system/getty@tty1.service.d/noclear.conf
 
 rm -vf airootfs/etc/systemd/system/getty@tty1.service.d/autologin.conf
 
@@ -144,25 +144,25 @@ rm -vf airootfs/etc/systemd/system/getty@tty1.service.d/autologin.conf
 
 echo 'root:x:0:0:root:/root:/bin/bash
 live:x:1000:984:live:/home/live:/bin/bash
-' > airootfs/etc/passwd
+' | tee airootfs/etc/passwd
 
 echo 'root:x:0:root
 power:x:98:live
 wheel:x:998:live
 storage:x:987:live
 autologin:x:969:live
-' > airootfs/etc/group
+' | tee airootfs/etc/group
 
 echo 'root::14871::::::
 live::18740:0:99999:7:::
-' > airootfs/etc/shadow
+' | tee airootfs/etc/shadow
 
 echo 'root:::root
 power:!*::live
 wheel:!*::live
 storage:!*::live
 autologin:!::live
-' > airoot/etc/gshadow
+' | tee airoot/etc/gshadow
 
 ######################### CLI Configs ############################
 
@@ -178,10 +178,10 @@ unset backup
 
 include "/usr/share/nano/*.nanorc"
 include "/usr/share/nano-syntax-highlighting/*.nanorc"
-' > airootfs/etc/nanorc
+' | tee airootfs/etc/nanorc
 
 mkdir -pv airootfs/etc/
-echo '" /usr/share/vim/vimfiles/archlinux.vim' > airootfs/etc/vimrc
+echo '" /usr/share/vim/vimfiles/archlinux.vim' | tee airootfs/etc/vimrc
 echo 'runtime! archlinux.vim
 autocmd BufWritePre * %s/\s\+$//e
 filetype plugin on
@@ -197,7 +197,7 @@ set wrap!
 set mouse=a
 let g:tagbar_width=30
 let g:NERDTreeWinSize=30
-syntax on' >> airootfs/etc/vimrc
+syntax on' | tee -a airootfs/etc/vimrc
 
 mkdir -pv airootfs/etc/skel/
 echo '
@@ -211,7 +211,7 @@ else
         true
         #exec startx
     fi
-fi' > airootfs/etc/skel/.bash_profile
+fi' | tee airootfs/etc/skel/.bash_profile
 
 ######################### GUI Configs ############################
 
@@ -221,7 +221,7 @@ echo 'Section "ServerFlags"
     Option "SuspendTime" "0"
     Option "OffTime" "0"
     Option "BlankTime" "0"
-EndSection' >  airootfs/etc/X11/xorg.conf.d/noblank.conf
+EndSection' | tee  airootfs/etc/X11/xorg.conf.d/noblank.conf
 
 echo "XTerm*faceName: LiterationMono Nerd Font Mono
 XTerm*faceSize: 8
@@ -237,21 +237,21 @@ Xft.hinting: true
 Xft.hintstyle: hintslight
 Xft.dpi: 96
 Xft.rgba: rgb
-Xft.lcdfilter: lcddefault" > airootfs/etc/skel/.Xdefaults
+Xft.lcdfilter: lcddefault" | tee airootfs/etc/skel/.Xdefaults
 
-echo "exec mate-session" > airootfs/etc/skel/.xinitrc
+echo "exec mate-session" | tee airootfs/etc/skel/.xinitrc
 
 mkdir -pv airootfs/etc/skel/.config/git/
 echo 'set mainfont {{Liberation Sans} 8}
 set textfont {{LiterationMono Nerd Font} 8}
-set uifont {{Liberation Sans} 8 bold}' > airootfs/etc/skel/.config/git/gitk
+set uifont {{Liberation Sans} 8 bold}' | tee airootfs/etc/skel/.config/git/gitk
 
 mkdir -pv airootfs/etc/gtk-2.0/
 echo '
 gtk-icon-theme-name = "Papirus-Light"
 gtk-theme-name = "Arc-Lighter-solid"
 gtk-font-name = "Liberation Sans 8"
-' > airootfs/etc/gtk-2.0/gtkrc
+' | tee airootfs/etc/gtk-2.0/gtkrc
 
 mkdir -pv airootfs/etc/gtk-3.0/
 echo '
@@ -260,7 +260,7 @@ gtk-icon-theme-name = Papirus-Light
 gtk-theme-name = Arc-Lighter-solid
 gtk-font-name = Liberation Sans 8
 gtk-application-prefer-dark-theme = false
-' > airootfs/etc/gtk-3.0/settings.ini
+' | tee airootfs/etc/gtk-3.0/settings.ini
 
 ######################### Archiso Mate #########################
 
@@ -272,7 +272,7 @@ mkdir -pv airootfs/etc/cups
 echo '
 Grp cups
 Out ${HOME}/PDF
-' > airootfs/etc/cups/cups-pdf.conf
+' | tee airootfs/etc/cups/cups-pdf.conf
 
 mkdir -pv airootfs/etc/lightdm
 
@@ -285,7 +285,7 @@ greeter-session=lightdm-gtk-greeter
 autologin-user-timeout=0
 autologin-session=mate
 autologin-user=live
-' > airootfs/etc/lightdm/lightdm.conf
+' | tee airootfs/etc/lightdm/lightdm.conf
 
 echo '[greeter]
 panel-position = top
@@ -299,7 +299,7 @@ xft-rgba = rgb
 xft-hintstyle = hintslight
 hide-user-image = true
 keyboard = onboard
-' > airootfs/etc/lightdm/lightdm-gtk-greeter.conf
+' | tee airootfs/etc/lightdm/lightdm-gtk-greeter.conf
 
 ln -svf /usr/lib/systemd/system/lightdm.service ${SYSTEMD}/lightdm.service
 ln -svf /usr/lib/systemd/system/cups.service ${SYSTEMD}/cups.service
