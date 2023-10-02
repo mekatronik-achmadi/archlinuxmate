@@ -66,7 +66,7 @@ gtk2 gtkmm gtkmm3
 python-wxpython
 python-gobject
 
-### install basic desktop
+### install desktop basic
 ttf-liberation-mono-nerd
 ttf-liberation onboard
 dconf-editor trash-cli
