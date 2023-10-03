@@ -28,11 +28,11 @@ kicad-library-3d ngspice
 ## External
 
 ### install kicad library
-- https://github.com/mekatronik-achmadi/archmate/tree/master/pkgbuilds/optional/kicad-seeed/
-- https://github.com/mekatronik-achmadi/archmate/tree/master/pkgbuilds/optional/kicad-user/
+- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/optional/kicad-seeed/
+- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/optional/kicad-user/
 
 ### install cadsoft eagle
-- https://github.com/mekatronik-achmadi/archmate/tree/master/pkgbuilds/optional/eaglecad/
+- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/optional/eaglecad/
 
 --------------------------------------------------------------------------------
 
