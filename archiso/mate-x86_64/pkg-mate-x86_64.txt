@@ -182,6 +182,12 @@ qt5gtk2 qt6gtk2
 brisk-menu gtk3-nocsd-git
 mate-tweak bluementa-icon-theme
 
+downgrade git-cola hardinfo-git
+
+vim-plug-git
+vi-vim-symlink
+vim-devicons-git
+
 archmate-font
 archmate-theme
 archmate-default

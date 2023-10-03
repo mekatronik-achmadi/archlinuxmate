@@ -22,7 +22,7 @@ qemu-system-x86_64 -m 2048M -vga virtio \
 
 #### add host shared folder
 #-device virtio-9p-pci,id=fs0,fsdev=fsdev0,mount_tag=shared0 \
-#-fsdev local,security_model=none,id=fsdev0,path=../../ArchMate-x86_64/mate_082023/
+#-fsdev local,security_model=none,id=fsdev0,path=../../ArchMate-x86_64/mate_102023/
 
 #### mount host shared folder inside guest
 #sudo mount -t 9p -o trans=virtio,version=9p2000.L,rw,uid=$USER shared0 /mnt
