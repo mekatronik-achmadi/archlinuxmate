@@ -1,0 +1,51 @@
+pkgname=archmate-default
+pkgver=0.1
+pkgrel=1
+pkgdesc="some default settings for ArchLinux MATE"
+arch=('any')
+url="https://github.com/mekatronik-achmadi/archmate/"
+license=('GPL')
+depends=(
+	'bash'
+	'vim-minimal'
+	'dconf-editor'
+	'xdg-user-dirs-gtk'
+	'caja'
+	'pluma'
+	'marco'
+	'firefox'
+	'mate-panel'
+	'brisk-menu'
+	'mate-tweak'
+	'mate-terminal'
+	'mate-control-center'
+	'mate-settings-daemon'
+	'mate-session-manager'
+	'vi-vim-symlink'
+	'archmate-font'
+	'archmate-theme')
+options=('!makeflags')
+install=pkg.install
+
+package() {
+	cd ../
+
+	install -d $pkgdir/usr/share/glib-2.0/schemas/
+	cp -f archmate.gschema.override $pkgdir/usr/share/glib-2.0/schemas/
+
+	install -d $pkgdir/usr/share/mate-panel/layouts/
+	cp -f ./panel/archmate.layout $pkgdir/usr/share/mate-panel/layouts/
+	cp -f ./panel/archdefault.layout $pkgdir/usr/share/mate-panel/layouts/
+
+	install -d $pkgdir/etc/profile.d/
+	install -m 755 ./archmate-profile.sh $pkgdir/etc/profile.d/
+
+	install -d $pkgdir/usr/share/archmate-default/
+	cp -f ./userset/archmate_bashrc $pkgdir/usr/share/archmate-default/
+	cp -f ./userset/redshift.conf $pkgdir/usr/share/archmate-default/
+	cp -f ./userset/mimeapps.list $pkgdir/usr/share/archmate-default/
+	cp -f ./userset/qt5ct.conf $pkgdir/usr/share/archmate-default/
+	cp -f ./userset/qt6ct.conf $pkgdir/usr/share/archmate-default/
+	cp -f ./userset/geany.conf $pkgdir/usr/share/archmate-default/
+	cp -f ./userset/gitconfig $pkgdir/usr/share/archmate-default/
+}
