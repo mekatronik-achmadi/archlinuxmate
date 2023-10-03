@@ -220,13 +220,13 @@ edk2-ovmf
 - qt6gtk2: https://aur.archlinux.org/packages/qt6gtk2/
 - brisk-menu: https://aur.archlinux.org/packages/brisk-menu/
 - gtk3-nocsd-git: https://aur.archlinux.org/packages/gtk3-nocsd-git/
-- mate-tweak: https://github.com/mekatronik-achmadi/archlinuxmate/tree/master/pkgbuilds/custom/mate-tweak/
-- bluementa-icon-theme: https://github.com/mekatronik-achmadi/archlinuxmate/tree/master/pkgbuilds/custom/bluementa-icons/
+- mate-tweak: https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/custom/mate-tweak/
+- bluementa-icon-theme: https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/custom/bluementa-icons/
 
 ### install additional tools
 - downgrade: https://aur.archlinux.org/packages/downgrade/
-- git-cola: https://github.com/mekatronik-achmadi/archlinuxmate/tree/master/pkgbuilds/custom/git-cola/
-- hardinfo-git: https://github.com/mekatronik-achmadi/archlinuxmate/tree/master/pkgbuilds/custom/hardinfo/
+- git-cola: https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/custom/git-cola/
+- hardinfo-git: https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/custom/hardinfo/
 
 ### install vim additionals
 - vim-plug-git: https://aur.archlinux.org/packages/vim-plug-git/
@@ -234,11 +234,11 @@ edk2-ovmf
 - vim-devicons-git: https://aur.archlinux.org/packages/vim-devicons-git/
 
 ### install archmate
-- archmate-font: https://github.com/mekatronik-achmadi/archlinuxmate/tree/master/pkgbuilds/custom/archmate-font/
-- archmate-theme: https://github.com/mekatronik-achmadi/archlinuxmate/tree/master/pkgbuilds/custom/archmate-theme/
-- archmate-default: https://github.com/mekatronik-achmadi/archlinuxmate/tree/master/pkgbuilds/custom/archmate-default/
-- archmate-archiso: https://github.com/mekatronik-achmadi/archlinuxmate/tree/master/pkgbuilds/custom/archmate-archiso/
-- archmate-install: https://github.com/mekatronik-achmadi/archlinuxmate/tree/master/pkgbuilds/custom/archmate-install/
+- archmate-font: https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/custom/archmate-font/
+- archmate-theme: https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/custom/archmate-theme/
+- archmate-default: https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/custom/archmate-default/
+- archmate-archiso: https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/custom/archmate-archiso/
+- archmate-install: https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/custom/archmate-install/
 
 --------------------------------------------------------------------------------
 
