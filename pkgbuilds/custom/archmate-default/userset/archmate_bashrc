@@ -89,7 +89,7 @@ export HISTCONTROL=ignorespace:ignoredups:erasedups
 # Lower Mirror Score means better
 # Look for 100% synced mirror from here:
 # https://archlinux.org/mirrors/status/#successful
-export REPOURL='http://mirror.gi.co.id/archlinux'
+export REPOURL='http://mirror.internode.on.net/pub/archlinux/'
 
 # sudo with preserve envars
 alias sudo='sudo -E'

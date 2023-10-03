@@ -33,7 +33,6 @@ mkdir -p tmproot/var/cache/pacman/pkg/
 ## Download Databases
 
 ```sh
-rm -f databases/*
 cd databases/
 
 wget -c $REPOURL/core/os/x86_64/core.db
@@ -69,11 +68,20 @@ if [ "$PKGCUSTOM" = "true" ];then
 fi
 ```
 
-## Copy Config and Databases
+## Copy Config, Databases, and Packages
 
 ```sh
 cp -vf pacman.conf tmproot/etc/pacman.conf
 rsync -avh databases/ tmproot/var/lib/pacman/sync/
+rsync -avh packages/official/ tmproot/var/cache/pacman/pkg/
+```
+
+## Copy Custom Packages
+
+```sh
+./custompkg.sh
+rsync -avh databases/ tmproot/var/lib/pacman/sync/
+rsync -avh packages/custom/ tmproot/var/cache/pacman/pkg/
 ```
 
 ## Generate Packages URL
@@ -87,7 +95,6 @@ tmproot $(cat $PKGLIST) > pkgurl.txt
 
 ```sh
 sed -i -e '1d;2d' pkgurl.txt
-rm -f packages/official/*
 cd packages/official/
 wget -c -i ../../pkgurl.txt
 cd ../../
