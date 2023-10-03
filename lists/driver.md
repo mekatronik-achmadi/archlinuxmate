@@ -34,6 +34,30 @@ virtualgl lib32-virtualgl
 - https://aur.archlinux.org/packages/nvidia-390xx-utils/
 - https://aur.archlinux.org/packages/lib32-nvidia-390xx-utils/
 
+### install scanners
+
+#### brother mfc-j220
+- https://aur.archlinux.org/packages/brscan3/
+- https://aur.archlinux.org/packages/brother-mfc-j220/
+
+### install printers
+
+#### canon
+- https://aur.archlinux.org/packages/cnijfilter-ip2700series/
+
+#### hp
+- https://aur.archlinux.org/packages/hplip-plugin/
+
+### install some usb drivers
+
+#### tl-wn823n (rtl8192eu)
+
+```sh
+echo "activate LED"
+sed -i '2i EXTRA_CFLAGS += -DCONFIG_RTW_LED' src/8192eu/Makefile
+```
+- https://aur.archlinux.org/packages/8192eu-dkms-git/
+
 --------------------------------------------------------------------------------
 
 ## Configurations
@@ -95,3 +119,21 @@ sudo rmmod nvidia_drm nvidia_modeset nvidia
 echo 'OFF' | sudo tee /proc/acpi/bbswitch
 ```
 
+### configure printer drivers
+
+```sh
+echo "Categories=Application;Utility;" | sudo tee -a /usr/share/applications/hp-uiscan.desktop
+```
+
+### configure usb-wifi drivers
+
+#### tl-wn823n (rtl8192eu)
+
+```sh
+#sudo dkms install --no-depmod 8192eu/r257.744bbe5 -k $(uname -r)
+#sudo depmod -a
+#sudo modprobe 8192eu
+
+echo "blacklist rtl8xxxu
+options 8192eu rtw_power_mgnt=0 rtw_enusbss=0" | sudo tee /etc/modprobe.d/rtl8xxxu.conf
+```
