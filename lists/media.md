@@ -33,8 +33,8 @@ ddrescue ext4magic foremost testdisk
 ## External
 
 ### install youtube programs
-- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/optional/youtube-bin/
-- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/optional/youtubemusic-bin/
+- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/optional/youtube/
+- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/optional/youtubemusic/
 
 --------------------------------------------------------------------------------
 
