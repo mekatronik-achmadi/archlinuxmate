@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Standard-Black
+Encoding=UTF-8
+
+Name[en_US]=Standard-Black.theme
+
+[X-GNOME-Metatheme]
+GtkTheme=BlackMATE
+MetacityTheme=BlackMATE
+IconTheme=matefaenzadark
+CursorTheme=mate-black
