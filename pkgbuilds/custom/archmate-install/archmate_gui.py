@@ -17,7 +17,7 @@ import wx.xrc
 class frmArchInstall ( wx.Frame ):
 
 	def __init__( self, parent ):
-		wx.Frame.__init__ ( self, parent, id = wx.ID_ANY, title = u"Arch Mate Install", pos = wx.DefaultPosition, size = wx.Size( 640,420 ), style = wx.DEFAULT_FRAME_STYLE|wx.TAB_TRAVERSAL )
+		wx.Frame.__init__ ( self, parent, id = wx.ID_ANY, title = u"Arch Linux Mate Install", pos = wx.DefaultPosition, size = wx.Size( 640,420 ), style = wx.DEFAULT_FRAME_STYLE|wx.TAB_TRAVERSAL )
 
 		self.SetSizeHints( wx.Size( 640,420 ), wx.DefaultSize )
 
@@ -37,7 +37,7 @@ class frmArchInstall ( wx.Frame ):
 
 		bHost.Add( self.m_lblHost, 1, wx.ALL|wx.ALIGN_CENTER_VERTICAL, 5 )
 
-		self.m_txtHost = wx.TextCtrl( sbHostUser.GetStaticBox(), wx.ID_ANY, u"archmate", wx.DefaultPosition, wx.DefaultSize, 0 )
+		self.m_txtHost = wx.TextCtrl( sbHostUser.GetStaticBox(), wx.ID_ANY, u"archlinuxmate", wx.DefaultPosition, wx.DefaultSize, 0 )
 		bHost.Add( self.m_txtHost, 1, wx.ALL, 5 )
 
 
