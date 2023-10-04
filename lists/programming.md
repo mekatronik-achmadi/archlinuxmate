@@ -1,4 +1,4 @@
-# Qt
+# Programming Packages
 
 ## Official
 
@@ -58,4 +58,3 @@ echo "uncheck: Analyze open files"
 echo "Edit->Preferences->FakeVim"
 echo "uncheck: Use FakeVim"
 ```
-
