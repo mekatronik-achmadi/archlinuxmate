@@ -5,7 +5,6 @@
 ### install web server
 openssl openssl-1.1
 apache wt vsftpd
-mongo-c-driver
 
 ### install mysql
 mysql++ mariadb
