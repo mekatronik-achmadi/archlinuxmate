@@ -37,5 +37,10 @@ jupyter-widgetsnbextension
 ### install cpu machine learning
 tensorflow python-tensorflow tensorboard
 
+### install texlive
+texlive texlive-langenglish
+texstudio minted biber pdftk
+dblatex latex2html latex2rtf
+
 ### install programming additionals
 fftw liquid-dsp libsndfile
