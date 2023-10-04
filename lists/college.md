@@ -25,14 +25,13 @@ python-seaborn python-patsy
 python-pytables python-tqdm
 python-pandas python-numexpr
 
+### install python interface
+jupyter-notebook spyder
+
 ### install python additional
 python-flit python-invoke python-cffi
 python-pillow python-beautifulsoup4
 python-pyaudio python-sounddevice
-
-### install python notebook
-jupyter-notebook spyder
-jupyter-widgetsnbextension
 
 ### install cpu machine learning
 tensorflow python-tensorflow tensorboard
