@@ -439,5 +439,8 @@ vncviewer <ip_number>:0
 ## Notes
 
 ### updated list
-- [ ] archiso.md
+- [x] archiso.md
+- [x] driver.md
+- [x] design.md
+- [x] media.md
 
