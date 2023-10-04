@@ -151,6 +151,7 @@ power:x:98:live
 wheel:x:998:live
 storage:x:987:live
 autologin:x:969:live
+wireshark:x:150:live
 ' | tee airootfs/etc/group
 
 echo 'root::14871::::::
@@ -162,6 +163,7 @@ power:!*::live
 wheel:!*::live
 storage:!*::live
 autologin:!::live
+wireshark:!*::live
 ' | tee airoot/etc/gshadow
 
 ######################### CLI Configs ############################

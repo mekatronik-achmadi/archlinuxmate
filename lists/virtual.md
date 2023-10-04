@@ -47,3 +47,41 @@ sudo mount -t vboxsf -o rw,uid=$USER folder_name /mnt
 wget https://www.spice-space.org/download/binaries/spice-guest-tools/spice-guest-tools-latest.exe
 ```
 
+### configure docker
+
+```sh
+sudo groupadd -f docker
+sudo gpasswd -a $USER docker
+
+sudo systemctl enable docker.service
+sudo systemctl start docker.service
+
+docker pull hello-world
+docker run hello-world
+```
+
+```sh
+sudo systemctl stop docker
+mkdir -p /path/to/your/docker
+sudo chown -R root:root /path/to/your/docker
+sudo touch /etc/docker/daemon.json
+echo '
+{
+    "data-root": "/path/to/your/docker"
+}' | sudo tee /etc/docker/daemon.json
+sudo rsync -aP /var/lib/docker/ /path/to/your/docker
+sudo systemctl start docker
+```
+
+```sh
+git clone https://github.com/repo/dockerweb.git
+cd dockerweb/
+
+ls docker-compose.yml
+docker-compose up --build
+
+docker-compose up
+docker-compose down
+docker-compose up -d --build
+```
+
