@@ -22,6 +22,21 @@ python-pyqt6-charts python-pyqt6-datavisualization
 qcustomplot qwt
 python-pyqtgraph
 
+### install markdown editor
+ghostwriter
+mathjax cmark
+
+### install c/c++ programming
+codeblocks lldb
+gdb clang boost
+gdb-dashboard
+lld valgrind
+llvm llvm14
+
+### install javacript programming
+npm nodejs
+jq yq yarn
+
 --------------------------------------------------------------------------------
 
 ## AUR
