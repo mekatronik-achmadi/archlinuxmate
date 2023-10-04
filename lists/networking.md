@@ -41,10 +41,10 @@ mosquitto libwebsockets
 ## External
 
 ### install chat program
-- https://github.com/mekatronik-achmadi/archmate/tree/master/pkgbuilds/optional/telegram-bin/
+- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/optional/telegram-bin/
 
 ### install cisco packet simulator
-- https://github.com/mekatronik-achmadi/archmate/tree/master/pkgbuilds/optional/packettracer/
+- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/optional/packettracer/
 
 --------------------------------------------------------------------------------
 
