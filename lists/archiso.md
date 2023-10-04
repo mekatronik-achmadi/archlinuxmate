@@ -94,9 +94,10 @@ bind-tools netctl ppp wpa_supplicant
 net-tools wavemon bmon nethogs gping
 crda iw iwd wireless_tools tigervnc
 bridge-utils ethtool usb_modeswitch
-nmap openresolv dhclient dhcpcd mtr
-tcpdump fping gnu-netcat inetutils
 traceroute dhcp dnsmasq nss-mdns
+openresolv dhclient dhcpcd mtr
+gnu-netcat nmap termshark
+tcpdump fping inetutils
 
 ### install android driver
 android-file-transfer scrcpy
