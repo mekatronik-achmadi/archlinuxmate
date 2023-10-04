@@ -36,6 +36,10 @@ python-pyaudio python-sounddevice
 ### install cpu machine learning
 tensorflow python-tensorflow tensorboard
 
+### install image processing
+opencv python-opencv
+hdf5-openmpi vtk
+
 ### install texlive
 texlive texlive-langenglish
 texstudio minted biber pdftk
