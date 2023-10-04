@@ -440,8 +440,11 @@ vncviewer <ip_number>:0
 ## Notes
 
 ### updated list
-- [x] archiso.md
-- [x] driver.md
-- [x] design.md
-- [x] media.md
+- [ ] archiso.md
+- [x] driver
+- [x] design
+- [x] media
+- [x] virtual
+- [x] programming
+- [x] networking
 
