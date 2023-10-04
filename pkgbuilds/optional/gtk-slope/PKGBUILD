@@ -1,0 +1,34 @@
+pkgname=gtk-slope
+_pkgname=slope
+pkgver=r338.fec28aa
+pkgrel=1
+arch=('x86_64' 'armv6h' 'armv7h')
+pkgdesc="Graph Toolkit using GTK and cairo"
+url="https://github.com/bytebrew/slope"
+license=('LGPL-3.0')
+depends=('gtk3' 'cairo')
+makedepends=('cmake')
+options=('!makeflags' 'libtool' 'staticlibs' '!strip')
+source=("git+$url")
+md5sums=('SKIP')
+
+pkgver() {
+  cd "$_pkgname"
+  printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
+
+build(){
+    cd "$srcdir/$_pkgname/"
+    mkdir -p build
+    cd build;cmake ..
+    cd slope;make
+}
+
+package(){
+    cd "$srcdir/$_pkgname/slope/include"
+    install -d $pkgdir/usr/include/gtk-3.0/
+    cp -rf slope/ $pkgdir/usr/include/gtk-3.0/
+
+    cd "$srcdir/$_pkgname/build/slope"
+    install -Dm644 libslope.so $pkgdir/usr/lib/libslope.so
+}

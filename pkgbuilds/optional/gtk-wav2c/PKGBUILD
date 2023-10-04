@@ -1,0 +1,27 @@
+pkgname='gtkwav2c'
+url='https://github.com/folkien/wav2c/'
+pkgdesc='WAV to C-Array with Simple GUI'
+arch=('x86_64' 'armv6h' 'armv7h')
+depends=('gtk3')
+license=('GPL-v2')
+source=('Makefile' 'main.c' 'window_main.glade' 'MarioTest.wav')
+pkgver=0.1
+pkgrel=1
+sha256sums=('SKIP' 'SKIP' 'SKIP' 'SKIP')
+
+build() {
+    cd $srcdir/
+    make all
+}
+
+package() {
+    cd $srcdir/
+
+    mkdir -p $pkgdir/usr/share/gtkwav2c/
+    cp -f gtkwav2c $pkgdir/usr/share/gtkwav2c/
+    cp -f MarioTest.wav $pkgdir/usr/share/gtkwav2c/
+    cp -f window_main.glade $pkgdir/usr/share/gtkwav2c/
+
+    mkdir -p $pkgdir/usr/bin/
+    ln -sf /usr/share/gtkwav2c/gtkwav2c $pkgdir/usr/bin/gtkwav2c
+}
