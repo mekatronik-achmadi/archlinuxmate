@@ -41,10 +41,28 @@ jq yq yarn
 
 ## AUR
 
+### install markdown renderer
+- https://aur.archlinux.org/packages/pandoc-bin/
+
 ### install qt5 qwt additionals
 - https://aur.archlinux.org/packages/qwt5-qt5/
 - https://aur.archlinux.org/packages/qwtplot3d-qt5/
 - https://aur.archlinux.org/packages/python-pyqt-qwt/
+
+### install programmming tools
+- https://aur.archlinux.org/packages/wxhexeditor/
+- https://aur.archlinux.org/packages/vscodium-bin/
+
+### install system python bindings
+- https://aur.archlinux.org/packages/python-wifiwrapper/
+- https://aur.archlinux.org/packages/python-pyalsaaudio/
+
+### install wx programming
+- https://aur.archlinux.org/packages/wxformbuilder/
+
+### install shell additional
+- https://aur.archlinux.org/packages/ttyplot-git/
+- https://aur.archlinux.org/packages/ncurses5-compat-libs/
 
 --------------------------------------------------------------------------------
 
