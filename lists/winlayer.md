@@ -3,11 +3,11 @@
 ## Official
 
 ### install wine
-wine-nine vkd3d
+
+wine wine-mono wine_gecko
+samba smbclient vkd3d
+winetricks msitools
 cabextract icoutils
-wine-mono wine_gecko
-wine-staging winetricks
-samba smbclient msitools
 
 ### install wine lib32
 lib32-alsa-plugins lib32-alsa-lib lib32-libjpeg-turbo
@@ -16,6 +16,7 @@ lib32-giflib lib32-libpng lib32-libldap lib32-gnutls
 lib32-sdl2 lib32-v4l-utils lib32-libpulse lib32-mesa
 lib32-libxcomposite lib32-libxinerama lib32-ncurses
 lib32-mpg123 lib32-openal lib32-gtk3 lib32-gtk2
+
 --------------------------------------------------------------------------------
 
 ## AUR
