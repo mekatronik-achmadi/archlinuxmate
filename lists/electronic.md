@@ -33,6 +33,10 @@ python-pyserial dfu-util esptool screen
 - https://aur.archlinux.org/packages/stm32cubemx/
 
 ### install esp compiler
+
+```sh
+sed -i "s#'expat' 'gdbm'#'expat' 'mpdecimal' 'gdbm'#g" PKGBUILD
+```
 - https://aur.archlinux.org/packages/python39/
 - https://aur.archlinux.org/packages/xtensa-lx106-elf-gcc-bin/
 
