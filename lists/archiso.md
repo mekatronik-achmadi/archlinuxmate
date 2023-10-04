@@ -447,4 +447,6 @@ vncviewer <ip_number>:0
 - [x] virtual
 - [x] programming
 - [x] networking
+- [x] winlayer
+- [x] electronic
 
