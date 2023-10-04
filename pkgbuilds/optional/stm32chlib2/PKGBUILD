@@ -1,0 +1,33 @@
+pkgname=stm32chlib2
+pkgver=2.6.10
+pkgrel=1
+ziprev=r16280
+zipsrc=chibios-code-${ziprev}-branches-stable_2.6.x
+pkgdesc="ChibiOS v3.0 - free embedded RTOS for STM32"
+arch=('any')
+url="https://sourceforge.net/p/chibios/code/HEAD/tree/branches/stable_2.6.x/"
+license=('custom')
+depends=('arm-none-eabi-gcc' 'arm-none-eabi-newlib')
+optdepends=('ugfxlib: for GUI on LCD-Touch with ChibiOS/RT')
+makedepends=('p7zip' 'unzip' 'tree')
+options=('!makeflags' 'libtool' 'staticlibs' '!strip')
+install=ch2x.install
+source=("${zipsrc}.zip" "unused_chibios2")
+sha256sums=('SKIP' 'SKIP')
+
+package() {
+	cd "$srcdir/${zipsrc}/ext/"
+	7z x fatfs*.zip
+	rm -f fatfs*.zip
+	7z x lwip*.7z
+	rm -f lwip*.7z
+
+	cd "$srcdir"
+
+	install -d -m755 $pkgdir/opt/stm32chlib/chibios2
+	mv -f $srcdir/${zipsrc}/* $pkgdir/opt/stm32chlib/chibios2
+
+	./unused_chibios2 $pkgdir/opt/stm32chlib/chibios2
+
+	chmod -Rf 755 $pkgdir/opt/stm32chlib/chibios2
+}

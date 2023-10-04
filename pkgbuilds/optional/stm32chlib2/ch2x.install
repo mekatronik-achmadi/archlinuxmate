@@ -1,0 +1,26 @@
+modify_shell() {
+    # disable echo
+    sed -i "304s#^#//#" /opt/stm32chlib/chibios2/os/various/shell.c
+
+    # disable start message
+    sed -i "149s#^#//#" /opt/stm32chlib/chibios2/os/various/shell.c
+
+    # disable invalid message
+    sed -i "189s#^#//#" /opt/stm32chlib/chibios2/os/various/shell.c
+    sed -i "190s#^#//#" /opt/stm32chlib/chibios2/os/various/shell.c
+
+    # disable prompt
+    sed -i "151s#^#//#" /opt/stm32chlib/chibios2/os/various/shell.c
+}
+
+libraries_modify() {
+    modify_shell
+}
+
+post_install() {
+	libraries_modify
+}
+
+post_upgrade() {
+	libraries_modify
+}

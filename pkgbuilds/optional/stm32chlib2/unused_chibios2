@@ -1,0 +1,36 @@
+#!/bin/bash
+
+rm -rf ${1}/demos/AVR*
+rm -rf ${1}/demos/ARM7*
+rm -rf ${1}/demos/ARMCM0-LPC*
+rm -rf ${1}/demos/ARMCM3-LPC*
+rm -rf ${1}/demos/ARMCM4-SAM*
+rm -rf ${1}/demos/MSP430*
+rm -rf ${1}/demos/PPC*
+
+rm -rf ${1}/testhal/LPC*
+rm -rf ${1}/testhal/SPC
+
+rm -rf ${1}/os/ports/IAR
+rm -rf ${1}/os/ports/RVCT
+
+rm -rf ${1}/boards/ARDUINO_MEGA
+rm -rf ${1}/boards/EA_LPCXPRESSO*
+rm -rf ${1}/boards/FREESCALE_FREEDOM*
+rm -rf ${1}/boards/NGX_BB_LPC*
+rm -rf ${1}/boards/OLIMEX_AVR*
+rm -rf ${1}/boards/OLIMEX_LPC*
+rm -rf ${1}/boards/OLIMEX_MSP*
+rm -rf ${1}/boards/OLIMEX_SAM*
+rm -rf ${1}/boards/PJRC_TEENSY_3
+rm -rf ${1}/boards/RAISONANCE_REVA_STM8S
+rm -rf ${1}/boards/ST_EVB_SPC*
+rm -rf ${1}/boards/ST_STM8*
+rm -rf ${1}/boards/STUDIEL_AT91SAM*
+rm -rf ${1}/boards/WS_CORE*
+
+rm -rf ${1}/os/hal/platforms/AT91SAM*
+rm -rf ${1}/os/hal/platforms/AVR*
+rm -rf ${1}/os/hal/platforms/LPC*
+rm -rf ${1}/os/hal/platforms/MSP*
+rm -rf ${1}/os/hal/platforms/SPC*
