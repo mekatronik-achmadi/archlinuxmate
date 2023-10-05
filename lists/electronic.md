@@ -74,6 +74,7 @@ sed -i "s#'python2-pyserial' 'python2-cryptography' 'python2-pyparsing'##g" PKGB
 - https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/packages/pkgbuilds/optional/esp8266-rtos/
 
 ### install stm32 tools
+- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/packages/pkgbuilds/optional/wxserterm/
 - https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/packages/pkgbuilds/optional/stlink-updater/
 
 ### install atmega tools
