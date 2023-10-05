@@ -71,12 +71,12 @@ ttf-liberation-mono-nerd
 ttf-liberation onboard
 dconf-editor trash-cli
 xdg-desktop-portal-gtk
+fontforge ttf-dejavu
 redshift python-xdg
 archlinux-wallpaper
 xdg-desktop-portal
 xdg-user-dirs-gtk
-tk ttf-dejavu
-gnome-keyring
+tk gnome-keyring
 
 ### install desktop tools
 geany geany-plugins
