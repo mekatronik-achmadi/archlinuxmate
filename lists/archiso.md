@@ -140,7 +140,7 @@ python-pkgconfig python-wheel
 python-build python-installer
 python-pipenv python-virtualenv
 python-pip python-distutils-extra
-cython pybind11 python-setuptools
+cython0 pybind11 python-setuptools
 
 ### install internet tools
 firefox filezilla uget aria2
