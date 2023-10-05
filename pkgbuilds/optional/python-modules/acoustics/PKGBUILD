@@ -1,0 +1,33 @@
+pkgname=python-acoustics
+_pkgname=acoustics
+pkgver=0.2.6
+pkgrel=1
+pkgdesc="a Python module with useful tools for acousticians"
+arch=("any")
+url="https://github.com/python-acoustics/python-acoustics"
+license=('BSD-3')
+depends=('python-numpy' 'python-scipy' 'python-matplotlib'
+    'python-six' 'python-pandas' 'python-tabulate')
+makedepends=('python-pip' 'python-flit')
+source=("https://files.pythonhosted.org/packages/28/55/6039f24c69f2c3fcdb9ca1655a28fe9bd66a698479fc12e79e8dcd9efd1f/acoustics-0.2.6.tar.gz")
+sha256sums=('d02bcc84251cfa2edd3e21c7f885dd963f8e8c587f975c2f9d4e1d9b142bcc52')
+
+build() {
+    cd ${srcdir}/${_pkgname}-${pkgver}
+    mkdir -p build_cache/
+
+    export PIP_CONFIG_FILE=/dev/null
+    pip wheel -w ${srcdir} \
+        --cache-dir ./build_cache/ \
+        --no-build-isolation \
+        --no-deps ./
+}
+
+package(){
+    cd ${srcdir}/
+    export PIP_CONFIG_FILE=/dev/null
+    pip install --isolated \
+        --root="$pkgdir" \
+        --ignore-installed \
+        --no-deps ${_pkgname}-*.whl
+}

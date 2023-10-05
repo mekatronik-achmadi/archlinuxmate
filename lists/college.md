@@ -97,3 +97,62 @@ depends += 'python-lazy-loader' 'python-msgpack'
 unset _JAVA_OPTIONS
 ```
 - https://aur.archlinux.org/packages/roomeqwizard/
+
+--------------------------------------------------------------------------------
+
+## External
+
+### install python photonic tools
+- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/optional/python-modules/instrumental/
+- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/optional/python-modules/pyotdr/
+- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/optional/python-modules/pm100/
+
+### install python acoustics tools
+- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/optional/python-modules/acoustics/
+- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/optional/python-modules/soxr/
+- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/optional/pychoacoustics/
+
+--------------------------------------------------------------------------------
+
+## Configurations
+
+### configure wps office
+
+```sh
+sudo rm -f /usr/share/applications/wps-office-pdf.desktop
+sudo rm -f /usr/share/applications/wps-office-prometheus.desktop
+sudo sed -i '/^$/d' /usr/share/desktop-directories/wps-office.directory
+echo 'NoDisplay=true' | sudo tee -a /usr/share/desktop-directories/wps-office.directory
+```
+
+### configure mendeley desktop
+
+```sh
+sudo sed -i 's#mendeleydesktop %f#mendeleydesktop -style gtk %f#g' /usr/share/applications/mendeleydesktop.desktop
+sed -i 's#mendeleydesktop %f#mendeleydesktop -style gtk %f#g' ~/.local/share/applications/mendeleydesktop.desktop
+```
+
+### configure texstudio
+
+```sh
+"latex -shell-escape -src -interaction=nonstopmode %.tex"
+"pdflatex -shell-escape -synctex=1 -interaction=nonstopmode %.tex"
+```
+
+```
+FancyVerb error \end{minted}
+Just delete \t (Tab) after \end{minted}
+```
+
+```
+Uncheck 'Adv. Editor'->'Structure Panel'->'Mark structure elements beyond \end{document}'
+```
+
+### configure roomeqwizard
+
+```sh
+sudo sed -i 's#Categories=Application;#Categories=AudioVideo;Audio;Player;#g' \
+/usr/share/applications/roomeqwizard/roomeqwizard.desktop
+echo "Terminal=false" | sudo tee -a /usr/share/applications/roomeqwizard/roomeqwizard.desktop
+echo "Comment=Room Equalizer Wizard"  | sudo tee -a /usr/share/applications/roomeqwizard/roomeqwizard.desktop
+```

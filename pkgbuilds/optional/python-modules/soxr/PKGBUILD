@@ -1,0 +1,27 @@
+pkgname=python-soxr
+pkgver=0.3.5
+pkgrel=1
+pkgdesc="High quality, one-dimensional sample-rate conversion library"
+arch=('any')
+url="https://github.com/dofuuz/python-soxr"
+license=('custom')
+depends=('python-numpy' 'libsoxr')
+makedepends=('python-setuptools')
+source=("https://github.com/dofuuz/python-soxr/archive/refs/tags/v0.3.5.tar.gz")
+sha256sums=('SKIP')
+
+prepare() {
+    cd "${srcdir}/$pkgname-$pkgver/"
+    echo "version = \"$pkgver\"" > ./src/soxr/version.py
+    sed -i "s#setup(#setup(version=\"$pkgver\",#" setup.py
+}
+
+build() {
+  cd "${srcdir}/$pkgname-$pkgver/"
+  python setup.py build --use-system-libsoxr
+}
+
+package() {
+  cd "${srcdir}/$pkgname-$pkgver/"
+  python setup.py install --prefix=/usr --root=${pkgdir} -O1 --skip-build --use-system-libsoxr
+}
