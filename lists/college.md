@@ -94,7 +94,8 @@ depends += 'python-lazy-loader' 'python-msgpack'
 - https://aur.archlinux.org/packages/wavesurfer/
 
 ```sh
-unset _JAVA_OPTIONS
+echo "add this on package()"
+echo "unset _JAVA_OPTIONS"
 ```
 - https://aur.archlinux.org/packages/roomeqwizard/
 
