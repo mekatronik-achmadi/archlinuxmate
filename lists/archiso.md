@@ -440,7 +440,7 @@ vncviewer <ip_number>:0
 ## Notes
 
 ### updated list
-- [ ] archiso
+- [x] archiso
 - [x] driver
 - [x] design
 - [x] media
@@ -450,5 +450,5 @@ vncviewer <ip_number>:0
 - [x] winlayer
 - [x] electronic
 - [x] college
-- [ ] other
+- [x] other
 
