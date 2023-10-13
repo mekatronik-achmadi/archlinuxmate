@@ -1,0 +1,21 @@
+pkgname=python-oyaml
+pkgver=v1.0
+pkgrel=1
+pkgdesc="Ordered YAML module"
+arch=('any')
+url="https://github.com/wimglenn/oyaml"
+license=('custom')
+depends=('python-yaml')
+makedepends=('python-setuptools')
+source=("https://github.com/wimglenn/oyaml/archive/refs/tags/v1.0.tar.gz")
+sha256sums=('SKIP')
+
+build() {
+  cd ${srcdir}/oyaml*/
+  python setup.py build
+}
+
+package() {
+  cd ${srcdir}/oyaml*/
+  python setup.py install --prefix=/usr --root=${pkgdir} -O1 --skip-build
+}

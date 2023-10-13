@@ -1,0 +1,23 @@
+pkgname=python-mle
+pkgver=0.1
+pkgrel=1
+pkgdesc="maximum likehood estimation python modules"
+arch=('any')
+url="https://github.com/ibab/python-mle/"
+license=('GPL')
+groups=('python-computing')
+depends=('python' 'python-scipy' 'python-numpy' 'python-theano')
+optdepends=()
+makedepends=('git' 'python-setuptools')
+source=("git+https://github.com/ibab/python-mle.git")
+sha256sums=('SKIP')
+
+build() {
+  cd "${srcdir}/python-mle/"
+  python setup.py build
+}
+
+package() {
+  cd "${srcdir}/python-mle/"
+  python setup.py install --prefix=/usr --root=${pkgdir} -O1 --skip-build
+}

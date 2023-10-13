@@ -1,0 +1,74 @@
+pkgname=python-opensmile
+pkgver=v2.4.1
+pkgrel=1
+pkgdesc="A fast, real-time (audio) feature extraction utility for automatic speech, music and paralinguistic recognition research"
+arch=('any')
+url="https://github.com/audeering/opensmile-python"
+license=('custom')
+depends=('python-oyaml' 'python-iso3166' 'python-iso639' 'opensmile')
+makedepends=('git' 'python-setuptools')
+source=(
+	"git+https://github.com/audeering/opensmile-python.git"
+	"git+https://github.com/audeering/audinterface.git"
+	"git+https://github.com/audeering/audresample.git"
+	"git+https://github.com/audeering/audformat.git"
+	"git+https://github.com/audeering/audobject.git"
+	"git+https://github.com/audeering/audiofile.git"
+	"git+https://github.com/audeering/audeer.git")
+sha256sums=('SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP')
+
+pkgver() {
+	cd "${srcdir}/opensmile-python/"
+	printf "%s" "$(git describe --tags | sed 's/\([^-]*-\)g/r\1/;s/-/./g;s/^rel\.//')"
+}
+
+build() {
+  cd "${srcdir}/opensmile-python/"
+  python setup.py build
+
+  cd "${srcdir}/audinterface/"
+  python setup.py build
+
+  cd "${srcdir}/audresample/"
+  python setup.py build
+
+  cd "${srcdir}/audformat/"
+  python setup.py build
+
+  cd "${srcdir}/audobject/"
+  python setup.py build
+
+  cd "${srcdir}/audiofile/"
+  python setup.py build
+
+  cd "${srcdir}/audeer/"
+  python setup.py build
+}
+
+package() {
+  cd "${srcdir}/opensmile-python/"
+  python setup.py install --prefix=/usr --root=${pkgdir} -O1 --skip-build
+
+  cd "${srcdir}/audinterface/"
+  python setup.py install --prefix=/usr --root=${pkgdir} -O1 --skip-build
+
+  cd "${srcdir}/audresample/"
+  python setup.py install --prefix=/usr --root=${pkgdir} -O1 --skip-build
+
+  cd "${srcdir}/audformat/"
+  python setup.py install --prefix=/usr --root=${pkgdir} -O1 --skip-build
+
+  cd "${srcdir}/audobject/"
+  python setup.py install --prefix=/usr --root=${pkgdir} -O1 --skip-build
+
+  cd "${srcdir}/audiofile/"
+  python setup.py install --prefix=/usr --root=${pkgdir} -O1 --skip-build
+
+  cd "${srcdir}/audeer/"
+  python setup.py install --prefix=/usr --root=${pkgdir} -O1 --skip-build
+
+  # use installed opensmile binary
+  export PYSITEPKG=$(python -c 'import site; print(site.getsitepackages()[0])')
+  ln -sf /usr/bin/SMILExtract "$pkgdir/$PYSITEPKG/opensmile/core/bin/linux/SMILExtract"
+  ln -sf /usr/lib/libSMILEapi.so "$pkgdir/$PYSITEPKG/opensmile/core/bin/linux/libSMILEapi.so"
+}
