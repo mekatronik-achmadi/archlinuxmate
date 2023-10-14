@@ -16,6 +16,7 @@ qemu-system-x86_64 -m 2048M -vga virtio \
 #parted vdisk.img mklabel msdos
 
 #### using virtual disk
+#-drive file=${1},format=raw,if=virtio
 #-drive file=vdisk.img,format=raw,if=virtio
 
 ################################################################################
