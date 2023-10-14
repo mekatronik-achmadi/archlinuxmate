@@ -3,8 +3,9 @@
 ## Official
 
 ### install graphic tools
-inkscape imagemagick
-mypaint gimp xsane-gimp
+gimp xsane-gimp
+imagemagick
+inkscape
 
 ### install multimedia tools
 steam openshot

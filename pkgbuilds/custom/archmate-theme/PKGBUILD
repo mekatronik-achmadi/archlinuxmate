@@ -8,6 +8,7 @@ license=('custom')
 depends=(
 	'gtk-engines' 'gtk-engine-murrine'
 	'mate-themes' 'gnome-themes-extra'
+	'inkscape' 'sassc'
 	'arc-solid-gtk-theme'
 	'gtk-update-icon-cache' 'icon-naming-utils'
     'papirus-icon-theme' 'gnome-icon-theme-extras'

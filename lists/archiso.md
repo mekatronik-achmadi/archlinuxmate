@@ -44,14 +44,12 @@ xorg-xinit xorg-fonts
 xsel xclip xterm
 xorg-fonts-misc
 
-### install login manager
+### install mate desktop
+mate mate-extra
+libappindicator-gtk3
+mate-common gnome-common
 lightdm lightdm-gtk-greeter
 lightdm-gtk-greeter-settings
-
-### install mate desktop
-mate-common gnome-common
-libappindicator-gtk3
-mate mate-extra
 
 ### install themes and icons
 gnome-icon-theme-extras gnome-themes-extra

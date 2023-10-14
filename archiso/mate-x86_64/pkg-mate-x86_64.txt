@@ -34,12 +34,11 @@ xorg-xinit xorg-fonts
 xsel xclip xterm
 xorg-fonts-misc
 
+mate mate-extra
+libappindicator-gtk3
+mate-common gnome-common
 lightdm lightdm-gtk-greeter
 lightdm-gtk-greeter-settings
-
-mate-common gnome-common
-libappindicator-gtk3
-mate mate-extra
 
 gnome-icon-theme-extras gnome-themes-extra
 gtk-update-icon-cache icon-naming-utils
