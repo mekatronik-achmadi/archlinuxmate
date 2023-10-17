@@ -116,9 +116,10 @@ gvfs-gphoto2 gvfs-afc
 gvfs-smb gvfs-nfs
 
 ### install compression tools
-xz bzip2 gzip lz4 p7zip unarj atool
-lrzip lzip lzop zip unzip zstd cpio
-tar libarchive unrar lhasa rpmextract
+tar atool xz libarchive unrar unarj
+lhasa rpmextract lxsplit unrar-free
+bzip2 gzip lz4 p7zip zip unzip
+lrzip lzip lzop zstd cpio
 
 ### install build tools
 git tig github-cli
