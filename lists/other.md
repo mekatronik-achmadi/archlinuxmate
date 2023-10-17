@@ -15,10 +15,13 @@ python-tensorflow-cuda
 
 ## AUR
 
+### install webrowser programs
+- https://aur.archlinux.org/packages/brave-bin/
+- https://aur.archlinux.org/packages/google-chrome/
+
 ### install internet programs
 - https://aur.archlinux.org/packages/teams/
 - https://aur.archlinux.org/packages/teamviewer/
-- https://aur.archlinux.org/packages/google-chrome/
 
 ### nvidia
 
