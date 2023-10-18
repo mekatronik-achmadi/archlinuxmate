@@ -19,8 +19,9 @@ python-tensorflow-cuda
 
 ### install webrowser programs
 
-- https://aur.archlinux.org/packages/brave-bin/
+- 
 - https://aur.archlinux.org/packages/google-chrome/
+- https://aur.archlinux.org/packages/thorium-browser-bin/
 
 ### install internet programs
 
