@@ -2,6 +2,10 @@
 
 ## Official
 
+### install webrowser programs
+
+chromium midori
+
 ### install latest nvidia driver
 
 nvidia-dkms nvidia-utils opencl-nvidia
@@ -19,9 +23,8 @@ python-tensorflow-cuda
 
 ### install webrowser programs
 
-- 
 - https://aur.archlinux.org/packages/google-chrome/
-- https://aur.archlinux.org/packages/thorium-browser-bin/
+- https://aur.archlinux.org/packages/microsoft-edge-stable-bin/
 
 ### install internet programs
 

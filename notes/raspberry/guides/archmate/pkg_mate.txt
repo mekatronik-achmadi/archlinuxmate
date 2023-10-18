@@ -18,3 +18,5 @@ gtk-update-icon-cache icon-naming-utils
 arc-solid-gtk-theme papirus-icon-theme
 libcanberra sound-theme-freedesktop
 gtk-engines gtk-engine-murrine
+
+chromium midori
