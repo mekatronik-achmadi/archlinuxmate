@@ -3,11 +3,13 @@
 ## Official
 
 ### install basic system
+
 linux base base-devel
 linux-headers linux-firmware
 multilib-devel terminus-font
 
 ### install basic tools
+
 bash-completion mkinitcpio
 squashfs-tools rsync zsync
 dkms arch-install-scripts
@@ -24,27 +26,32 @@ libxcrypt-compat
 pv archinstall
 
 ### install posix meta
+
 posix posix-software-development
 posix-xsi posix-c-development
 
 ### install cli tools
+
 mc highlight
 python lua perl
 hexedit most bat
 moc fdupes w3m lynx
 
 ### install vim editor
+
 vim vim-nerdtree vim-surround
 vim-nerdcommenter vim-gitgutter
 vim-airline vim-tagbar vim-tabular
 
 ### install xorg server
+
 xorg xorg-apps xorg-drivers
 xorg-xinit xorg-fonts
 xsel xclip xterm
 xorg-fonts-misc
 
 ### install mate desktop
+
 mate mate-extra
 libappindicator-gtk3
 mate-common gnome-common
@@ -52,6 +59,7 @@ lightdm lightdm-gtk-greeter
 lightdm-gtk-greeter-settings
 
 ### install themes and icons
+
 gnome-icon-theme-extras gnome-themes-extra
 gtk-update-icon-cache icon-naming-utils
 arc-solid-gtk-theme papirus-icon-theme
@@ -59,12 +67,14 @@ libcanberra sound-theme-freedesktop
 gtk-engines gtk-engine-murrine
 
 ### install gtk 2/3 libraries
+
 gtk3 wxgtk3 glade
 gtk2 gtkmm gtkmm3
 python-wxpython
 python-gobject
 
 ### install desktop basic
+
 ttf-liberation-mono-nerd
 ttf-liberation onboard
 dconf-editor trash-cli
@@ -77,6 +87,7 @@ xdg-user-dirs-gtk
 tk gnome-keyring
 
 ### install desktop tools
+
 geany geany-plugins
 qt5-base qt6-base
 qt5ct qt6ct scrot
@@ -85,6 +96,7 @@ zenity xdotool
 shotwell xchm
 
 ### install networking system
+
 networkmanager nm-connection-editor
 network-manager-applet modemmanager
 mobile-broadband-provider-info iftop
@@ -98,10 +110,12 @@ gnu-netcat nmap termshark
 tcpdump fping inetutils
 
 ### install android driver
+
 android-file-transfer scrcpy
 android-udev python-pyudev
 
 ### install audio system
+
 pulseaudio portaudio
 jack2 pulseaudio-jack
 alsa-utils alsa-firmware
@@ -111,17 +125,20 @@ pulseaudio-equalizer pavucontrol
 pulseaudio-alsa pulseaudio-bluetooth
 
 ### install gio filesystem
+
 gvfs gvfs-mtp gvfs-google
 gvfs-gphoto2 gvfs-afc
 gvfs-smb gvfs-nfs
 
 ### install compression tools
+
 tar atool xz libarchive unrar unarj
 lhasa rpmextract lxsplit unrar-free
 bzip2 gzip lz4 p7zip zip unzip
 lrzip lzip lzop zstd cpio
 
 ### install build tools
+
 git tig github-cli
 bear hub subversion
 autoconf meson ninja
@@ -135,6 +152,7 @@ jre8-openjdk jdk8-openjdk
 tcsh gobject-introspection
 
 ### install python installer
+
 python-pkgconfig python-wheel
 python-build python-installer
 python-pipenv python-virtualenv
@@ -142,14 +160,17 @@ python-pip python-distutils-extra
 cython0 pybind11 python-setuptools
 
 ### install internet tools
+
 firefox filezilla uget aria2
 qbittorrent-nox qbittorrent
 
 ### install bluetooth support
+
 blueman bluez
 bluez-utils
 
 ### install multimedia
+
 gstreamer gst-libav
 vlc rhythmbox mpv
 ffmpegthumbnailer
@@ -161,6 +182,7 @@ gstreamer-vaapi
 guvcview ffmpeg
 
 ### install libva driver
+
 intel-media-driver
 libva-intel-driver
 libva-vdpau-driver
@@ -170,6 +192,7 @@ libvdpau-va-gl
 vdpauinfo
 
 ### install cd-dvd tools
+
 gnome-multi-writer
 fuseiso mdf2iso
 brasero bchunk
@@ -178,6 +201,7 @@ dvdauthor
 vcdimager
 
 ### install printing support
+
 cups cups-pdf
 ghostscript gsfonts
 system-config-printer
@@ -185,10 +209,12 @@ gutenprint foomatic-db-engine
 foomatic-db foomatic-db-nonfree
 
 ### install image scanner
+
 sane sane-airscan xsane
 ipp-usb simple-scan
 
 ### install system information
+
 lm_sensors xsensors hddtemp
 lsof nmon sysstat procps-ng
 usbutils dmidecode hwdetect
@@ -199,6 +225,7 @@ dstat ltrace strace mesa-demos
 ccze htop inxi atop libstatgrab
 
 ### install disk tools
+
 ntfs-3g exfat-utils
 gparted dosfstools
 gpart e2fsprogs
@@ -206,6 +233,7 @@ gptfdisk mtools
 fuse2 fuse3
 
 ### install boot system
+
 grub os-prober
 efibootmgr
 edk2-shell
@@ -216,6 +244,7 @@ edk2-ovmf
 ## Non-Official
 
 ### install additional base
+
 - qt5gtk2: https://aur.archlinux.org/packages/qt5gtk2/
 - qt6gtk2: https://aur.archlinux.org/packages/qt6gtk2/
 - brisk-menu: https://aur.archlinux.org/packages/brisk-menu/
@@ -224,16 +253,19 @@ edk2-ovmf
 - bluementa-icon-theme: https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/custom/bluementa-icons/
 
 ### install additional tools
+
 - downgrade: https://aur.archlinux.org/packages/downgrade/
 - git-cola: https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/custom/git-cola/
 - hardinfo-git: https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/custom/hardinfo/
 
 ### install vim additionals
+
 - vim-plug-git: https://aur.archlinux.org/packages/vim-plug-git/
 - vi-vim-symlink: https://aur.archlinux.org/packages/vi-vim-symlink/
 - vim-devicons-git: https://aur.archlinux.org/packages/vim-devicons-git/
 
 ### install archmate
+
 - archmate-font: https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/custom/archmate-font/
 - archmate-theme: https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/custom/archmate-theme/
 - archmate-default: https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/custom/archmate-default/
@@ -428,10 +460,12 @@ vncviewer <ip_number>:0
 ```
 
 #### configure firefox
+
 - https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/
 - https://addons.mozilla.org/en-US/firefox/addon/adblock-for-firefox/
 
 #### configure google drive
+
 - https://workspace.google.com/marketplace/app/file_checksum/982370769845
 
 --------------------------------------------------------------------------------
@@ -439,6 +473,7 @@ vncviewer <ip_number>:0
 ## Notes
 
 ### updated list
+
 - [x] archiso
 - [x] driver
 - [x] design
@@ -450,4 +485,3 @@ vncviewer <ip_number>:0
 - [x] electronic
 - [x] college
 - [x] other
-

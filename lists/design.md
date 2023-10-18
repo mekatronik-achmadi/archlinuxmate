@@ -3,10 +3,12 @@
 ## Official
 
 ### install cad tools
+
 freecad openscad qcad
 povray netcdf-openmpi
 
 ### install kicad
+
 kicad kicad-library
 kicad-library-3d ngspice
 
@@ -15,10 +17,12 @@ kicad-library-3d ngspice
 ## AUR
 
 ### install cad tools
+
 - https://aur.archlinux.org/packages/cura-bin/
 - https://aur.archlinux.org/packages/openssl-1.0/ (--skippgpcheck)
 
 ### install kicad library
+
 - https://aur.archlinux.org/packages/kicad-library-digikey-git/
 - https://aur.archlinux.org/packages/kicad-library-sparkfun-git/
 - https://aur.archlinux.org/packages/kicad-library-espressif-git/
@@ -28,10 +32,12 @@ kicad-library-3d ngspice
 ## External
 
 ### install kicad library
+
 - https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/optional/kicad-seeed/
 - https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/optional/kicad-user/
 
 ### install cadsoft eagle
+
 - https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/optional/eaglecad/
 
 --------------------------------------------------------------------------------
@@ -48,6 +54,7 @@ echo "FreeCAD -> Tools -> Addon Manager"
 ```
 
 FreeCAD recommended plugins:
+
 - https://github.com/kbwbe/A2plus/
 - https://github.com/easyw/kicadStepUpMod/
 - https://github.com/looooo/freecad.gears/
@@ -69,11 +76,13 @@ echo "KiCAD -> Tools -> Plugin and Content Manager"
 ```
 
 KiCAD recommended plugins:
+
 - https://github.com/openscopeproject/InteractiveHtmlBom/
 - https://github.com/bennymeg/JLC-Plugin-for-KiCad/
 - https://github.com/Bouni/kicad-jlcpcb-tools/
 
 #### kicad custom symbol/footprint
+
 - https://techexplorations.com/blog/kicad/blog-kicad-5-recipe-how-to-create-a-new-component-symbol/
 - https://techexplorations.com/kicad-4-book/index-p=111.html
 
@@ -84,6 +93,7 @@ jq -r '.[].Size' *.gbrjob 2> /dev/null
 ```
 
 #### online gerber viewer
+
 - http://pcbviewer.geraicerdas.com
 - http://pcbviewer.cloudcerdas.com
 - https://www.pcbway.com/project/OnlineGerberViewer.html

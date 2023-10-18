@@ -3,10 +3,12 @@
 ## Official
 
 ### install qt programming
+
 qt5 qt6 qtcreator
 x11-ssh-askpass
 
 ### install qt python
+
 pyqt-builder
 sip python-qtpy
 python-pyqt5
@@ -19,14 +21,12 @@ python-pyqt6-3d python-pyqt6-webengine
 python-pyqt6-charts python-pyqt6-datavisualization
 
 ### install qt graph additionals
+
 qcustomplot qwt
 python-pyqtgraph
 
-### install markdown editor
-ghostwriter
-mathjax cmark
-
 ### install c/c++ programming
+
 codeblocks lldb
 gdb clang boost
 gdb-dashboard
@@ -34,6 +34,7 @@ lld valgrind
 llvm llvm14
 
 ### install javacript programming
+
 npm nodejs
 jq yq yarn
 
@@ -41,26 +42,33 @@ jq yq yarn
 
 ## AUR
 
-### install markdown renderer
+### install markdown editor
+
 - https://aur.archlinux.org/packages/pandoc-bin/
+- https://aur.archlinux.org/packages/marktext-bin/
 
 ### install qt5 qwt additionals
+
 - https://aur.archlinux.org/packages/qwt5-qt5/
 - https://aur.archlinux.org/packages/qwtplot3d-qt5/
 - https://aur.archlinux.org/packages/python-pyqt-qwt/
 
 ### install programmming tools
+
 - https://aur.archlinux.org/packages/wxhexeditor/
 - https://aur.archlinux.org/packages/vscodium-bin/
 
 ### install system python bindings
+
 - https://aur.archlinux.org/packages/python-wifiwrapper/
 - https://aur.archlinux.org/packages/python-pyalsaaudio/
 
 ### install wx programming
+
 - https://aur.archlinux.org/packages/wxformbuilder/
 
 ### install shell additional
+
 - https://aur.archlinux.org/packages/ttyplot-git/
 - https://aur.archlinux.org/packages/ncurses5-compat-libs/ (--skippgpcheck)
 
@@ -69,14 +77,17 @@ jq yq yarn
 ## External
 
 ### install doxygen tools
+
 - https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/optional/custom-doxygen/
 - https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/optional/vim-doxygen/
 
 ### install codeblocks additionals
+
 - https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/optional/cbp2make/
 - https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/optional/cbcc-stm32/
 
 ### install gtk additionals
+
 - https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/optional/gtk-wav2c/
 - https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/optional/gtk-slope/
 
@@ -171,6 +182,7 @@ echo ":hi"
 ```
 
 ### configure vscodium
+
 - https://github.com/VSCodeVim/Vim/
 - https://github.com/clangd/vscode-clangd/
 - https://github.com/cschlosser/doxdocgen/

@@ -3,14 +3,17 @@
 ## Official
 
 ### install web server
+
 openssl openssl-1.1
 apache wt vsftpd
 
 ### install mysql
+
 mysql++ mariadb
 mariadb-libs
 
 ### install python microserver
+
 python-flask python-dotenv
 python-mysql-connector
 python-mysqlclient
@@ -18,6 +21,7 @@ python-mongoengine
 python-pymongo
 
 ### install mqtt broker
+
 mosquitto libwebsockets
 
 --------------------------------------------------------------------------------
@@ -25,15 +29,19 @@ mosquitto libwebsockets
 ## AUR
 
 ### install meeting program
+
 - https://aur.archlinux.org/packages/zoom/
 
 ### install chat program
+
 - https://aur.archlinux.org/packages/whatsdesk-bin/
 
 ### install remote pc
+
 - https://aur.archlinux.org/packages/anydesk-bin/
 
 ### install http tools
+
 - https://aur.archlinux.org/packages/postman-bin/
 
 --------------------------------------------------------------------------------
@@ -41,9 +49,11 @@ mosquitto libwebsockets
 ## External
 
 ### install chat program
+
 - https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/optional/telegram-bin/
 
 ### install cisco packet simulator
+
 - https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/optional/packettracer/
 
 --------------------------------------------------------------------------------
@@ -165,4 +175,3 @@ sudo systemctl start vsftpd
 # test on local
 ftp localhost
 ```
-

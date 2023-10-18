@@ -3,6 +3,7 @@
 ## Official
 
 ### install stm32 programming
+
 libopencm3
 openocd stlink
 arm-none-eabi-gcc
@@ -10,13 +11,16 @@ arm-none-eabi-gdb
 arm-none-eabi-newlib
 
 ### install atmega programming
+
 avr-gcc avr-gdb avr-libc avrdude
 
 ### install arduino programming
+
 arduino-builder arduino-avr-core
 arduino arduino-cli arduino-ctags
 
 ### install serial terminal
+
 minicom picocom python-pyusb moserial
 python-pyserial dfu-util esptool screen
 
@@ -25,10 +29,12 @@ python-pyserial dfu-util esptool screen
 ## AUR
 
 ### install serial port tools
+
 - https://aur.archlinux.org/packages/cutecom/
 - https://aur.archlinux.org/packages/interceptty/
 
 ### install stm32 tools
+
 - https://aur.archlinux.org/packages/stm32flash/
 - https://aur.archlinux.org/packages/stm32cubemx/
 
@@ -37,19 +43,22 @@ python-pyserial dfu-util esptool screen
 ```sh
 sed -i "s#'expat' 'gdbm'#'expat' 'mpdecimal' 'gdbm'#g" PKGBUILD
 ```
+
 - https://aur.archlinux.org/packages/python39/
 - https://aur.archlinux.org/packages/xtensa-lx106-elf-gcc-bin/
 
 ```sh
 sed -i "s#'python2-pyserial' 'python2-cryptography' 'python2-pyparsing'##g" PKGBUILD
 ```
+
 - https://aur.archlinux.org/packages/xtensa-esp32-elf-gcc-bin/
 
-
 ### install arduino tools
+
 - https://aur.archlinux.org/packages/arduino-mk/
 
 ### install simulator
+
 - https://aur.archlinux.org/packages/simavr/
 - https://aur.archlinux.org/packages/simulide/
 - https://aur.archlinux.org/packages/simutron-svn/
@@ -59,6 +68,7 @@ sed -i "s#'python2-pyserial' 'python2-cryptography' 'python2-pyparsing'##g" PKGB
 ## External
 
 ### install stm32 libraries
+
 - https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/packages/pkgbuilds/optional/ugfxlib/
 - https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/packages/pkgbuilds/optional/stm32chlib/
 - https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/packages/pkgbuilds/optional/stm32chlib2/
@@ -69,15 +79,18 @@ sed -i "s#'python2-pyserial' 'python2-cryptography' 'python2-pyparsing'##g" PKGB
 - https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/packages/pkgbuilds/optional/stm32chlib-bluepill/
 
 ### install esp libraries
+
 - https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/packages/pkgbuilds/optional/esp32-idf/
 - https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/packages/pkgbuilds/optional/esp32-dsp/
 - https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/packages/pkgbuilds/optional/esp8266-rtos/
 
 ### install stm32 tools
+
 - https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/packages/pkgbuilds/optional/wxserterm/
 - https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/packages/pkgbuilds/optional/stlink-updater/
 
 ### install atmega tools
+
 - https://github.com/mekatronik-achmadi/atmega-dev/tree/master/atmega-tools/
 - https://github.com/mekatronik-achmadi/atmega-dev/tree/master/atmega-demos/
 - https://github.com/mekatronik-achmadi/atmega-dev/tree/master/qtcreator-arduino/

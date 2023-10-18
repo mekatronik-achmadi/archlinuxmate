@@ -3,10 +3,12 @@
 ## Official
 
 ### install latest nvidia driver
+
 nvidia-dkms nvidia-utils opencl-nvidia
 lib32-nvidia-utils lib32-opencl-nvidia
 
 ### install gpu machine learning
+
 tensorflow-cuda
 python-pytorch-cuda
 python-tensorflow-cuda
@@ -16,20 +18,24 @@ python-tensorflow-cuda
 ## AUR
 
 ### install webrowser programs
+
 - https://aur.archlinux.org/packages/brave-bin/
 - https://aur.archlinux.org/packages/google-chrome/
 
 ### install internet programs
+
 - https://aur.archlinux.org/packages/teams/
 - https://aur.archlinux.org/packages/teamviewer/
 
 ### nvidia
 
 #### nvidia-470 (utils,dkms,opencl)
+
 - https://aur.archlinux.org/packages/nvidia-470xx-utils/
 - https://aur.archlinux.org/packages/lib32-nvidia-470xx-utils/
 
 #### nvidia-optimus
+
 - https://aur.archlinux.org/packages/optimus-manager/
 
 --------------------------------------------------------------------------------
@@ -37,6 +43,7 @@ python-tensorflow-cuda
 ## External
 
 ### install matlab binary
+
 - https://github.com/mekatronik-achmadi/archmate/tree/master/pkgbuilds/optional/matlab-bin-basic/
 
 --------------------------------------------------------------------------------
@@ -143,4 +150,3 @@ sudo rm -f /usr/share/applications/teamviewerapi.desktop
 sudo systemctl enable teamviewerd
 sudo systemctl start teamviewerd
 ```
-

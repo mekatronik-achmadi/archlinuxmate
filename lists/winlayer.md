@@ -10,6 +10,7 @@ winetricks msitools
 cabextract icoutils
 
 ### install wine lib32
+
 lib32-alsa-plugins lib32-alsa-lib lib32-libjpeg-turbo
 lib32-libxslt lib32-gst-plugins-base-libs lib32-vkd3d
 lib32-giflib lib32-libpng lib32-libldap lib32-gnutls
@@ -22,6 +23,7 @@ lib32-mpg123 lib32-openal lib32-gtk3 lib32-gtk2
 ## AUR
 
 ### install wine additional
+
 - https://aur.archlinux.org/packages/icoextract/
 
 --------------------------------------------------------------------------------
@@ -63,5 +65,3 @@ winetricks fontsmooth=gray
 winetricks fontsmooth=bgr
 winetricks fontsmooth=rgb
 ```
-
-

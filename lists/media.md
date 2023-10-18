@@ -3,17 +3,20 @@
 ## Official
 
 ### install graphic tools
+
 gimp xsane-gimp
 imagemagick
 inkscape
 
 ### install multimedia tools
+
 steam openshot
 frei0r-plugins
 audacity faac sox
 steam-native-runtime
 
 ### install disk recovery tools
+
 ddrescue ext4magic foremost testdisk
 
 --------------------------------------------------------------------------------
@@ -21,13 +24,16 @@ ddrescue ext4magic foremost testdisk
 ## AUR
 
 ### install disk recovery tools
+
 - https://aur.archlinux.org/packages/extundelete/
 
 ### install screencast tools
+
 - https://aur.archlinux.org/packages/simplescreenrecorder/
 - https://aur.archlinux.org/packages/key-mon/
 
 ### install youtube downloader
+
 - https://aur.archlinux.org/packages/yt-dlp-git/
 
 --------------------------------------------------------------------------------
@@ -35,6 +41,7 @@ ddrescue ext4magic foremost testdisk
 ## External
 
 ### install youtube programs
+
 - https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/optional/youtube/
 - https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/optional/youtubemusic/
 

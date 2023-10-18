@@ -3,12 +3,14 @@
 ## Official
 
 ### install vulkan mesa driver
+
 vulkan-radeon lib32-vulkan-radeon
 vulkan-icd-loader lib32-vulkan-icd-loader
 lib32-vulkan-intel lib32-vulkan-mesa-layers
 vulkan-tools vulkan-intel vulkan-mesa-layers
 
 ### install acpi tools
+
 acpi acpid acpi_call-dkms
 
 ### install intel-nvidia driver
@@ -16,6 +18,7 @@ acpi acpid acpi_call-dkms
 ```
 echo "Install NVIDIA drivers first"
 ```
+
 bumblebee primus lib32-primus
 nvidia-prime bbswitch-dkms
 primus_vk lib32-primus_vk
@@ -26,26 +29,31 @@ virtualgl lib32-virtualgl
 ## AUR
 
 ### install hwclock
+
 - https://aur.archlinux.org/packages/fake-hwclock/
 
 ### install gpu driver
 
 #### nvidia-390 (utils,dkms,opencl)
+
 - https://aur.archlinux.org/packages/nvidia-390xx-utils/
 - https://aur.archlinux.org/packages/lib32-nvidia-390xx-utils/
 
 ### install scanners
 
 #### brother mfc-j220
+
 - https://aur.archlinux.org/packages/brscan3/
 - https://aur.archlinux.org/packages/brother-mfc-j220/
 
 ### install printers
 
 #### canon
+
 - https://aur.archlinux.org/packages/cnijfilter-ip2700series/
 
 #### hp
+
 - https://aur.archlinux.org/packages/hplip-plugin/
 
 ### install some usb drivers
@@ -56,6 +64,7 @@ virtualgl lib32-virtualgl
 echo "activate LED"
 sed -i '2i EXTRA_CFLAGS += -DCONFIG_RTW_LED' src/8192eu/Makefile
 ```
+
 - https://aur.archlinux.org/packages/8192eu-dkms-git/
 
 --------------------------------------------------------------------------------
