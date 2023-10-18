@@ -11,6 +11,7 @@ inkscape
 steam openshot
 frei0r-plugins
 audacity faac sox
+steam-native-runtime
 
 ### install disk recovery tools
 ddrescue ext4magic foremost testdisk

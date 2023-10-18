@@ -39,6 +39,9 @@ tensorflow python-tensorflow tensorboard
 ### install image processing
 opencv python-opencv
 hdf5-openmpi vtk
+python-pytesseract
+tesseract-data-eng
+tesseract-data-ind
 
 ### install texlive
 texlive texlive-langenglish
