@@ -15,7 +15,7 @@ acpi acpid acpi_call-dkms
 
 ### install intel-nvidia driver
 
-```
+```sh
 echo "Install NVIDIA drivers first"
 ```
 

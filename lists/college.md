@@ -101,7 +101,7 @@ sed -i "s#'llvm-config'#'llvm-config-14'#g" src/llvmlite/ffi/build.py
 - https://aur.archlinux.org/packages/python-audioread/
 - https://aur.archlinux.org/packages/python-resampy/
 
-```
+```text
 depends += 'python-lazy-loader' 'python-msgpack'
 ```
 

@@ -401,7 +401,7 @@ EndSection' >  /etc/X11/xorg.conf.d/noblank.conf
 
 ### configure gitk (qemu-chroot)
 
-```
+```sh
 mkdir -p /home/alarm/.config/git/
 echo 'set mainfont {{Liberation Sans} 8}
 set textfont {{LiterationMono Nerd Font} 8}

@@ -68,7 +68,7 @@ echo "re-enabled headphone"
 alsactl init
 ```
 
-```
+```sh
 echo "
 change 'sysdefault: Headphone Mic:0'
 to 'sysdefault: Internal Mic:0'

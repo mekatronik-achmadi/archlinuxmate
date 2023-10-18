@@ -211,7 +211,7 @@ cp -r $IDF_PATH/examples/get-started/hello_world/ ./
 cd hello_world/
 ```
 
-```
+```sh
 echo '# idf_monitor.py only works in 74880 baudrate
 CONFIG_CONSOLE_UART_BAUDRATE=115200
 CONFIG_ESP_CONSOLE_UART_BAUDRATE=115200' > sdkconfig.defaults
@@ -246,7 +246,7 @@ cp -r $IDF_PATH/examples/get-started/blink/ ./
 cd blink/;
 ```
 
-```
+```sh
 echo '# disable outdated sertificate bundle
 CONFIG_MBEDTLS_CERTIFICATE_BUNDLE_DEFAULT_CMN=y
 ' > sdkconfig.defaults
