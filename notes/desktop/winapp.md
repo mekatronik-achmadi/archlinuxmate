@@ -30,7 +30,7 @@ sudo -g winenoinet LD_PRELOAD=  WINEPREFIX=~/WineDir/winefolder/ wine program.ex
 
 ### riched20.reg
 
-```txt
+```text
 REGEDIT4
 
 [HKEY_CURRENT_USER\Software\Wine\DllOverrides]
@@ -39,7 +39,7 @@ REGEDIT4
 
 ### gaming.reg
 
-```txt
+```text
 REGEDIT4
 
 [HKEY_CURRENT_USER\Software\Wine\Direct3D]
@@ -50,7 +50,7 @@ REGEDIT4
 
 ### vdesktop.reg
 
-```txt
+```text
 REGEDIT4
 
 [HKEY_CURRENT_USER\Software\Wine\Explorer\Desktops]
@@ -59,7 +59,7 @@ REGEDIT4
 
 ### gtktheme.reg
 
-```txt
+```text
 REGEDIT4
 
 [HKEY_CURRENT_USER\Software\Wine]
@@ -154,7 +154,7 @@ cd "~/WineDir/winesc/drive_c/Program Files/StarCraft_II/"
 LD_PRELOAD=  WINEPREFIX=~/WineDir/winesc/ wine "StarCraft II Offline.exe" &> /dev/null
 ```
 
-```txt
+```text
 login: dlr@dr.com
 ```
 
@@ -225,7 +225,7 @@ regedit gaming.reg
 wine directx_*/DXSETUP.exe
 ```
 
-```txt
+```text
 # Zero Hour Keys
 64UU-HJLH-PJCK-M7AK-KUE9
 PDWW-HYA4-TPQD-T8KT-ZC3J
@@ -252,7 +252,7 @@ mkdir -p "$HOME/Documents/Command And Conquer Generals Zero Hour Data/"
 echo '
 AntiAliasing = 1
 BuildingOcclusion = no
-DrawScrollAnchor = 
+DrawScrollAnchor =
 DynamicLOD = yes
 ExtraAnimations = no
 GameSpyIPAddress = 127.0.0.2
