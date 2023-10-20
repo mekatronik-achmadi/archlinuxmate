@@ -22,7 +22,7 @@ arduino arduino-cli arduino-ctags
 ### install serial terminal
 
 minicom picocom python-pyusb moserial
-python-pyserial dfu-util esptool screen
+python-pyserial dfu-util esptool socat screen
 
 --------------------------------------------------------------------------------
 
