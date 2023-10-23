@@ -563,6 +563,14 @@ sshfs sshuser@192.168.56.101:/home/sshuser sshmnt/ #enter password
 fusermount -u sshmnt/
 ```
 
+### QBittorrent Speed
+
+```text
+Preferences -> Speed:
+Set Global Rate Limits to infinity
+Set Alternative Rate Limits to infinity
+```
+
 ## Python
 
 ### python installation
