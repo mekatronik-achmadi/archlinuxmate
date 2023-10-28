@@ -15,6 +15,9 @@ remove_themes() {
 	rm -rf /usr/share/themes/GreenLaguna
 	rm -rf /usr/share/themes/TraditionalOkTest
 
+	rm -rf /usr/share/themes/YaruGreen
+	rm -rf /usr/share/themes/YaruOk
+
 	rm -rf /usr/share/themes/HighContrast
 	rm -rf /usr/share/themes/HighContrastInverse
 	rm -rf /usr/share/themes/ContrastHigh
@@ -33,9 +36,6 @@ remove_themes() {
 	rm -rf /usr/share/themes/Motif
 	rm -rf /usr/share/themes/Esco
 
-	rm -rf /usr/share/themes/TraditionalGreen
-	rm -rf /usr/share/themes/TraditionalOk
-
 	rm -rf /usr/share/themes/*-border
 }
 
@@ -49,8 +49,8 @@ remove_menus() {
     rm -f /usr/share/themes/BlueMenta/index.theme
     rm -f /usr/share/themes/Menta/index.theme
 
-    rm -f /usr/share/themes/YaruGreen/index.theme
-    rm -f /usr/share/themes/YaruOk/index.theme
+    rm -f /usr/share/themes/TraditionalGreen/index.theme
+    rm -f /usr/share/themes/TraditionalOk/index.theme
 }
 
 cursor_modify() {
