@@ -35,8 +35,6 @@ remove_themes() {
 
 	rm -rf /usr/share/themes/TraditionalGreen
 	rm -rf /usr/share/themes/TraditionalOk
-	rm -rf /usr/share/themes/YaruGreen
-	rm -rf /usr/share/themes/YaruOk
 
 	rm -rf /usr/share/themes/*-border
 }
@@ -50,6 +48,9 @@ remove_menus() {
     rm -f /usr/share/themes/BlackMATE/index.theme
     rm -f /usr/share/themes/BlueMenta/index.theme
     rm -f /usr/share/themes/Menta/index.theme
+
+    rm -f /usr/share/themes/YaruGreen/index.theme
+    rm -f /usr/share/themes/YaruOk/index.theme
 }
 
 cursor_modify() {
