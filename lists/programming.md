@@ -38,6 +38,12 @@ llvm llvm14
 npm nodejs
 jq yq yarn
 
+### install rust programming
+
+rust rust-musl rust-analyzer corrosion
+cargo-asm cargo-edit cargo-feature
+cargo-modules cargo-outdated
+
 --------------------------------------------------------------------------------
 
 ## AUR
@@ -53,19 +59,17 @@ jq yq yarn
 - https://aur.archlinux.org/packages/qwtplot3d-qt5/
 - https://aur.archlinux.org/packages/python-pyqt-qwt/
 
-### install programmming tools
+### install programmming editor
 
+- https://aur.archlinux.org/packages/eric/
 - https://aur.archlinux.org/packages/wxhexeditor/
 - https://aur.archlinux.org/packages/vscodium-bin/
+- https://aur.archlinux.org/packages/wxformbuilder/
 
 ### install system python bindings
 
 - https://aur.archlinux.org/packages/python-wifiwrapper/
 - https://aur.archlinux.org/packages/python-pyalsaaudio/
-
-### install wx programming
-
-- https://aur.archlinux.org/packages/wxformbuilder/
 
 ### install shell additional
 
