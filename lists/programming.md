@@ -40,9 +40,9 @@ jq yq yarn
 
 ### install rust programming
 
-rust rust-musl rust-analyzer corrosion
-cargo-asm cargo-edit cargo-feature
-cargo-modules cargo-outdated
+rust rust-musl rust-src rust-analyzer
+corrosion cargo-asm cargo-edit cargo-audit
+cargo-outdated cargo-feature cargo-modules
 
 --------------------------------------------------------------------------------
 
@@ -164,6 +164,7 @@ vim -c "CocInstall coc-tsserver coc-html"
 vim -c "CocInstall coc-sh coc-ultisnips"
 vim -c "CocInstall coc-clangd coc-jedi"
 vim -c "CocInstall coc-json coc-yaml"
+vim -c "CocInstall coc-rust-analyzer"
 vim +PlugClean
 
 echo "For editing PKGBUILD"
@@ -190,6 +191,8 @@ echo ":hi"
 - https://github.com/VSCodeVim/Vim/
 - https://github.com/clangd/vscode-clangd/
 - https://github.com/cschlosser/doxdocgen/
+- https://github.com/rust-lang/rust-analyzer/
+- https://github.com/Microsoft/vscode-python/
 
 ```sh
 #VSCONFDIR=~/.config/Code\ -\ OSS/User
