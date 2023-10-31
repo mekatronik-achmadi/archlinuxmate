@@ -10,9 +10,9 @@ inkscape
 
 ### install multimedia tools
 
-steam openshot
-frei0r-plugins
-audacity faac sox
+audacity cheese
+steam openshot sox
+frei0r-plugins faac
 steam-native-runtime
 
 ### install disk recovery tools
