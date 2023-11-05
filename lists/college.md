@@ -73,7 +73,6 @@ fftw liquid-dsp libsndfile
 ### install academic tools
 
 - https://aur.archlinux.org/packages/mendeleydesktop-bundled/
-- https://aur.archlinux.org/packages/rstudio-desktop-bin/
 - https://aur.archlinux.org/packages/drawio-desktop-bin/
 - https://aur.archlinux.org/packages/scidavis-qt5/
 

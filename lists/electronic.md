@@ -57,6 +57,7 @@ sed -i "s#'python2-pyserial' 'python2-cryptography' 'python2-pyparsing'##g" PKGB
 ### install arduino tools
 
 - https://aur.archlinux.org/packages/arduino-mk/
+- https://aur.archlinux.org/packages/arduino-ide-bin
 
 ### install simulator
 
@@ -128,13 +129,20 @@ sudo sed -i "s#Categories=Electronics;#Categories=Development;#g" /usr/share/app
 sudo sed -i 's#("-DAPP_DIR=$APPDIR")#("-DAPP_DIR=$APPDIR" "-Dawt.useSystemAAFontSettings=on" "-Dswing.aatext=true" "-Djdk.util.zip.ensureTrailingSlash=false")#g' /usr/share/arduino/arduino
 ```
 
-```sh
+```text
 File -> Preferences -> Additional Board Manager URLs
 Tools -> Board: -> Boards Manager
 
 https://arduino.esp8266.com/stable/package_esp8266com_index.json
 https://dan.drown.org/stm32duino/package_STM32duino_index.json
 https://dl.espressif.com/dl/package_esp32_index.json
+```
+
+```sh
+mkdir -p ~/Arduino/libraries/
+cd ~/Arduino/libraries/
+git clone https://github.com/sandeepmistry/arduino-LoRa.git
+git clone https://github.com/armtronix/arduino-LoRa-STM32.git
 ```
 
 ### configure st-link
