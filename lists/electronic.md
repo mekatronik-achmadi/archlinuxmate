@@ -141,8 +141,7 @@ https://dl.espressif.com/dl/package_esp32_index.json
 ```sh
 mkdir -p ~/Arduino/libraries/
 cd ~/Arduino/libraries/
-git clone https://github.com/sandeepmistry/arduino-LoRa.git
-git clone https://github.com/armtronix/arduino-LoRa-STM32.git
+git clone https://github.com/sandeepmistry/arduino-LoRa.git LoRa
 ```
 
 ### configure st-link
