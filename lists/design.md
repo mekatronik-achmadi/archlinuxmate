@@ -58,7 +58,9 @@ FreeCAD recommended plugins:
 - https://github.com/kbwbe/A2plus/
 - https://github.com/easyw/kicadStepUpMod/
 - https://github.com/looooo/freecad.gears/
+- https://github.com/FreeCAD/FreeCAD-render/
 - https://github.com/jmwright/cadquery-freecad-module/
+- https://github.com/TheRaytracers/freecad-povray-render/
 
 ### configure kicad
 
