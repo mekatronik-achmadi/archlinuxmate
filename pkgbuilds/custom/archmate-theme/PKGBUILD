@@ -21,7 +21,7 @@ package() {
     ####################### Theme Index ####################
 
 	cd ../
-    for i in Black Dark Faenza Light Mate Menta;do
+    for i in Black Classic Dark Faenza Light Mate Menta;do
 	    install -d $pkgdir/usr/share/themes/Standard-$i/;
 	    cp -f ./Standard-$i.theme $pkgdir/usr/share/themes/Standard-$i/index.theme;
     done

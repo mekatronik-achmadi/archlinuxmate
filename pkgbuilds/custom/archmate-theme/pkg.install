@@ -51,6 +51,8 @@ remove_menus() {
 
     rm -f /usr/share/themes/TraditionalGreen/index.theme
     rm -f /usr/share/themes/TraditionalOk/index.theme
+
+    rm -f /usr/share/themes/Chicago95/index.theme
 }
 
 cursor_modify() {

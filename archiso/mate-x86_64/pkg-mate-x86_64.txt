@@ -180,6 +180,7 @@ edk2-shell
 edk2-ovmf
 
 qt5gtk2 qt6gtk2
+chicago95-gtk-theme-git
 brisk-menu gtk3-nocsd-git
 mate-tweak bluementa-icon-theme
 
