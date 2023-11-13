@@ -13,7 +13,7 @@ depends=(
 	'gtk-update-icon-cache' 'icon-naming-utils'
     'papirus-icon-theme' 'gnome-icon-theme-extras'
     'mate-icon-theme' 'mate-icon-theme-faenza'
-    'bluementa-icon-theme')
+    'bluementa-icon-theme' 'chicago95-gtk-theme-git')
 install=pkg.install
 options=('!makeflags' '!strip')
 
