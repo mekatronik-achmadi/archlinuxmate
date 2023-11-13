@@ -27,11 +27,6 @@ python-tensorflow-cuda
 - https://aur.archlinux.org/packages/google-chrome/
 - https://aur.archlinux.org/packages/microsoft-edge-stable-bin/
 
-### install internet programs
-
-- https://aur.archlinux.org/packages/teams/
-- https://aur.archlinux.org/packages/teamviewer/
-
 ### nvidia
 
 #### nvidia-470 (utils,dkms,opencl)
@@ -54,13 +49,6 @@ python-tensorflow-cuda
 --------------------------------------------------------------------------------
 
 ## Configurations
-
-### configure teams login
-
-```sh
-echo 'adjust timezone'
-sudo ln -svf /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
-```
 
 ### configure nvidia
 
@@ -145,13 +133,4 @@ schemer_import
 ```sh
 # fix graphic low level issue
 echo "-Djogl.disable.openglarbcontext=1" | sudo tee -a /opt/mathworks/matlab-2018a/bin/glnxa64/java.opts
-```
-
-### configure teamviewer
-
-```sh
-sudo rm -f /usr/share/applications/teamviewerapi.desktop
-
-sudo systemctl enable teamviewerd
-sudo systemctl start teamviewerd
 ```
