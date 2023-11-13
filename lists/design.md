@@ -132,10 +132,13 @@ firefox http://xxx.xxx.xxx.xxx:8080/
 #### git diff server
 
 ```sh
+echo ".kiri" >> .gitignore
+
 kiri -S -r -k
 firefox http://127.0.0.1:8080/web/index.html
 ```
 
 #### additional tools
+
 - https://github.com/wokwi/easyeda2kicad/
 - https://wokwi.com/tools/easyeda2kicad/
