@@ -90,7 +90,7 @@ KiCAD recommended plugins:
 - https://github.com/bennymeg/JLC-Plugin-for-KiCad/
 - https://github.com/Bouni/kicad-jlcpcb-tools/
 - https://github.com/gregdavill/KiBuzzard/
-- https://gitlab.com/dennevi/Board2Pdf
+- https://gitlab.com/dennevi/Board2Pdf/
 
 #### kicad custom symbol/footprint
 
