@@ -5,9 +5,12 @@
 - 7Zip: https://www.7-zip.org/download.html
 - LiberationFontsTTF: https://github.com/liberationfonts/liberation-fonts/releases/tag/2.1.5
 - Firefox Browser: https://www.mozilla.org/id/firefox/all/#product-desktop-release
-- Ghostwriter: https://github.com/KDE/ghostwriter/releases
-  + Latest MSVC++: https://learn.microsoft.com/id-id/cpp/windows/latest-supported-vc-redist
+- Latest MSVC++: https://learn.microsoft.com/id-id/cpp/windows/latest-supported-vc-redist
 - CopyQ: https://github.com/hluk/CopyQ/releases
+- MarkText: https://www.marktext.cc/
+- WinMerge: https://winmerge.org/downloads/?lang=en
+- Geany: https://www.geany.org/download/releases/
+- Notepad++: https://notepad-plus-plus.org/downloads/
 
 ## Installation
 
