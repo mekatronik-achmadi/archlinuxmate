@@ -11,6 +11,7 @@
 - WinMerge: https://winmerge.org/downloads/?lang=en
 - Geany: https://www.geany.org/download/releases/
 - Notepad++: https://notepad-plus-plus.org/downloads/
+- Git: https://git-scm.com/download/win
 
 ## Installation
 
