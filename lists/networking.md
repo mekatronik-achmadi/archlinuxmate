@@ -31,12 +31,11 @@ mosquitto libwebsockets
 ### install meeting program
 
 - https://aur.archlinux.org/packages/zoom/
-- https://aur.archlinux.org/packages/teams/
+- https://aur.archlinux.org/packages/discord-ptb/
 
 ### install chat program
 
 - https://aur.archlinux.org/packages/whatsdesk-bin/
-- https://aur.archlinux.org/packages/discord-ptb
 
 ### install remote pc
 
@@ -46,7 +45,6 @@ mosquitto libwebsockets
 ### install http tools
 
 - https://aur.archlinux.org/packages/postman-bin/
-- https://aur.archlinux.org/packages/zenmap/
 
 --------------------------------------------------------------------------------
 
