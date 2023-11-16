@@ -9,9 +9,10 @@
 - CopyQ: https://github.com/hluk/CopyQ/releases
 - MarkText: https://www.marktext.cc/
 - WinMerge: https://winmerge.org/downloads/?lang=en
-- Geany: https://www.geany.org/download/releases/
 - Notepad++: https://notepad-plus-plus.org/downloads/
 - Git: https://git-scm.com/download/win
+- Git-Cola: https://git-cola.github.io/downloads.html
+- VSCodium: https://github.com/VSCodium/vscodium/releases/
 
 ## Installation
 

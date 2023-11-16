@@ -36,6 +36,7 @@ mosquitto libwebsockets
 ### install chat program
 
 - https://aur.archlinux.org/packages/whatsdesk-bin/
+- https://aur.archlinux.org/packages/discord-ptb
 
 ### install remote pc
 
