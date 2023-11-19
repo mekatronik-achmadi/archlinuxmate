@@ -131,7 +131,7 @@ echo 'OFF' | sudo tee /proc/acpi/bbswitch
 ### configure printer drivers
 
 ```sh
-echo "Categories=Application;Utility;" | sudo tee -a /usr/share/applications/hp-uiscan.desktop
+sudo rm -vf /usr/share/applications/hp-uiscan.desktop
 ```
 
 ### configure usb-wifi drivers
