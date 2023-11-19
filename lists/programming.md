@@ -35,8 +35,8 @@ llvm llvm14
 
 ### install javacript programming
 
-npm nodejs
-jq yq yarn
+npm nodejs jq
+yarn asar yq
 
 ### install rust programming
 

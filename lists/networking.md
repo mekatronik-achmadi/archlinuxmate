@@ -31,7 +31,7 @@ mosquitto libwebsockets
 ### install meeting program
 
 - https://aur.archlinux.org/packages/zoom/
-- https://aur.archlinux.org/packages/discord-ptb/
+- https://aur.archlinux.org/packages/discord-electron/
 
 ### install chat program
 
