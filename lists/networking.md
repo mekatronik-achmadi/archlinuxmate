@@ -5,6 +5,7 @@
 ### install web server
 
 openssl openssl-1.1
+lighttpd perl-cgi
 apache wt vsftpd
 
 ### install mysql
@@ -61,6 +62,13 @@ mosquitto libwebsockets
 --------------------------------------------------------------------------------
 
 ## Configurations
+
+### configure git web
+
+```sh
+ls ./.git
+git instaweb -l -p 5757
+```
 
 ### configure apache
 
@@ -186,3 +194,4 @@ sudo rm -f /usr/share/applications/teamviewerapi.desktop
 sudo systemctl enable teamviewerd
 sudo systemctl start teamviewerd
 ```
+

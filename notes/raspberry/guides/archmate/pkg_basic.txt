@@ -113,7 +113,7 @@ libva libva-utils
 libvdpau-va-gl
 vdpauinfo
 
-vsftpd perl-cgi
+vsftpd perl-cgi lighttpd
 apache fake-hwclock
 
 gpio-utils python-periphery
