@@ -31,6 +31,7 @@ kicad-library-3d ngspice
 
 - https://aur.archlinux.org/packages/kicad-diff-git/
 - https://aur.archlinux.org/packages/kiri-git/
+- https://aur.archlinux.org/packages/gerbv/
 
 --------------------------------------------------------------------------------
 
