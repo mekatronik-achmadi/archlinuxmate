@@ -38,6 +38,10 @@ python-tensorflow-cuda
 
 - https://aur.archlinux.org/packages/optimus-manager/
 
+### install remote pc
+
+- https://aur.archlinux.org/packages/teamviewer/
+
 --------------------------------------------------------------------------------
 
 ## External
@@ -93,6 +97,15 @@ sudo reboot
 lsmod | grep nvi
 lsmod | grep nou
 lspci | grep -i nvidia
+```
+
+### configure teamviewer
+
+```sh
+sudo rm -f /usr/share/applications/teamviewerapi.desktop
+
+sudo systemctl enable teamviewerd
+sudo systemctl start teamviewerd
 ```
 
 ### configure matlab
