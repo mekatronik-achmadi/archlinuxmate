@@ -73,6 +73,7 @@ fftw liquid-dsp libsndfile
 ### install academic tools
 
 - https://aur.archlinux.org/packages/mendeleydesktop-bundled/
+- https://aur.archlinux.org/packages/rstudio-desktop-bin/
 - https://aur.archlinux.org/packages/drawio-desktop-bin/
 - https://aur.archlinux.org/packages/scidavis-qt5/
 
@@ -153,6 +154,13 @@ echo 'NoDisplay=true' | sudo tee -a /usr/share/desktop-directories/wps-office.di
 ```sh
 sudo sed -i 's#mendeleydesktop %f#mendeleydesktop -style gtk %f#g' /usr/share/applications/mendeleydesktop.desktop
 sed -i 's#mendeleydesktop %f#mendeleydesktop -style gtk %f#g' ~/.local/share/applications/mendeleydesktop.desktop
+```
+
+### configure rstudio
+
+```sh
+sudo sed -i 's#Categories=Development#Categories=Education#g' \
+/usr/share/applications/rstudio.desktop
 ```
 
 ### configure texstudio

@@ -63,8 +63,13 @@ cargo-outdated cargo-feature cargo-modules
 
 - https://aur.archlinux.org/packages/eric/
 - https://aur.archlinux.org/packages/wxhexeditor/
-- https://aur.archlinux.org/packages/vscodium-bin/
 - https://aur.archlinux.org/packages/wxformbuilder/
+
+### install vscodium
+
+- https://aur.archlinux.org/packages/vscodium-bin/
+- https://aur.archlinux.org/packages/vscodium-bin-features/
+- https://aur.archlinux.org/packages/vscodium-bin-marketplace/
 
 ### install system python bindings
 
