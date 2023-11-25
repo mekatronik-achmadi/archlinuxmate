@@ -58,8 +58,12 @@ sed -i "s#'python2-pyserial' 'python2-cryptography' 'python2-pyparsing'##g" PKGB
 
 - https://aur.archlinux.org/packages/simavr/
 - https://aur.archlinux.org/packages/simulide/
-- https://aur.archlinux.org/packages/arduino-mk/
 - https://aur.archlinux.org/packages/simutron-svn/
+
+### install arduino editor
+
+- https://aur.archlinux.org/packages/arduino-mk/
+- https://aur.archlinux.org/packages/arduino-ide-bin/
 
 --------------------------------------------------------------------------------
 
