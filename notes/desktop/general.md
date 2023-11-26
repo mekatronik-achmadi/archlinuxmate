@@ -635,3 +635,57 @@ ipython kernel install --user --name=infrapyenv
 ```sh
 jupyter-notebook --no-browser
 ```
+
+## Android Tools
+
+### ADB
+
+#### basic setup
+
+```txt
+Settings -> Developer options
+```
+
+```sh
+adb devices
+adb shell
+```
+
+#### using Wifi
+
+```sh
+echo "connect on USB First"
+adb tcpip 5555
+
+echo "ping device wlan ip"
+ping <device_ip_address>
+
+echo "switch to wifi"
+adb connect <device_ip_address>:5555
+
+echo "disconnect USB and check"
+adb devices
+```
+
+#### restart
+
+```sh
+adb kill-server
+adb start-server
+
+adb connect <device_ip_address>:5555
+adb devices
+```
+
+### scrcpy
+
+```sh
+echo "via USB"
+scrcpy -w -S --disable-screensaver --no-audio
+
+echo "via WiFi"
+scrcpy -w -S -b2M -m800 --disable-screensaver --no-audio
+
+echo "selection"
+scrcpy -w -S --disable-screensaver --no-audio [-d/-e] <device>
+```
