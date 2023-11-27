@@ -665,6 +665,10 @@ adb connect <device_ip_address>:5555
 
 echo "disconnect USB and check"
 adb devices
+
+echo "back to usb"
+adb kill-server
+adb usb
 ```
 
 #### restart
@@ -686,7 +690,7 @@ scrcpy -w -S --disable-screensaver --no-audio
 echo "via WiFi"
 scrcpy -w -S -b2M -m800 --disable-screensaver --no-audio
 
-echo "selection"
+echo "device/port selection"
 scrcpy -w -S --disable-screensaver --no-audio [-d/-e] <device>
 scrcpy -w -S --disable-screensaver --no-audio --tcpip[=ip[:port]]
 ```
