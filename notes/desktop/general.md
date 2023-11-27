@@ -688,4 +688,5 @@ scrcpy -w -S -b2M -m800 --disable-screensaver --no-audio
 
 echo "selection"
 scrcpy -w -S --disable-screensaver --no-audio [-d/-e] <device>
+scrcpy -w -S --disable-screensaver --no-audio --tcpip[=ip[:port]]
 ```
