@@ -201,6 +201,10 @@ echo ":hi"
 - https://github.com/platformio/platformio-vscode-ide/ (disable clangd)
 
 ```sh
+sudo rm -vf /usr/share/applications/codium-wayland.desktop
+```
+
+```sh
 #VSCONFDIR=~/.config/Code\ -\ OSS/User
 VSCONFDIR=~/.config/VSCodium/User
 mkdir -p "$VSCONFDIR"
