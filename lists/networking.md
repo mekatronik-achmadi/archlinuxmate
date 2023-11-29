@@ -72,13 +72,6 @@ sudo systemctl enable teamviewerd
 sudo systemctl start teamviewerd
 ```
 
-### configure git web
-
-```sh
-ls ./.git
-git instaweb -l -p 5757
-```
-
 ### configure apache
 
 ```sh

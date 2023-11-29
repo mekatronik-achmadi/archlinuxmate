@@ -16,3 +16,6 @@ python-pymongo
 mosquitto libwebsockets
 
 docker docker-compose
+
+gitea memcached pam
+postgresql redis sqlite

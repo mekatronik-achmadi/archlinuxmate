@@ -2,6 +2,11 @@
 
 ## Official
 
+### install gitea server
+
+gitea memcached pam
+postgresql redis sqlite
+
 ### install qt programming
 
 qt5 qt6 qtcreator
@@ -43,6 +48,11 @@ yarn asar yq
 rust rust-musl rust-src rust-analyzer
 corrosion cargo-asm cargo-edit cargo-audit
 cargo-outdated cargo-feature cargo-modules
+
+### install golang programming
+
+go delve yaegi
+go-tools liteide
 
 --------------------------------------------------------------------------------
 
@@ -103,6 +113,15 @@ cargo-outdated cargo-feature cargo-modules
 --------------------------------------------------------------------------------
 
 ## Configurations
+
+### configure git server
+
+#### instant git web
+
+```sh
+ls ./.git
+git instaweb -l -p 5757
+```
 
 ### configure qtcreator
 
