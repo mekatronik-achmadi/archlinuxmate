@@ -66,7 +66,7 @@ export DEVDISK='/dev/sdb'
 sudo mount ${DEVDISK}2 /mnt/mmc/root
 sudo mount ${DEVDISK}1 /mnt/mmc/root/boot
 
-#sudo losetup --partscan --find --show armv7h.img
+#sudo losetup --partscan --find --show ../armv7h.img
 #sudo mkdir -p /mnt/mmc/root/mnt/pkgs/
 #sudo mount /dev/loop0 /mnt/mmc/root/mnt/pkgs/
 ```
@@ -635,6 +635,7 @@ exit
 
 ```sh
 #sudo umount /mnt/mmc/root/mnt/pkgs/
+#sudo losetup -d /dev/loop0
 
 sudo umount /mnt/mmc/root/boot/
 sudo umount /mnt/mmc/root/

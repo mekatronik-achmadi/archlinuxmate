@@ -2,7 +2,7 @@
 
 ## Setup Server
 
-### login ssh
+### login SSH
 
 ```sh
 ssh -Y alarm@10.124.4.150
@@ -145,4 +145,108 @@ git remote -v
 
 git branch
 git push gitlocal master
+```
+
+## Gitea Setup
+
+### login SSH
+
+```sh
+ssh -Y alarm@10.3.49.199
+```
+
+### config MySQL
+
+#### initialize database
+
+```sh
+sudo chown -R mysql /var/lib/mysql
+sudo mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
+
+sudo systemctl enable mysqld
+sudo systemctl start mysqld
+```
+
+#### create gitea database
+
+```sh
+sudo mariadb -u root
+
+CREATE DATABASE `gitea` DEFAULT CHARACTER SET `utf8mb4` COLLATE `utf8mb4_unicode_ci`;
+CREATE USER `gitea`@'localhost' IDENTIFIED BY '';
+GRANT ALL PRIVILEGES ON `gitea`.* TO `gitea`@`localhost`;
+FLUSH PRIVILEGES;
+
+exit
+```
+
+#### test gitea database
+
+```sh
+mariadb -u gitea -D gitea
+exit
+```
+
+### config Gitea
+
+#### app config
+
+```sh
+echo "DB_TYPE  = mysql
+HOST     = /var/run/mysqld/mysqld.sock
+NAME     = gitea
+USER     = gitea
+HTTP_ADDR = 0.0.0.0
+HTTP_PORT = 3000
+DISABLE_SSH = true
+" | sudo tee /etc/gitea/app.ini
+```
+
+#### run service
+
+```sh
+sudo systemctl enable gitea
+sudo systemctl start gitea
+```
+
+#### first install webpage
+
+```sh
+firefox http://10.3.49.199:3000/
+```
+
+#### repository name pattern
+
+```sh
+firefox http://10.3.49.199:3000/mekatronikachmadi/archlinuxmate
+```
+
+#### final settings
+
+```sh
+# app config
+sudo less /etc/gitea/app.ini
+
+# repositories path
+sudo ls -l /var/lib/gitea/data/gitea-repositories
+```
+
+#### reset database
+
+```sh
+sudo mariadb -u root
+
+DROP DATABASE gitea;
+CREATE DATABASE `gitea` DEFAULT CHARACTER SET `utf8mb4` COLLATE `utf8mb4_unicode_ci`;
+FLUSH PRIVILEGES;
+
+exit
+```
+
+#### adopt existing repositories
+
+```txt
+Account -> Site Administration -> Code Assets -> Repositories
+
+Unadopted Repositories -> Search -> Adopt Files
 ```

@@ -4,7 +4,7 @@
 
 ### install gitea server
 
-gitea memcached pam
+gitea tea memcached pam
 postgresql redis sqlite
 
 ### install qt programming

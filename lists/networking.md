@@ -92,6 +92,8 @@ w3m http://localhost/index.html
 
 ### configure mysql
 
+#### initialization
+
 ```sh
 sudo chown -R mysql /var/lib/mysql
 sudo mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
@@ -99,11 +101,13 @@ sudo mysql_install_db --user=mysql --basedir=/usr --datadir=/var/lib/mysql
 sudo systemctl enable mysqld
 sudo systemctl start mysqld
 
-sudo mysql -N -B -u root -e 'SHOW DATABASES'
+sudo mariadb -B -u root -e 'SHOW DATABASES'
 ```
 
+#### create new user
+
 ```sh
-sudo mysql -u root
+sudo mariadb -u root
 
 SELECT User,Host FROM mysql.user;
 CREATE USER 'sqluser'@localhost IDENTIFIED BY '';
@@ -113,13 +117,17 @@ FLUSH PRIVILEGES;
 exit
 ```
 
+#### check new user
+
 ```sh
-mysql -u sqluser
+mariadb -u sqluser
 exit
 ```
 
+#### remove new user
+
 ```sh
-sudo mysql -u root
+sudo mariadb -u root
 
 SELECT User,Host FROM mysql.user;
 DROP USER 'sqluser'@localhost;

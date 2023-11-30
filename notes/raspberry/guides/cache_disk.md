@@ -36,7 +36,6 @@ sudo rsync -avh packages/official/ /mnt/pkgs/packages/official/
 ```sh
 sudo umount /mnt/pkgs/
 sudo losetup -d /dev/loop0
-cd ../
 ```
 
 ## Cache Mount
@@ -44,7 +43,7 @@ cd ../
 ```sh
 # make sure new chroot already mounted on /mnt/mmc/root/
 
-sudo losetup --partscan --find --show armv7h.img
+sudo losetup --partscan --find --show ../armv7h.img
 sudo mkdir -p /mnt/mmc/root/mnt/pkgs/
 sudo mount /dev/loop0 /mnt/mmc/root/mnt/pkgs/
 ```

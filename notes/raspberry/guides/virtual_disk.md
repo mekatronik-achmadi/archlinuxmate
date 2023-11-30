@@ -56,10 +56,6 @@ sudo losetup --partscan --find --show rpi.img
 
 sudo mount -o rw /dev/loop0p2 /mnt/img/root/
 sudo mount -o rw /dev/loop0p1 /mnt/img/root/boot/
-
-#sudo losetup --partscan --find --show armv7h.img
-#sudo mkdir -p /mnt/mmc/root/mnt/pkgs/
-#sudo mount /dev/loop0 /mnt/mmc/root/mnt/pkgs/
 ```
 
 ```sh
