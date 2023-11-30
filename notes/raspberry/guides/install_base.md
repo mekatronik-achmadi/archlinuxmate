@@ -634,7 +634,8 @@ exit
 ### umount disk (host-pc)
 
 ```sh
-sudo umount /mnt/mmc/root/mnt/pkgs/
+#sudo umount /mnt/mmc/root/mnt/pkgs/
+
 sudo umount /mnt/mmc/root/boot/
 sudo umount /mnt/mmc/root/
 ```

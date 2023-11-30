@@ -287,6 +287,11 @@ sudo systemctl start systemd-timesyncd
 sudo ln -svf /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
 sudo date -s "28 MAR 2023 20:46:00"
 
+echo "LANG=en_US.UTF-8" > /etc/locale.conf
+echo "en_US ISO-8859-1" >> /etc/locale.gen
+echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
+locale-gen
+
 sudo mkdir -vp /var/lib/pacman/sync/
 sudo mkdir -vp /var/cache/pacman/pkg/
 
