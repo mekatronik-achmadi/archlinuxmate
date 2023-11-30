@@ -10,11 +10,10 @@ Basic requirement are:
 
 Arch Linux and derivaties distro including:
 
-- Manjaro
-- Chakra Linux
-- Velt OS
-- ArchBang
-- Anarchy
+- [Manjaro](https://manjaro.org/) (most recommended for beginner)
+- [Endeavor](https://endeavouros.com/)
+- [RebornOS](https://rebornos.org/)
+- [Garuda](https://garudalinux.org/)
 
 ### 2. Bash or Zsh familiarity
 
