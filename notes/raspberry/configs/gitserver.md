@@ -268,10 +268,14 @@ sudo systemctl start gitea
 firefox http://10.3.49.199:3000/
 ```
 
-#### repository name pattern
+#### repository URL pattern
 
-```sh
-firefox http://10.3.49.199:3000/mekatronikachmadi/archlinuxmate.git
+```txt
+# repository example
+http://10.3.49.199:3000/mekatronikachmadi/archlinuxmate.git
+
+# user profile repository
+http://10.3.49.199:3000/mekatronikachmadi/.profile
 ```
 
 #### final settings
