@@ -1,4 +1,6 @@
-# archlinuxmate
+# Arch Linux with Mate Desktop
+
+![archlinuxmate](./archlinuxmate.png)
 
 My Personal lists, scripts, and configurations for my Arch Linux with Mate Desktop installation.
 
