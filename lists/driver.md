@@ -78,6 +78,15 @@ sudo systemctl enable fake-hwclock fake-hwclock-save.timer
 sudo systemctl start fake-hwclock
 ```
 
+### configure new driver modeset
+
+```sh
+sudo sed -i 's#loglevel=3 quiet#loglevel=3 driver=nonfree nouveau.modeset=0 i915.modeset=1 radeon.modeset=1 quiet#' \
+/etc/default/grub
+
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+```
+
 ### configure nvidia
 
 #### prevent nouveau
