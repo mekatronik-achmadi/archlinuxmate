@@ -189,7 +189,7 @@ exit
 
 ### config Gitea
 
-#### app config
+#### initial config
 
 ```sh
 echo "DB_TYPE  = mysql
@@ -209,7 +209,7 @@ sudo systemctl enable gitea
 sudo systemctl start gitea
 ```
 
-#### first install webpage
+#### completing installation
 
 ```sh
 firefox http://10.3.49.199:3000/
@@ -218,7 +218,7 @@ firefox http://10.3.49.199:3000/
 #### repository name pattern
 
 ```sh
-firefox http://10.3.49.199:3000/mekatronikachmadi/archlinuxmate
+firefox http://10.3.49.199:3000/mekatronikachmadi/archlinuxmate.git
 ```
 
 #### final settings
@@ -231,7 +231,7 @@ sudo less /etc/gitea/app.ini
 sudo ls -l /var/lib/gitea/data/gitea-repositories
 ```
 
-#### reset database
+#### recreate database
 
 ```sh
 sudo mariadb -u root
