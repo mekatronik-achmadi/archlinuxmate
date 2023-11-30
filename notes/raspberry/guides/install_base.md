@@ -82,6 +82,11 @@ sudo arch-chroot /mnt/mmc/root /bin/bash
 ```
 
 ```sh
+echo "LANG=en_US.UTF-8" > /etc/locale.conf
+echo "en_US ISO-8859-1" >> /etc/locale.gen
+echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
+locale-gen
+
 pacman -V
 ```
 
@@ -99,14 +104,13 @@ exit
 sudo arch-chroot /mnt/mmc/root /bin/bash
 ```
 
-### initialize pacman keyring (qemu-chroot)
+### optionally initialize pacman keyring (qemu-chroot)
 
 ```sh
 # need internet connection and proper time setting
 
-pacman-key --init
-#pacman-key --refresh-keys # if failed
-pacman-key --populate archlinuxarm
+#pacman-key --init
+#pacman-key --populate archlinuxarm
 ```
 
 ### download database (host-pc)
@@ -156,6 +160,9 @@ sed -i "s#= Optional TrustAll#= Never#g" /etc/pacman.conf
 sed -i "s#= Optional#= Never#g" /etc/pacman.conf
 
 pacman -Su --noconfirm
+
+#export CACHEDIR=/mnt/pkgs/packages/official/
+#pacman -Su --noconfirm --cachedir $CACHEDIR
 ```
 
 ### copy install packages list (host-pc)
@@ -192,6 +199,9 @@ sed -i "s#= Optional TrustAll#= Never#g" /etc/pacman.conf
 sed -i "s#= Optional#= Never#g" /etc/pacman.conf
 
 pacman -S --noconfirm $(cat /home/alarm/basiclist.txt)
+
+#export CACHEDIR=/mnt/pkgs/packages/official/
+#pacman -S --noconfirm --cachedir $CACHEDIR $(cat /home/alarm/basiclist.txt)
 ```
 
 ### generate server/mate packages urls (qemu-chroot)
@@ -223,6 +233,9 @@ sed -i "s#= Optional TrustAll#= Never#g" /etc/pacman.conf
 sed -i "s#= Optional#= Never#g" /etc/pacman.conf
 
 pacman -S --noconfirm $(cat /home/alarm/serverlist.txt) $(cat /home/alarm/matelist.txt)
+
+#export CACHEDIR=/mnt/pkgs/packages/official/
+#pacman -S --noconfirm --cachedir $CACHEDIR $(cat /home/alarm/serverlist.txt) $(cat /home/alarm/matelist.txt)
 ```
 
 ### copy some mate desktop defaults (host-pc)
