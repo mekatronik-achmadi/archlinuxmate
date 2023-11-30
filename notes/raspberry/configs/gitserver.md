@@ -1,6 +1,6 @@
 # Git Server
 
-## Setup Server
+## Git Web
 
 ### login SSH
 
@@ -147,6 +147,8 @@ git branch
 git push gitlocal master
 ```
 
+-------------------------------------------------
+
 ## Gitea Setup
 
 ### login SSH
@@ -155,9 +157,11 @@ git push gitlocal master
 ssh -Y alarm@10.3.49.199
 ```
 
-### config MySQL
+### database setup
 
-#### initialize database
+#### simpler database (MySQL)
+
+##### initialize database
 
 ```sh
 sudo chown -R mysql /var/lib/mysql
@@ -167,7 +171,7 @@ sudo systemctl enable mysqld
 sudo systemctl start mysqld
 ```
 
-#### create gitea database
+##### create gitea database
 
 ```sh
 sudo mariadb -u root
@@ -180,27 +184,75 @@ FLUSH PRIVILEGES;
 exit
 ```
 
-#### test gitea database
-
 ```sh
+mariadb -u gitea -e "SHOW DATABASES;"
+
 mariadb -u gitea -D gitea
 exit
 ```
-
-### config Gitea
 
 #### initial config
 
 ```sh
 echo "DB_TYPE  = mysql
-HOST     = /var/run/mysqld/mysqld.sock
-NAME     = gitea
-USER     = gitea
+HOST = /var/run/mysqld/mysqld.sock
+NAME = gitea
+USER = gitea
+PASSWD =
 HTTP_ADDR = 0.0.0.0
 HTTP_PORT = 3000
 DISABLE_SSH = true
 " | sudo tee /etc/gitea/app.ini
 ```
+
+#### recommended database (PostgreSQL)
+
+Notes: Ignore all **could not change directory to "/home/alarm": Permission denied**
+
+##### initialize database
+
+```sh
+sudo chown -R postgres /var/lib/postgres/data/
+sudo -u postgres initdb --locale en_US.UTF-8 -D /var/lib/postgres/data
+sudo -u postgres psql -c "alter user postgres with password ''"
+
+sudo systemctl enable postgresql
+sudo systemctl start postgresql
+```
+
+##### create gitea database
+
+```sh
+sudo -u postgres createuser gitea
+sudo -u postgres createdb -O gitea gitea
+
+echo "local gitea gitea peer
+" sudo tee /var/lib/postgres/data/pg_hba.conf
+sudo systemctl restart postgresql
+```
+
+```sh
+sudo -u postgres psql -c "\l"
+
+sudo -u postgres psql --dbname=gitea --username=gitea
+exit
+```
+
+#### initial config
+
+```sh
+echo "DB_TYPE = postgres
+HOST = /run/postgresql/
+NAME = gitea
+USER = gitea
+PASSWD =
+HTTP_ADDR = 0.0.0.0
+HTTP_PORT = 3000
+DISABLE_SSH = true
+" | sudo tee /etc/gitea/app.ini
+```
+
+### run Gitea
 
 #### run service
 
@@ -212,6 +264,7 @@ sudo systemctl start gitea
 #### completing installation
 
 ```sh
+# make sure database type is correct
 firefox http://10.3.49.199:3000/
 ```
 
@@ -234,6 +287,7 @@ sudo ls -l /var/lib/gitea/data/gitea-repositories
 #### recreate database
 
 ```sh
+#MySQL
 sudo mariadb -u root
 
 DROP DATABASE gitea;
@@ -241,6 +295,12 @@ CREATE DATABASE `gitea` DEFAULT CHARACTER SET `utf8mb4` COLLATE `utf8mb4_unicode
 FLUSH PRIVILEGES;
 
 exit
+```
+
+```sh
+# PostgreSQL
+sudo -u postgres dropdb -U gitea gitea
+sudo -u postgres createdb -O gitea gitea
 ```
 
 #### adopt existing repositories
