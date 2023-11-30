@@ -18,9 +18,8 @@ yes | sudo parted ${DEVDISK} mkpart primary 0% 200
 yes | sudo parted ${DEVDISK} mkpart primary 200 100%
 
 yes | sudo mkfs.vfat -F 32 ${DEVDISK}1
-yes | sudo mkfs.ext4 ${DEVDISK}2
-
 yes | sudo parted ${DEVDISK} set 1 boot on
+yes | sudo mkfs.ext4 ${DEVDISK}2
 ```
 
 ### download image
@@ -41,8 +40,7 @@ sudo mkdir -p /mnt/mmc/{boot,root}
 sudo mount ${DEVDISK}1 /mnt/mmc/boot
 sudo mount ${DEVDISK}2 /mnt/mmc/root
 
-mkdir -p armv7h/
-cd armv7h/
+mkdir -p armv7h/;cd armv7h/
 
 sudo bsdtar -xpf ../ArchLinuxARM-rpi-armv7-latest.tar.gz -C /mnt/mmc/root
 sudo sync
@@ -67,6 +65,10 @@ export DEVDISK='/dev/sdb'
 ```sh
 sudo mount ${DEVDISK}2 /mnt/mmc/root
 sudo mount ${DEVDISK}1 /mnt/mmc/root/boot
+
+#sudo losetup --partscan --find --show armv7h.img
+#sudo mkdir -p /mnt/mmc/root/mnt/pkgs/
+#sudo mount /dev/loop0 /mnt/mmc/root/mnt/pkgs/
 ```
 
 ### copy qemu-arm-static (host-pc)
@@ -82,11 +84,6 @@ sudo arch-chroot /mnt/mmc/root /bin/bash
 ```
 
 ```sh
-echo "LANG=en_US.UTF-8" > /etc/locale.conf
-echo "en_US ISO-8859-1" >> /etc/locale.gen
-echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
-locale-gen
-
 pacman -V
 ```
 
@@ -111,6 +108,15 @@ sudo arch-chroot /mnt/mmc/root /bin/bash
 
 #pacman-key --init
 #pacman-key --populate archlinuxarm
+```
+
+### generate locale (qemu-chroot)
+
+```sh
+echo "LANG=en_US.UTF-8" > /etc/locale.conf
+echo "en_US ISO-8859-1" >> /etc/locale.gen
+echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
+locale-gen
 ```
 
 ### download database (host-pc)
@@ -290,15 +296,6 @@ echo 'kernel.printk = 3 3 3 3' > /etc/sysctl.d/20-quiet-printk.conf
 
 # if not using bluetooth
 echo 'dtoverlay=disable-bt' >> /boot/config.txt
-```
-
-### generate locale (qemu-chroot)
-
-```sh
-echo "LANG=en_US.UTF-8" > /etc/locale.conf
-echo "en_US ISO-8859-1" >> /etc/locale.gen
-echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
-locale-gen
 ```
 
 ### sudoers no password (qemu-chroot)
@@ -637,6 +634,7 @@ exit
 ### umount disk (host-pc)
 
 ```sh
+sudo umount /mnt/mmc/root/mnt/pkgs/
 sudo umount /mnt/mmc/root/boot/
 sudo umount /mnt/mmc/root/
 ```

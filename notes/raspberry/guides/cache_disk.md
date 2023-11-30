@@ -3,15 +3,12 @@
 ## Prepare VDisk
 
 ```sh
-qemu-img create armv7h.img 4G
-dd status=progress if=/dev/zero of=armv7h.img bs=1G count=4
+qemu-img create ../armv7h.img 2G
+dd status=progress if=/dev/zero of=armv7h.img bs=1G count=2
 
-```sh
-
-```sh
 sudo parted armv7h.img mklabel msdos
-
 yes | sudo parted armv7h.img mkpart primary 0% 100%
+
 sudo losetup --partscan --find --show armv7h.img
 sudo mkfs.ext4 /dev/loop0
 
@@ -30,20 +27,24 @@ sudo mount /dev/loop0 /mnt/pkgs/
 sudo mkdir -p /mnt/pkgs/databases/
 sudo mkdir -p /mnt/pkgs/packages/official/
 
-sudo rsync -avh armv7h/databases/ /mnt/pkgs/databases/
-sudo rsync -avh armv7h/packages/official/ /mnt/pkgs/packages/official/
+mkdir -p armv7h/;cd armv7h/
+
+sudo rsync -avh databases/ /mnt/pkgs/databases/
+sudo rsync -avh packages/official/ /mnt/pkgs/packages/official/
 ```
 
 ```sh
 sudo umount /mnt/pkgs/
 sudo losetup -d /dev/loop0
+cd ../
 ```
 
 ## Cache Mount
 
 ```sh
-sudo losetup --partscan --find --show armv7h.img
+# make sure new chroot already mounted on /mnt/mmc/root/
 
+sudo losetup --partscan --find --show armv7h.img
 sudo mkdir -p /mnt/mmc/root/mnt/pkgs/
 sudo mount /dev/loop0 /mnt/mmc/root/mnt/pkgs/
 ```
