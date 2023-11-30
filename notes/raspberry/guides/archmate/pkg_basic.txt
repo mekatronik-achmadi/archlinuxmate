@@ -16,7 +16,7 @@ posix-xsi posix-c-development
 mc highlight
 python lua perl
 hexedit most bat
-moc fdupes w3m lynx
+fdupes w3m lynx
 
 vim vim-nerdtree vim-surround
 vim-nerdcommenter vim-gitgutter

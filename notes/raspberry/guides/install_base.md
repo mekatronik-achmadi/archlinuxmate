@@ -7,7 +7,9 @@
 ```sh
 sudo fdisk -l
 export DEVDISK='/dev/sdb'
+```
 
+```sh
 sudo parted ${DEVDISK} mklabel msdos
 ```
 
@@ -19,7 +21,6 @@ yes | sudo mkfs.vfat -F 32 ${DEVDISK}1
 yes | sudo mkfs.ext4 ${DEVDISK}2
 
 yes | sudo parted ${DEVDISK} set 1 boot on
-yes | sudo parted ${DEVDISK} set 1 lba on
 ```
 
 ### download image
@@ -33,7 +34,9 @@ wget -c http://os.archlinuxarm.org/os/ArchLinuxARM-rpi-armv7-latest.tar.gz
 ```sh
 sudo fdisk -l
 export DEVDISK='/dev/sdb'
+```
 
+```sh
 sudo mkdir -p /mnt/mmc/{boot,root}
 sudo mount ${DEVDISK}1 /mnt/mmc/boot
 sudo mount ${DEVDISK}2 /mnt/mmc/root
@@ -59,7 +62,9 @@ sudo umount /mnt/mmc/root /mnt/mmc/boot
 ```sh
 sudo fdisk -l
 export DEVDISK='/dev/sdb'
+```
 
+```sh
 sudo mount ${DEVDISK}2 /mnt/mmc/root
 sudo mount ${DEVDISK}1 /mnt/mmc/root/boot
 ```
@@ -74,14 +79,13 @@ sudo cp -vf /usr/bin/qemu-arm-static /mnt/mmc/root/usr/bin/
 
 ```sh
 sudo arch-chroot /mnt/mmc/root /bin/bash
+```
 
-echo "LANG=en_US.UTF-8" > /etc/locale.conf
-echo "en_US ISO-8859-1" >> /etc/locale.gen
-echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
-locale-gen
-
+```sh
 pacman -V
+```
 
+```sh
 exit
 ```
 
@@ -99,6 +103,7 @@ sudo arch-chroot /mnt/mmc/root /bin/bash
 
 ```sh
 # need internet connection and proper time setting
+
 pacman-key --init
 #pacman-key --refresh-keys # if failed
 pacman-key --populate archlinuxarm
@@ -108,6 +113,7 @@ pacman-key --populate archlinuxarm
 
 ```sh
 mkdir -p databases/;cd databases/
+#rm -vf *.db
 echo "
 http://mirror.archlinuxarm.org/armv7h/core/core.db
 http://mirror.archlinuxarm.org/armv7h/extra/extra.db
@@ -118,6 +124,7 @@ http://mirror.archlinuxarm.org/armv7h/aur/aur.db
 wget -c -i ../dbase.txt
 cd ../
 
+sudo mkdir -p /mnt/mmc/root/var/lib/pacman/sync/
 sudo rsync -avh databases/ /mnt/mmc/root/var/lib/pacman/sync/
 ```
 
@@ -131,10 +138,13 @@ pacman -Sup > /home/alarm/upgrade_pkgs.txt
 
 ```sh
 cp -vf /mnt/mmc/root/home/alarm/upgrade_pkgs.txt ./
+
 mkdir -p packages/official/;cd packages/official/
+#rm -vf *.pkg.tar.xz;rm -vf *.pkg.tar.zst
 wget -c -i ../../upgrade_pkgs.txt
 cd ../../
 
+sudo mkdir -p /mnt/mmc/root/var/cache/pacman/pkg/
 sudo rsync -avh packages/official/ /mnt/mmc/root/var/cache/pacman/pkg/
 ```
 
@@ -166,6 +176,7 @@ pacman -Sp $(cat /home/alarm/basiclist.txt) > /home/alarm/basic_pkgs.txt
 
 ```sh
 cp -vf /mnt/mmc/root/home/alarm/basic_pkgs.txt ./
+
 mkdir -p packages/official/;cd packages/official/
 wget -c -i ../../basic_pkgs.txt
 cd ../../
@@ -195,6 +206,7 @@ pacman -Sp $(cat /home/alarm/matelist.txt) > /home/alarm/mate_pkgs.txt
 ```sh
 cp -vf /mnt/mmc/root/home/alarm/server_pkgs.txt ./
 cp -vf /mnt/mmc/root/home/alarm/mate_pkgs.txt ./
+
 mkdir -p packages/official/;cd packages/official/
 wget -c -i ../../server_pkgs.txt
 wget -c -i ../../mate_pkgs.txt
