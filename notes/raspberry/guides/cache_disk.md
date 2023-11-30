@@ -59,7 +59,8 @@ ls -1 /mnt/pkgs/databases/
 ls -1 /mnt/pkgs/packages/official/
 
 export CACHEDIR=/mnt/pkgs/packages/official/
-pacman -S --cachedir $CACHEDIR package_names
+pacman -Su --noconfirm
+pacman -S --noconfirm --cachedir $CACHEDIR package_names
 ```
 
 ```sh
