@@ -32,7 +32,6 @@ mosquitto libwebsockets
 ### install meeting program
 
 - https://aur.archlinux.org/packages/zoom/
-- https://aur.archlinux.org/packages/discord-electron/
 
 ### install chat program
 
@@ -41,7 +40,6 @@ mosquitto libwebsockets
 ### install remote pc
 
 - https://aur.archlinux.org/packages/anydesk-bin/
-- https://aur.archlinux.org/packages/teamviewer/
 
 ### install http tools
 
@@ -62,15 +60,6 @@ mosquitto libwebsockets
 --------------------------------------------------------------------------------
 
 ## Configurations
-
-### configure teamviewer
-
-```sh
-sudo rm -f /usr/share/applications/teamviewerapi.desktop
-
-sudo systemctl enable teamviewerd
-sudo systemctl start teamviewerd
-```
 
 ### configure apache
 

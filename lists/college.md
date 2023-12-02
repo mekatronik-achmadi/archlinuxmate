@@ -34,10 +34,9 @@ jupyter-notebook spyder
 
 ### install python additional
 
-python-invoke python-cffi
-python-flit python-html2text
 python-pyaudio python-sounddevice
 python-pillow python-beautifulsoup4
+python-invoke python-flit python-cffi
 
 ### install cpu machine learning
 
@@ -74,8 +73,8 @@ fftw liquid-dsp libsndfile
 ### install academic tools
 
 - https://aur.archlinux.org/packages/mendeleydesktop-bundled/
+- https://aur.archlinux.org/packages/rstudio-desktop-bin/
 - https://aur.archlinux.org/packages/drawio-desktop-bin/
-- https://aur.archlinux.org/packages/scidavis-qt5/
 
 ### install wps office
 
@@ -139,6 +138,12 @@ echo "unset _JAVA_OPTIONS"
 --------------------------------------------------------------------------------
 
 ## Configurations
+
+### configure rstudio
+
+```sh
+sudo sed -i "s#Categories=Development#Categories=Education#g" /usr/share/applications/rstudio.desktop
+```
 
 ### configure wps office
 

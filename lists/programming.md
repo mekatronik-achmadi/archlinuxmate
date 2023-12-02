@@ -4,8 +4,8 @@
 
 ### install gitea server
 
-gitea tea memcached pam
-postgresql redis sqlite
+gitea postgresql
+tea memcached redis
 
 ### install qt programming
 
@@ -40,8 +40,8 @@ llvm llvm14
 
 ### install javacript programming
 
-npm nodejs jq
-yarn asar yq
+npm nodejs
+yarn jq yq
 
 ### install rust programming
 

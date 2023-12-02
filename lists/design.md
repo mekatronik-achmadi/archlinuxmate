@@ -28,11 +28,10 @@ kicad-library-3d ngspice
 - https://aur.archlinux.org/packages/kicad-library-sparkfun-git/
 - https://aur.archlinux.org/packages/kicad-library-espressif-git/
 
-### install kicad tools
+### install kicad gitdiff
 
 - https://aur.archlinux.org/packages/kicad-diff-git/
 - https://aur.archlinux.org/packages/kiri-git/
-- https://aur.archlinux.org/packages/gerbv/
 
 --------------------------------------------------------------------------------
 

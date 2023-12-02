@@ -27,6 +27,10 @@ python-tensorflow-cuda
 - https://aur.archlinux.org/packages/google-chrome/
 - https://aur.archlinux.org/packages/microsoft-edge-stable-bin/
 
+### install internet programs
+- https://aur.archlinux.org/packages/teamviewer/
+- https://aur.archlinux.org/packages/discord-ptb/
+
 ### nvidia
 
 #### nvidia-470 (utils,dkms,opencl)
@@ -37,8 +41,6 @@ python-tensorflow-cuda
 #### nvidia-optimus
 
 - https://aur.archlinux.org/packages/optimus-manager/
-
-### install remote pc
 
 --------------------------------------------------------------------------------
 
@@ -51,6 +53,15 @@ python-tensorflow-cuda
 --------------------------------------------------------------------------------
 
 ## Configurations
+
+### configure teamviewer
+
+```sh
+sudo rm -f /usr/share/applications/teamviewerapi.desktop
+
+sudo systemctl enable teamviewerd
+sudo systemctl start teamviewerd
+```
 
 ### configure nvidia
 
