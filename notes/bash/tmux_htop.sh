@@ -24,7 +24,7 @@ if [ $? != 0 ]; then
 	tmux split-window -h -t $session
 
 ################# start programs in each pane #################
-    tmux send-keys -t $session:0.0 'ifconfig;df-h' C-m
+    tmux send-keys -t $session:0.0 'ifconfig;df -h' C-m
 	tmux send-keys -t $session:0.1 'htop' C-m
 
 ################# actual tmux running #################
