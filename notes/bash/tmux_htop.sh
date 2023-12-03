@@ -4,12 +4,6 @@
 tmux_path=$(command -v tmux)
 if [ -z "$tmux_path" ];then echo "tmux not found";exit;fi
 
-watch_path=$(command -v watch)
-if [ -z "$watch_path" ];then echo "watch not found";exit;fi
-
-sensors_path=$(command -v sensors)
-if [ -z "$sensors_path" ];then echo "sensors not found";exit;fi
-
 htop_path=$(command -v htop)
 if [ -z "$htop_path" ];then echo "htop not found";exit;fi
 
@@ -17,27 +11,21 @@ ifconfig_path=$(command -v ifconfig)
 if [ -z "$ifconfig_path" ];then echo "ifconfig not found";exit;fi
 
 df_path=$(command -v df)
-if [ -z "$df_path" ];then echo "df not found";exit;fi
+if [ -z "$ifconfig_path" ];then echo "df not found";exit;fi
 
 ################# start and check session #################
-session="watch_info"
+session="htop_info"
 tmux has-session -t $session 2>/dev/null
 
 if [ $? != 0 ]; then
 	tmux new -d -s $session
 
-################# split window into 4 panes #################
-	tmux split-window -v -t $session
-	tmux select-pane -t 0
-	tmux split-window -h -t $session
-	tmux select-pane -t 2
+################# split window into 2 panes #################
 	tmux split-window -h -t $session
 
 ################# start programs in each pane #################
-	tmux send-keys -t $session:0.0 'htop' C-m
-	tmux send-keys -t $session:0.1 'watch ifconfig' C-m
-	tmux send-keys -t $session:0.2 'watch -n1 df -h' C-m
-	tmux send-keys -t $session:0.3 'watch -n1 sensors' C-m
+    tmux send-keys -t $session:0.0 'ifconfig;df-h' C-m
+	tmux send-keys -t $session:0.1 'htop' C-m
 
 ################# actual tmux running #################
 	tmux attach -t $session

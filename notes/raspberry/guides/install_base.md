@@ -289,7 +289,8 @@ echo "alarmrpi" > /etc/hostname
 ```sh
 echo '
 boot_delay=0
-disable_splash=1' >> /boot/config.txt
+disable_splash=1
+avoid_warnings=1' >> /boot/config.txt
 
 sed -i '$s/$/ audit=0 quiet loglevel=0/' /boot/cmdline.txt
 echo 'kernel.printk = 3 3 3 3' > /etc/sysctl.d/20-quiet-printk.conf
@@ -545,8 +546,11 @@ if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
     echo "SSH Login Success"
 else
     if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
-        # for cli or tigervnc
+        # for idle cli or tigervnc
         true
+
+        # for runnable scripts
+        #bash ~/script.sh
 
         # for actual display
         #exec startx
