@@ -16,7 +16,7 @@ session="process"
 tmux new -d -s $session
 tmux split-window -v -t $session
 
-tmux send-keys -t $session:0.0 'htop' C-m
+tmux send-keys -t $session:0.0 'htop -t' C-m
 tmux send-keys -t $session:0.1 'watch -n1 nvidia-smi' C-m
 
 tmux attach -t $session
