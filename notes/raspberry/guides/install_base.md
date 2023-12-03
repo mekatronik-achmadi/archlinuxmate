@@ -659,5 +659,7 @@ sudo umount /mnt/mmc/root/
 ### clear url list files (host-pc)
 
 ```sh
- rm -vf dbase.txt upgrade_pkgs.txt basic_pkgs.txt server_pkgs.txt mate_pkgs.txt
+rm -vf dbase.txt upgrade_pkgs.txt \
+basic_pkgs.txt more_pkgs.txt \
+server_pkgs.txt mate_pkgs.txt
 ```
