@@ -214,7 +214,6 @@ Notes: Ignore all **could not change directory to "/home/alarm": Permission deni
 ```sh
 sudo chown -R postgres /var/lib/postgres/data/
 sudo -u postgres initdb --locale en_US.UTF-8 -D /var/lib/postgres/data
-sudo -u postgres psql -c "alter user postgres with password ''"
 
 sudo systemctl enable postgresql
 sudo systemctl start postgresql
@@ -223,6 +222,7 @@ sudo systemctl start postgresql
 ##### create gitea database
 
 ```sh
+sudo -u postgres psql -c "alter user postgres with password ''"
 sudo -u postgres createuser gitea
 sudo -u postgres createdb -O gitea gitea
 
