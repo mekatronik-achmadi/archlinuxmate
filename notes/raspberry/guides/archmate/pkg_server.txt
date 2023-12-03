@@ -1,3 +1,6 @@
+vsftpd perl-cgi lighttpd
+apache fake-hwclock
+
 openssl openssl-1.1
 
 jq yq

@@ -22,20 +22,6 @@ vim vim-nerdtree vim-surround
 vim-nerdcommenter vim-gitgutter
 vim-airline vim-tagbar vim-tabular
 
-xorg xorg-apps xorg-drivers
-xorg-xinit xorg-fonts
-xinput_calibrator
-xsel xclip xterm
-xorg-fonts-misc
-
-tk ttf-liberation-mono-nerd
-fontforge ttf-liberation ttf-dejavu
-
-gtk3 wxgtk3 gtk2
-python-wxpython
-python-gobject
-gtkmm gtkmm3
-
 networkmanager nm-connection-editor
 network-manager-applet modemmanager
 mobile-broadband-provider-info iftop
@@ -47,50 +33,6 @@ traceroute dhcp dnsmasq nss-mdns
 openresolv dhclient dhcpcd mtr
 gnu-netcat nmap termshark
 tcpdump fping inetutils
-
-android-file-transfer
-android-udev python-pyudev
-
-pulseaudio portaudio
-jack2 pulseaudio-jack
-alsa-utils alsa-firmware
-alsa-ucm-conf sof-firmware
-alsa-oss alsa-lib alsa-plugins
-pulseaudio-equalizer pavucontrol
-pulseaudio-alsa pulseaudio-bluetooth
-
-git tig github-cli
-bear hub subversion
-autoconf meson ninja
-vala autogen automake
-cblas openblas lapack
-pkgconf gendesk help2man
-mercurial breezy cvs cloc
-cmake extra-cmake-modules
-dos2unix doxygen graphviz
-tcsh gobject-introspection
-
-python-pkgconfig python-wheel
-python-build python-installer
-python-pipenv python-virtualenv
-python-pip python-distutils-extra
-cython0 pybind11 python-setuptools
-
-firefox qbittorrent
-aria2 qbittorrent-nox
-
-blueman bluez
-bluez-utils
-
-gstreamer gst-libav
-vlc rhythmbox mpv
-ffmpegthumbnailer
-gst-plugins-base
-gst-plugins-good
-gst-plugins-ugly
-gst-plugins-bad
-gstreamer-vaapi
-guvcview ffmpeg
 
 lm_sensors xsensors hddtemp
 htop atop dstat libstatgrab
@@ -107,18 +49,6 @@ gpart e2fsprogs
 gptfdisk mtools
 fuse2 fuse3
 
-libva-vdpau-driver
-libva-mesa-driver
-libva libva-utils
-libvdpau-va-gl
-vdpauinfo
-
-vsftpd perl-cgi lighttpd
-apache fake-hwclock
-
 gpio-utils python-periphery
 wiringpi python-wiringx-git
 
-python-numpy python-requests
-python-scipy python-matplotlib
-sox python-pandas python-pyqt5

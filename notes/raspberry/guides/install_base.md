@@ -175,6 +175,7 @@ pacman -Su --noconfirm
 
 ```sh
 cp -vf ../archmate/pkg_basic.txt /mnt/mmc/root/home/alarm/basiclist.txt
+cp -vf ../archmate/pkg_more.txt /mnt/mmc/root/home/alarm/morelist.txt
 cp -vf ../archmate/pkg_server.txt /mnt/mmc/root/home/alarm/serverlist.txt
 cp -vf ../archmate/pkg_mate.txt /mnt/mmc/root/home/alarm/matelist.txt
 ```
@@ -213,6 +214,7 @@ pacman -S --noconfirm $(cat /home/alarm/basiclist.txt)
 ### generate server/mate packages urls (qemu-chroot)
 
 ```sh
+pacman -Sp $(cat /home/alarm/morelist.txt) > /home/alarm/more_pkgs.txt
 pacman -Sp $(cat /home/alarm/serverlist.txt) > /home/alarm/server_pkgs.txt
 pacman -Sp $(cat /home/alarm/matelist.txt) > /home/alarm/mate_pkgs.txt
 ```
@@ -220,10 +222,12 @@ pacman -Sp $(cat /home/alarm/matelist.txt) > /home/alarm/mate_pkgs.txt
 ### download server/mate packages (host-pc)
 
 ```sh
+cp -vf /mnt/mmc/root/home/alarm/more_pkgs.txt ./
 cp -vf /mnt/mmc/root/home/alarm/server_pkgs.txt ./
 cp -vf /mnt/mmc/root/home/alarm/mate_pkgs.txt ./
 
 mkdir -p packages/official/;cd packages/official/
+wget -c -i ../../more_pkgs.txt
 wget -c -i ../../server_pkgs.txt
 wget -c -i ../../mate_pkgs.txt
 cd ../../
@@ -238,10 +242,16 @@ sed -i "s#= Required DatabaseOptional#= Never#g" /etc/pacman.conf
 sed -i "s#= Optional TrustAll#= Never#g" /etc/pacman.conf
 sed -i "s#= Optional#= Never#g" /etc/pacman.conf
 
-pacman -S --noconfirm $(cat /home/alarm/serverlist.txt) $(cat /home/alarm/matelist.txt)
+pacman -S --noconfirm \
+$(cat /home/alarm/morelist.txt) \
+$(cat /home/alarm/serverlist.txt) \
+$(cat /home/alarm/matelist.txt)
 
 #export CACHEDIR=/mnt/pkgs/packages/official/
-#pacman -S --noconfirm --cachedir $CACHEDIR $(cat /home/alarm/serverlist.txt) $(cat /home/alarm/matelist.txt)
+#pacman -S --noconfirm --cachedir $CACHEDIR \
+#$(cat /home/alarm/morelist.txt) \
+#$(cat /home/alarm/serverlist.txt) \
+#$(cat /home/alarm/matelist.txt)
 ```
 
 ### copy some mate desktop defaults (host-pc)
@@ -398,81 +408,6 @@ TTYVTDisallocate=no
 " > /etc/systemd/system/getty@tty1.service.d/noclear.conf
 ```
 
-## Xorg Configuration
-
-### fbdev config file (qemu-chroot)
-
-```sh
-echo 'Section "Device"
-    Identifier    "FBDEV"
-    Driver        "fbdev"
-    Option        "fbdev" "/dev/fb0"
-    Option        "SwapbufferWait" "true"
-EndSection' > /etc/X11/xorg.conf.d/99-fbdev.conf
-```
-
-### xorg no blank (qemu-chroot)
-
-```sh
-echo 'Section "ServerFlags"
-    Option "StandbyTime" "0"
-    Option "SuspendTime" "0"
-    Option "OffTime" "0"
-    Option "BlankTime" "0"
-EndSection' >  /etc/X11/xorg.conf.d/noblank.conf
-```
-
-### configure gitk (qemu-chroot)
-
-```sh
-mkdir -p /home/alarm/.config/git/
-echo 'set mainfont {{Liberation Sans} 8}
-set textfont {{LiterationMono Nerd Font} 8}
-set uifont {{Liberation Sans} 8 bold}' > /home/alarm/.config/git/gitk
-chown -Rvf alarm:alarm /home/alarm/.config/
-```
-
-### configure xterm (qemu-chroot)
-
-```sh
-echo "XTerm*faceName: LiterationMono Nerd Font Mono
-XTerm*faceSize: 8
-XTerm*background: white
-XTerm*foreground: black
-XTerm*selectToClipboard: true
-XTerm*eightBitInput: false
-XTerm*eightBitOutput: true
-XClock.Clock.face: Liberation Sans:size=9
-Xft.autohint: 0
-Xft.antialias: 1
-Xft.hinting: true
-Xft.hintstyle: hintslight
-Xft.dpi: 96
-Xft.rgba: rgb
-Xft.lcdfilter: lcddefault" | tee /home/alarm/.Xdefaults
-chown -vf alarm:alarm /home/alarm/.Xdefaults
-```
-
-### configure gtk theme (qemu-chroot)
-
-```sh
-mkdir -p /etc/gtk-2.0/
-echo '
-gtk-icon-theme-name = "menta"
-gtk-theme-name = "Menta"
-gtk-font-name = "Liberation Sans 8"
-' | tee /etc/gtk-2.0/gtkrc
-
-mkdir -p /etc/gtk-3.0/
-echo '
-[Settings]
-gtk-icon-theme-name = menta
-gtk-theme-name = Menta
-gtk-font-name = Liberation Sans 8
-gtk-application-prefer-dark-theme = false
-' | tee /etc/gtk-3.0/settings.ini
-```
-
 ### some profiles (qemu-chroot)
 
 ```sh
@@ -557,6 +492,81 @@ else
     fi
 fi' | tee /home/alarm/.bash_profile
 chown -vf alarm:alarm /home/alarm/.bash_profile
+```
+
+## Xorg Configuration
+
+### fbdev config file (qemu-chroot)
+
+```sh
+echo 'Section "Device"
+    Identifier    "FBDEV"
+    Driver        "fbdev"
+    Option        "fbdev" "/dev/fb0"
+    Option        "SwapbufferWait" "true"
+EndSection' > /etc/X11/xorg.conf.d/99-fbdev.conf
+```
+
+### xorg no blank (qemu-chroot)
+
+```sh
+echo 'Section "ServerFlags"
+    Option "StandbyTime" "0"
+    Option "SuspendTime" "0"
+    Option "OffTime" "0"
+    Option "BlankTime" "0"
+EndSection' >  /etc/X11/xorg.conf.d/noblank.conf
+```
+
+### configure gitk (qemu-chroot)
+
+```sh
+mkdir -p /home/alarm/.config/git/
+echo 'set mainfont {{Liberation Sans} 8}
+set textfont {{LiterationMono Nerd Font} 8}
+set uifont {{Liberation Sans} 8 bold}' > /home/alarm/.config/git/gitk
+chown -Rvf alarm:alarm /home/alarm/.config/
+```
+
+### configure xterm (qemu-chroot)
+
+```sh
+echo "XTerm*faceName: LiterationMono Nerd Font Mono
+XTerm*faceSize: 8
+XTerm*background: white
+XTerm*foreground: black
+XTerm*selectToClipboard: true
+XTerm*eightBitInput: false
+XTerm*eightBitOutput: true
+XClock.Clock.face: Liberation Sans:size=9
+Xft.autohint: 0
+Xft.antialias: 1
+Xft.hinting: true
+Xft.hintstyle: hintslight
+Xft.dpi: 96
+Xft.rgba: rgb
+Xft.lcdfilter: lcddefault" | tee /home/alarm/.Xdefaults
+chown -vf alarm:alarm /home/alarm/.Xdefaults
+```
+
+### configure gtk theme (qemu-chroot)
+
+```sh
+mkdir -p /etc/gtk-2.0/
+echo '
+gtk-icon-theme-name = "menta"
+gtk-theme-name = "Menta"
+gtk-font-name = "Liberation Sans 8"
+' | tee /etc/gtk-2.0/gtkrc
+
+mkdir -p /etc/gtk-3.0/
+echo '
+[Settings]
+gtk-icon-theme-name = menta
+gtk-theme-name = Menta
+gtk-font-name = Liberation Sans 8
+gtk-application-prefer-dark-theme = false
+' | tee /etc/gtk-3.0/settings.ini
 ```
 
 ### configure startx (qemu-chroot)
