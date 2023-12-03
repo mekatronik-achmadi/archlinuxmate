@@ -5,7 +5,7 @@
 ### install gitea server
 
 gitea postgresql
-tea memcached redis
+memcached redis
 
 ### install qt programming
 
@@ -51,8 +51,8 @@ cargo-outdated cargo-feature cargo-modules
 
 ### install golang programming
 
-go delve yaegi
-go-tools liteide
+go go-tools
+delve yaegi
 
 --------------------------------------------------------------------------------
 
@@ -217,6 +217,7 @@ echo ":hi"
 - https://github.com/cschlosser/doxdocgen/
 - https://github.com/rust-lang/rust-analyzer/
 - https://github.com/Microsoft/vscode-python/
+- https://github.com/golang/vscode-go/
 - https://github.com/platformio/platformio-vscode-ide/ (disable clangd)
 
 ```sh
@@ -261,10 +262,4 @@ Diagnostics:
 
 # Disable header cleaning
 sed -i 's@UnusedIncludes: Strict@UnusedIncludes: None@g' ~/.config/clangd/config.yaml
-```
-
-### configure electron
-
-```sh
-sudo rm -vf /usr/share/applications/electron*.desktop
 ```

@@ -17,5 +17,5 @@ mosquitto libwebsockets
 
 docker docker-compose
 
-gitea tea memcached pam
-postgresql redis sqlite
+gitea memcached
+postgresql redis

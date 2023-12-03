@@ -16,6 +16,7 @@
   + Linting
   + Nativefier
   + Checkdepends
+  + Official Electron
 - User programs priorities:
   + Both GUI/CLI
   + Only CLI
