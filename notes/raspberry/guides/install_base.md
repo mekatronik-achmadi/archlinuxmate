@@ -634,6 +634,7 @@ rm -rf /usr/share/themes/*-border
 ```sh
 rm -vf /home/alarm/{upgrade_pkgs.txt}
 rm -vf /home/alarm/{basic_pkgs.txt,basiclist.txt}
+rm -vf /home/alarm/{more_pkgs.txt,morelist.txt}
 rm -vf /home/alarm/{server_pkgs.txt,serverlist.txt}
 rm -vf /home/alarm/{mate_pkgs.txt,matelist.txt}
 rm -vf /var/cache/pacman/pkg/*
