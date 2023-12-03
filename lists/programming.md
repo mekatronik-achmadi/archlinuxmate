@@ -187,9 +187,6 @@ vim -c "CocInstall coc-pairs coc-snippets"
 vim -c "CocInstall coc-sh coc-ultisnips"
 vim -c "CocInstall coc-clangd coc-jedi"
 vim -c "CocInstall coc-json coc-yaml"
-vim +PlugClean
-
-vim +PlugInstall
 vim -c "CocInstall coc-go coc-rust-analyzer"
 vim -c "CocInstall coc-tsserver coc-html"
 vim +PlugClean
