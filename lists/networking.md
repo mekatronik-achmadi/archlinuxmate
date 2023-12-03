@@ -53,10 +53,6 @@ mosquitto libwebsockets
 
 - https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/optional/telegram-bin/
 
-### install cisco packet simulator
-
-- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/optional/packettracer/
-
 --------------------------------------------------------------------------------
 
 ## Configurations

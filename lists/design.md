@@ -20,7 +20,6 @@ kicad-library-3d ngspice
 
 - https://aur.archlinux.org/packages/cura-bin/
 - https://aur.archlinux.org/packages/openssl-1.0/ (--skippgpcheck)
-- https://aur.archlinux.org/packages/easyeda-pro-bin/
 
 ### install kicad library
 

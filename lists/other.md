@@ -28,8 +28,13 @@ python-tensorflow-cuda
 - https://aur.archlinux.org/packages/microsoft-edge-stable-bin/
 
 ### install internet programs
+
 - https://aur.archlinux.org/packages/teamviewer/
 - https://aur.archlinux.org/packages/discord-ptb/
+
+### install electronic tools
+- https://aur.archlinux.org/packages/arduino-ide-bin/
+- https://aur.archlinux.org/packages/easyeda-pro-bin/
 
 ### nvidia
 
@@ -49,6 +54,10 @@ python-tensorflow-cuda
 ### install matlab binary
 
 - https://github.com/mekatronik-achmadi/archmate/tree/master/pkgbuilds/optional/matlab-bin-basic/
+
+### install cisco packet simulator
+
+- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/optional/packettracer/
 
 --------------------------------------------------------------------------------
 
