@@ -51,8 +51,8 @@ cargo-outdated cargo-feature cargo-modules
 
 ### install golang programming
 
-go go-tools
-delve yaegi
+go gopls delve
+go-tools yaegi
 
 --------------------------------------------------------------------------------
 
@@ -184,11 +184,14 @@ mkdir -p ~/.vim/pack/plug/start/
 
 vim +PlugInstall
 vim -c "CocInstall coc-pairs coc-snippets"
-vim -c "CocInstall coc-tsserver coc-html"
 vim -c "CocInstall coc-sh coc-ultisnips"
 vim -c "CocInstall coc-clangd coc-jedi"
 vim -c "CocInstall coc-json coc-yaml"
-vim -c "CocInstall coc-rust-analyzer"
+vim +PlugClean
+
+vim +PlugInstall
+vim -c "CocInstall coc-go coc-rust-analyzer"
+vim -c "CocInstall coc-tsserver coc-html"
 vim +PlugClean
 
 echo "For editing PKGBUILD"
