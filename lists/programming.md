@@ -218,6 +218,7 @@ echo ":hi"
 - https://github.com/rust-lang/rust-analyzer/
 - https://github.com/Microsoft/vscode-python/
 - https://github.com/golang/vscode-go/
+- https://github.com/Microsoft/vscode-arduino.git/
 - https://github.com/platformio/platformio-vscode-ide/ (disable clangd)
 
 ```sh

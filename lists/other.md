@@ -54,7 +54,15 @@ python-tensorflow-cuda
 
 ### install cisco packet simulator
 
-- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/optional/packettracer/
+- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/unused/packettracer/
+
+### install cadsoft eagle
+
+- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/unused/eaglecad/
+
+### install youtube program
+
+- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/unused/youtubemusic/
 
 --------------------------------------------------------------------------------
 
