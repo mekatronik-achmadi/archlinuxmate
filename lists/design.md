@@ -19,18 +19,13 @@ kicad-library-3d ngspice
 ### install cad tools
 
 - https://aur.archlinux.org/packages/cura-bin/
-- https://aur.archlinux.org/packages/openssl-1.0/ (--skippgpcheck)
+- https://aur.archlinux.org/packages/easyeda-pro-electron/
 
 ### install kicad library
 
 - https://aur.archlinux.org/packages/kicad-library-digikey-git/
 - https://aur.archlinux.org/packages/kicad-library-sparkfun-git/
 - https://aur.archlinux.org/packages/kicad-library-espressif-git/
-
-### install kicad gitdiff
-
-- https://aur.archlinux.org/packages/kicad-diff-git/
-- https://aur.archlinux.org/packages/kiri-git/
 
 --------------------------------------------------------------------------------
 
@@ -40,10 +35,6 @@ kicad-library-3d ngspice
 
 - https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/optional/kicad-seeed/
 - https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/optional/kicad-user/
-
-### install cadsoft eagle
-
-- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/optional/eaglecad/
 
 --------------------------------------------------------------------------------
 
@@ -131,17 +122,3 @@ yarn start
 firefox http://localhost:8080/
 firefox http://xxx.xxx.xxx.xxx:8080/
 ```
-
-#### git diff server
-
-```sh
-echo ".kiri" >> .gitignore
-
-kiri -S -r -k
-firefox http://127.0.0.1:8080/web/index.html
-```
-
-#### additional tools
-
-- https://github.com/wokwi/easyeda2kicad/
-- https://wokwi.com/tools/easyeda2kicad/

@@ -30,11 +30,8 @@ python-tensorflow-cuda
 ### install internet programs
 
 - https://aur.archlinux.org/packages/teamviewer/
-- https://aur.archlinux.org/packages/discord-ptb/
-
-### install electronic tools
-- https://aur.archlinux.org/packages/arduino-ide-bin/
-- https://aur.archlinux.org/packages/easyeda-pro-bin/
+- https://aur.archlinux.org/packages/electron24-bin/
+- https://aur.archlinux.org/packages/discord_arch_electron/
 
 ### nvidia
 

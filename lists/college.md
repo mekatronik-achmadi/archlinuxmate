@@ -75,12 +75,7 @@ fftw liquid-dsp libsndfile
 - https://aur.archlinux.org/packages/mendeleydesktop-bundled/
 - https://aur.archlinux.org/packages/rstudio-desktop-bin/
 - https://aur.archlinux.org/packages/drawio-desktop-bin/
-
-### install wps office
-
-- https://aur.archlinux.org/packages/libtiff5/
-- https://aur.archlinux.org/packages/wps-office/
-- https://aur.archlinux.org/packages/ttf-wps-fonts/
+- https://aur.archlinux.org/packages/onlyoffice-bin/
 
 ### install python additionals
 
@@ -145,13 +140,13 @@ echo "unset _JAVA_OPTIONS"
 sudo sed -i "s#Categories=Development#Categories=Education#g" /usr/share/applications/rstudio.desktop
 ```
 
-### configure wps office
+### configure onlyoffice
 
 ```sh
-sudo rm -f /usr/share/applications/wps-office-pdf.desktop
-sudo rm -f /usr/share/applications/wps-office-prometheus.desktop
-sudo sed -i '/^$/d' /usr/share/desktop-directories/wps-office.directory
-echo 'NoDisplay=true' | sudo tee -a /usr/share/desktop-directories/wps-office.directory
+sudo sed -i 's#desktopeditors %U#desktopeditors --system-title-bar %U#g' \
+/usr/share/applications/onlyoffice-desktopeditors.desktop
+sudo sed -i 's#desktopeditors --new#desktopeditors --system-title-bar --new#g' \
+/usr/share/applications/onlyoffice-desktopeditors.desktop
 ```
 
 ### configure mendeley desktop
