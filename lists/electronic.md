@@ -140,6 +140,28 @@ cd ~/Arduino/libraries/
 git clone https://github.com/sandeepmistry/arduino-LoRa.git LoRa
 ```
 
+### configure arduino-CLI
+
+```sh
+arduino-cli config init
+
+arduino-cli sketch new LED
+cd LED/
+
+arduino-cli core update-index
+arduino-cli core search nano
+arduino-cli core install arduino:avr
+arduino-cli core list
+
+arduino-cli lib search DHT11 | grep DHT11
+arduino-cli lib install "DHT11"
+
+arduino-cli compile --fqbn arduino:avr:nano
+
+arduino-cli board list
+arduino-cli upload --fqbn arduino:avr:nano --port /dev/ttyUSB0
+```
+
 ### configure st-link
 
 #### update st-link
@@ -303,4 +325,3 @@ mv "$VSCONFDIR/temp.json" "$VSCONFDIR/settings.json"
 
 cat "$VSCONFDIR/settings.json"
 ```
-
