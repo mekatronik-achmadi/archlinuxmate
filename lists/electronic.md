@@ -272,3 +272,35 @@ make app-flash
 ```sh
 make monitor # CTRL+] to exit
 ```
+
+### configure arduino-platformio
+
+#### vscode extension
+
+```sh
+vscodium --list-extensions
+
+# Make sure CLangd extension also disabled
+vscodium --force --install-extension ms-vscode.cpptools
+vscodium --force --install-extension platformio.platformio-ide
+vscodium --force --install-extension vsciot-vscode.vscode-arduino
+```
+
+```sh
+VSCONFDIR=~/.config/VSCodium/User
+
+jq '
+."C_Cpp.intelliSenseEngine"="default" |
+."arduino.commandPath"="arduino-cli" |
+."arduino.enableUSBDetection"=true |
+."arduino.logLevel"="verbose" |
+."arduino.path"="/usr/bin/" |
+."arduino.useArduinoCli"=true
+' "$VSCONFDIR/settings.json" | tee "$VSCONFDIR/temp.json"
+
+rm -f "$VSCONFDIR/settings.json"
+mv "$VSCONFDIR/temp.json" "$VSCONFDIR/settings.json"
+
+cat "$VSCONFDIR/settings.json"
+```
+
