@@ -41,11 +41,6 @@ mosquitto libwebsockets
 
 - https://aur.archlinux.org/packages/anydesk-bin/
 
-### install social media client
-
-- https://aur.archlinux.org/packages/whalebird-bin/
-- https://aur.archlinux.org/packages/discord_arch_electron/
-
 ### install http tools
 
 - https://aur.archlinux.org/packages/postman-bin/

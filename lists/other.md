@@ -30,6 +30,8 @@ python-tensorflow-cuda
 ### install internet programs
 
 - https://aur.archlinux.org/packages/teamviewer/
+- https://aur.archlinux.org/packages/whalebird-bin/
+- https://aur.archlinux.org/packages/discord_arch_electron/
 
 ### nvidia
 
