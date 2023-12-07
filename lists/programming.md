@@ -38,6 +38,9 @@ gdb-dashboard
 lld valgrind
 llvm llvm14
 
+### install latest java
+jre-openjdk jdk-openjdk
+
 ### install javacript programming
 
 npm nodejs yq
@@ -85,6 +88,10 @@ go-tools yaegi
 
 - https://aur.archlinux.org/packages/python-wifiwrapper/
 - https://aur.archlinux.org/packages/python-pyalsaaudio/
+
+### install java launcher
+
+- https://aur.archlinux.org/packages/archlinux-java-run/
 
 ### install shell additional
 

@@ -4,8 +4,8 @@
 
 ### install stm32 programming
 
-libopencm3
 openocd stlink
+libopencm3 sdcc
 arm-none-eabi-gcc
 arm-none-eabi-gdb
 arm-none-eabi-newlib
@@ -61,6 +61,10 @@ sed -i "s#'python2-pyserial' 'python2-cryptography' 'python2-pyparsing'##g" PKGB
 - https://aur.archlinux.org/packages/arduino-mk/
 - https://aur.archlinux.org/packages/simutron-svn/
 
+### install stm8 tools
+
+- https://aur.archlinux.org/packages/stm8flash-git/
+
 --------------------------------------------------------------------------------
 
 ## External
@@ -86,6 +90,10 @@ sed -i "s#'python2-pyserial' 'python2-cryptography' 'python2-pyparsing'##g" PKGB
 
 - https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/packages/pkgbuilds/optional/wxserterm/
 - https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/packages/pkgbuilds/optional/stlink-updater/
+
+### install stm8 tools
+
+- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/packages/pkgbuilds/optional/stm8cubemx/
 
 ### install atmega tools
 
