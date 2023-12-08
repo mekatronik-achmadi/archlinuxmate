@@ -16,8 +16,7 @@ avr-gcc avr-gdb avr-libc avrdude
 
 ### install arduino programming
 
-arduino-builder arduino-avr-core
-arduino arduino-cli arduino-ctags
+arduino-cli arduino-avr-core
 
 ### install serial terminal
 
@@ -60,6 +59,7 @@ sed -i "s#'python2-pyserial' 'python2-cryptography' 'python2-pyparsing'##g" PKGB
 - https://aur.archlinux.org/packages/simulide/
 - https://aur.archlinux.org/packages/arduino-mk/
 - https://aur.archlinux.org/packages/simutron-svn/
+- https://aur.archlinux.org/packages/arduino-ide-bin/
 
 ### install stm8 tools
 
@@ -130,10 +130,6 @@ sudo sed -i "s#Categories=Electronics;#Categories=Development;#g" /usr/share/app
 ```
 
 ### configure arduino-IDE
-
-```sh
-sudo sed -i 's#("-DAPP_DIR=$APPDIR")#("-DAPP_DIR=$APPDIR" "-Dawt.useSystemAAFontSettings=on" "-Dswing.aatext=true" "-Djdk.util.zip.ensureTrailingSlash=false")#g' /usr/share/arduino/arduino
-```
 
 ```text
 File -> Preferences -> Additional Board Manager URLs
