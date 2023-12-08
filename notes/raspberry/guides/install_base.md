@@ -268,17 +268,17 @@ sudo cp -vf ../archmate/archlinux.layout /mnt/mmc/root/usr/share/mate-panel/layo
 ### basic config.txt (qemu-chroot)
 
 ```sh
-echo "
+echo 'gpu_mem=256
+dtoverlay=vc4-kms-v3d
 initramfs initramfs-linux.img followkernel
-gpu_mem=128
-dtparam=audio=on
-camera_auto_detect=1
-display_auto_detect=1
 
 hdmi_force_hotplug=1
-dtoverlay=vc4-kms-v3d
 max_framebuffers=2
 disable_overscan=1
+display_auto_detect=1
+
+camera_auto_detect=1
+dtparam=audio=on
 
 [cm4]
 otg_mode=1
@@ -287,8 +287,7 @@ otg_mode=1
 arm_boost=1
 
 [all]
-
-" > /boot/config.txt
+dtoverlay=disable-bt' > /boot/config.txt
 ```
 
 ### set hostname (qemu-chroot)
@@ -307,9 +306,6 @@ avoid_warnings=1' >> /boot/config.txt
 
 sed -i '$s/$/ audit=0 quiet loglevel=0/' /boot/cmdline.txt
 echo 'kernel.printk = 3 3 3 3' > /etc/sysctl.d/20-quiet-printk.conf
-
-# if not using bluetooth
-echo 'dtoverlay=disable-bt' >> /boot/config.txt
 ```
 
 ### sudoers no password (qemu-chroot)

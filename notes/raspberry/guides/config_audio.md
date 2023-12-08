@@ -32,11 +32,15 @@ sudo sed -i "s#console=ttyAMA0,115200 ##g" /boot/cmdline.txt
 echo "dtparam=krnbt=on" | sudo tee -a /boot/config.txt
 echo "enable_uart=0" | sudo tee -a /boot/config.txt
 
+sudo sed -i '/disable-bt/d' /boot/config.txt
+
 # Bluetooth modules for Pi-3
 sudo systemctl enable brcm43438
 export BT_AUDIO='btc_mode=1\nbtc_params8=0x4e20\nbtc_params1=0x7530'
 echo -e $BT_AUDIO | sudo tee -a /usr/lib/firmware/updates/brcm/brcmfmac43430-sdio.txt
 echo -e $BT_AUDIO | sudo tee -a /usr/lib/firmware/updates/brcm/brcmfmac43455-sdio.txt
+
+sudo reboot
 ```
 
 ```sh

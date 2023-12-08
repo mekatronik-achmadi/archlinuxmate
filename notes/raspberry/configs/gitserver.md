@@ -8,6 +8,12 @@
 ssh -Y alarm@10.124.4.150
 ```
 
+### run headless
+
+```sh
+sudo sed -i 's#gpu_mem=256#gpu_mem=16#g' /boot/config.txt
+```
+
 ### apache server
 
 ```sh
