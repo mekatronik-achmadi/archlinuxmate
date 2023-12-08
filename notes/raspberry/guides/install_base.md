@@ -351,7 +351,7 @@ systemctl enable NetworkManager
 ### enable fake hwclock (qemu-chroot)
 
 ```sh
-systemctl enable fake-hwclock fake-hwclock-save.timer
+systemctl enable fake-hwclock fake-hwclock-save
 ```
 
 ### enable ssh server (qemu-chroot)

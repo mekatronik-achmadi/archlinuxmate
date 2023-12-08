@@ -111,6 +111,7 @@ export SYSTEMD='airootfs/etc/systemd/system/multi-user.target.wants'
 mkdir -pv ${SYSTEMD}
 
 ln -svf /usr/lib/systemd/system/systemd-timesyncd.service ${SYSTEMD}/systemd-timesyncd.service
+ln -svf /usr/lib/systemd/system/fake-hwclock-save.service ${SYSTEMD}/fake-hwclock-save.service
 ln -svf /usr/lib/systemd/system/fake-hwclock.service ${SYSTEMD}/fake-hwclock.service
 ln -svf /usr/lib/systemd/system/vboxservice.service ${SYSTEMD}/vboxservice.service
 ln -svf /usr/lib/systemd/system/bluetooth.service ${SYSTEMD}/bluetooth.service

@@ -256,6 +256,7 @@ edk2-ovmf
 ### install additional tools
 
 - downgrade: https://aur.archlinux.org/packages/downgrade/
+- fake-hwclock: https://aur.archlinux.org/packages/fake-hwclock/
 - git-cola: https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/custom/git-cola/
 - hardinfo-git: https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/custom/hardinfo/
 
@@ -284,6 +285,8 @@ rsync -a /etc/skel/ $HOME/
 
 sudo systemctl enable systemd-timesyncd
 sudo systemctl start systemd-timesyncd
+sudo systemctl enable fake-hwclock fake-hwclock-save
+sudo systemctl start fake-hwclock fake-hwclock-save
 sudo ln -svf /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
 sudo date -s "28 MAR 2023 20:46:00"
 

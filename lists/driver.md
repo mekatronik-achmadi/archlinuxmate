@@ -28,10 +28,6 @@ virtualgl lib32-virtualgl
 
 ## AUR
 
-### install hwclock
-
-- https://aur.archlinux.org/packages/fake-hwclock/
-
 ### install gpu driver
 
 #### nvidia-390 (utils,dkms,opencl)
@@ -70,13 +66,6 @@ sed -i '2i EXTRA_CFLAGS += -DCONFIG_RTW_LED' src/8192eu/Makefile
 --------------------------------------------------------------------------------
 
 ## Configurations
-
-### configure fake-hwclock
-
-```sh
-sudo systemctl enable fake-hwclock fake-hwclock-save.timer
-sudo systemctl start fake-hwclock
-```
 
 ### configure new driver modeset
 

@@ -184,7 +184,8 @@ chicago95-gtk-theme-git
 brisk-menu gtk3-nocsd-git
 mate-tweak bluementa-icon-theme
 
-downgrade git-cola hardinfo-git
+downgrade fake-hwclock
+git-cola hardinfo-git
 
 vim-plug-git
 vi-vim-symlink
