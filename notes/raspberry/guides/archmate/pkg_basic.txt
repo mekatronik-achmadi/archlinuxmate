@@ -49,6 +49,6 @@ gpart e2fsprogs
 gptfdisk mtools
 fuse2 fuse3
 
-gpio-utils python-periphery
-wiringpi python-wiringx-git
+gpio-utils wiringpi fake-hwclock
+python-periphery python-wiringx-git
 

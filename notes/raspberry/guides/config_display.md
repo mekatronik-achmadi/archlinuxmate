@@ -39,9 +39,6 @@ echo "
 dtparam=spi=on
 dtoverlay=waveshare35a:rotate=0,swapxy=1,speed=80000000" >> /boot/config.txt
 
-# workaround bug for failed boot without HDMI
-echo "hdmi_force_hotplug=1" >> /boot/config.txt
-
 # ' fbcon=map:10' confusing
 sed -i '$s/$/ fbcon=font:ProFont6x11/' /boot/cmdline.txt
 

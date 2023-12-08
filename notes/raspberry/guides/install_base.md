@@ -268,11 +268,14 @@ sudo cp -vf ../archmate/archlinux.layout /mnt/mmc/root/usr/share/mate-panel/layo
 ### basic config.txt (qemu-chroot)
 
 ```sh
-echo "gpu_mem=128
+echo "
+initramfs initramfs-linux.img followkernel
+gpu_mem=128
 dtparam=audio=on
 camera_auto_detect=1
 display_auto_detect=1
 
+hdmi_force_hotplug=1
 dtoverlay=vc4-kms-v3d
 max_framebuffers=2
 disable_overscan=1

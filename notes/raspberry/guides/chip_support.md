@@ -20,13 +20,6 @@ Option available:
     - https://alaa.ad24.cz/repos/2022/02/06/armv6h/
     - http://tardis.tiny-vps.com/aarm/repos/2022/01/08/armv6h/
 
-## Some NOT Recommended Bugfixes
-
-```sh
-echo "initramfs initramfs-linux.img followkernel" >> /boot/config.txt
-echo "hdmi_force_hotplug=1" >> /boot/config.txt
-```
-
 ## Transmission Daemon
 
 ### basic settings

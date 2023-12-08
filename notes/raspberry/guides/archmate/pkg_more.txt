@@ -47,14 +47,14 @@ blueman bluez
 bluez-utils
 
 gstreamer gst-libav
-vlc rhythmbox mpv
+vlc-rpi rhythmbox mpv
 ffmpegthumbnailer
 gst-plugins-base
 gst-plugins-good
 gst-plugins-ugly
 gst-plugins-bad
 gstreamer-vaapi
-guvcview ffmpeg
+guvcview ffmpeg-rpi
 
 libva-vdpau-driver
 libva-mesa-driver
