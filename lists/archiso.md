@@ -148,7 +148,6 @@ pkgconf gendesk help2man
 mercurial breezy cvs cloc
 cmake extra-cmake-modules
 dos2unix doxygen graphviz
-jre8-openjdk jdk8-openjdk
 tcsh gobject-introspection
 
 ### install python installer
