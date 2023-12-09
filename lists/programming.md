@@ -39,6 +39,7 @@ lld valgrind
 llvm llvm14
 
 ### install java programming
+
 jre-openjdk jdk-openjdk
 jre8-openjdk jdk8-openjdk
 
@@ -230,6 +231,9 @@ vscodium --list-extensions
 vscodium --force --install-extension cschlosser.doxdocgen
 vscodium --force --install-extension llvm-vs-code-extensions.vscode-clangd
 vscodium --force --install-extension rust-lang.rust-analyzer
+vscodium --force --install-extension golang.Go
+vscodium --force --install-extension ms-python.python
+vscodium --force --install-extension ms-toolsai.jupyter
 vscodium --force --install-extension vscodevim.vim
 ```
 

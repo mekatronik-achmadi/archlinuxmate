@@ -312,6 +312,7 @@ vscodium --list-extensions
 vscodium --force --install-extension ms-vscode.cpptools
 vscodium --force --install-extension platformio.platformio-ide
 vscodium --force --install-extension vsciot-vscode.vscode-arduino
+vscodium --force --install-extension ms-vscode.vscode-serial-monitor
 ```
 
 ```sh
