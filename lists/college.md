@@ -104,10 +104,6 @@ depends += 'python-lazy-loader' 'python-msgpack'
 
 ### install audio tools
 
-```sh
-sed -i 's#=8##g' PKGBUILD
-```
-
 - https://aur.archlinux.org/packages/roomeqwizard/
 - https://aur.archlinux.org/packages/wavesurfer/
 - https://aur.archlinux.org/packages/snack/

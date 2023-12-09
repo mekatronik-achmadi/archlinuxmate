@@ -38,8 +38,9 @@ gdb-dashboard
 lld valgrind
 llvm llvm14
 
-### install latest java
+### install java programming
 jre-openjdk jdk-openjdk
+jre8-openjdk jdk8-openjdk
 
 ### install javacript programming
 
