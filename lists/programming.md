@@ -104,6 +104,10 @@ go-tools yaegi
 
 ## External
 
+### install clang tools
+
+- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/optional/compiledb/
+
 ### install doxygen tools
 
 - https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/optional/custom-doxygen/
@@ -275,7 +279,12 @@ cat "$VSCONFDIR/settings.json"
 
 ```sh
 intercept-build gcc -o coba.exe coba.c
-scan-build gcc -o coba.exe coba.c
+intercept-build make -j$(nproc)
+```
+
+```sh
+compiledb gcc -o coba.exe coba.c
+compiledb make -j$(nproc)
 ```
 
 ```sh
@@ -296,3 +305,4 @@ Diagnostics:
 # Disable header cleaning
 sed -i 's@UnusedIncludes: Strict@UnusedIncludes: None@g' ~/.config/clangd/config.yaml
 ```
+

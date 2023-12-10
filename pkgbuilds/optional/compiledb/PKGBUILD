@@ -1,0 +1,42 @@
+pkgname=compiledb
+pkgshlex=python-bashlex
+shlex=bashlex
+pkgver=0.10.1
+pkgvershlex=0.18
+pkgrel=1
+pkgdesc="Tool for generating Clang's JSON Compilation Database file for GNU make-based build systems"
+arch=('any')
+url="https://github.com/nickdiego/compiledb-generator"
+urlshlex="https://github.com/idank/bashlex"
+license=('GPL3')
+provides=('compiledb-generator' 'python-bashlex')
+conflicts=('python-bashlex')
+replaces=('compiledb-generator')
+makedepends=(
+    'perl'
+    'python-setuptools'
+	'python-build'
+	'python-installer'
+)
+depends=('python'
+        'python-click'
+        'python-shutilwhich'
+        'python-setuptools')
+source=("$pkgname-$pkgver.tar.gz::${url}/archive/v${pkgver}.tar.gz"
+        "${pkgshlex}-${pkgvershlex}.tar.gz::${urlshlex}/archive/${pkgvershlex}.tar.gz")
+sha256sums=('3f288e4897e2b17b4dd8070d3ad9e9fc627961faa4d0be29a78f6c619e055f36'
+            '116dec8de99b5477247bc6ee8d6ed4d0f7a661d7c0d8980b13e15b67b9248d82')
+
+build() {
+    cd "$srcdir/$shlex-$pkgvershlex"
+	python3 -m build --wheel --skip-dependency-check
+}
+
+package() {
+    cd "$srcdir/$pkgname-$pkgver"
+    python setup.py install --root="$pkgdir/" --optimize=1
+
+    cd "$srcdir/$shlex-$pkgvershlex"
+    python3 -m installer --destdir="$pkgdir" dist/*.whl
+}
+
