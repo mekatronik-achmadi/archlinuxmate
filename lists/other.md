@@ -21,6 +21,11 @@ python-tensorflow-cuda
 
 ## AUR
 
+### install stm8 tools
+
+- https://aur.archlinux.org/packages/stm8cubemx/
+- https://aur.archlinux.org/packages/stm8flash-git/
+
 ### install webrowser programs
 
 - https://aur.archlinux.org/packages/brave-bin/
@@ -48,9 +53,14 @@ python-tensorflow-cuda
 
 ## External
 
+### install stm8 tools
+
+- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/unused/stm8gal/
+- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/unused/stm8spl/
+
 ### install matlab binary
 
-- https://github.com/mekatronik-achmadi/archmate/tree/master/pkgbuilds/optional/matlab-bin-basic/
+- https://github.com/mekatronik-achmadi/archmate/tree/master/pkgbuilds/unused/matlab-bin-basic/
 
 ### install cisco packet simulator
 

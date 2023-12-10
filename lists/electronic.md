@@ -61,11 +61,6 @@ sed -i "s#'python2-pyserial' 'python2-cryptography' 'python2-pyparsing'##g" PKGB
 - https://aur.archlinux.org/packages/simutron-svn/
 - https://aur.archlinux.org/packages/arduino-ide-bin/
 
-### install stm8 tools
-
-- https://aur.archlinux.org/packages/stm8cubemx/
-- https://aur.archlinux.org/packages/stm8flash-git/
-
 --------------------------------------------------------------------------------
 
 ## External
@@ -98,11 +93,6 @@ sed -i "s#'python2-pyserial' 'python2-cryptography' 'python2-pyparsing'##g" PKGB
 - https://github.com/mekatronik-achmadi/atmega-dev/tree/master/atmega-tools/
 - https://github.com/mekatronik-achmadi/atmega-dev/tree/master/atmega-demos/
 - https://github.com/mekatronik-achmadi/atmega-dev/tree/master/qtcreator-arduino/
-
-### install stm8 tools
-
-- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/optional/stm8gal/
-- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/optional/stm8spl/
 
 --------------------------------------------------------------------------------
 
