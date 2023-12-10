@@ -191,4 +191,13 @@ vim +PlugClean
 
 ```sh
 intercept-build gcc -o coba.exe coba.c
+scan-build gcc -o coba.exe coba.c
+```
+
+```sh
+make --always-make --dry-run \
+ | grep -wE 'gcc|g\+\+|clang|sdcc' \
+ | grep -w '\-c' \
+ | jq -nR '[inputs|{directory:".", command:., file: match(" [^ ]+$").string[1:]}]' \
+ > compile_commands.json
 ```
