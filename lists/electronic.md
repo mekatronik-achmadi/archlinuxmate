@@ -72,25 +72,26 @@ sed -i "s#'python2-pyserial' 'python2-cryptography' 'python2-pyparsing'##g" PKGB
 
 ### install stm32 libraries
 
-- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/packages/pkgbuilds/optional/ugfxlib/
-- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/packages/pkgbuilds/optional/stm32chlib/
-- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/packages/pkgbuilds/optional/stm32chlib2/
-- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/packages/pkgbuilds/optional/stm32freertos/
-- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/packages/pkgbuilds/optional/stm32-chibios17/
-- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/packages/pkgbuilds/optional/stm32-chibios20/
-- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/packages/pkgbuilds/optional/libopencm3-demos/
-- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/packages/pkgbuilds/optional/stm32chlib-bluepill/
+- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/optional/ugfxlib/
+- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/optional/stm32chlib/
+- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/optional/stm32chlib2/
+- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/optional/stm32freertos/
+- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/optional/stm32-chibios17/
+- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/optional/stm32-chibios20/
+- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/optional/libopencm3-demos/
+- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/optional/stm32chlib-bluepill/
 
 ### install esp libraries
 
-- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/packages/pkgbuilds/optional/esp32-idf/
-- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/packages/pkgbuilds/optional/esp32-dsp/
-- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/packages/pkgbuilds/optional/esp8266-rtos/
+- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/optional/esp32-idf/
+- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/optional/esp32-idf
+- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/optional/esp32-dsp/
+- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/optional/esp8266-rtos/
 
 ### install stm32 tools
 
-- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/packages/pkgbuilds/optional/wxserterm/
-- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/packages/pkgbuilds/optional/stlink-updater/
+- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/optional/wxserterm/
+- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/optional/stlink-updater/
 
 ### install atmega tools
 
@@ -100,8 +101,8 @@ sed -i "s#'python2-pyserial' 'python2-cryptography' 'python2-pyparsing'##g" PKGB
 
 ### install stm8 tools
 
-- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/packages/pkgbuilds/optional/stm8gal/
-- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/packages/pkgbuilds/optional/stm8spl/
+- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/optional/stm8gal/
+- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/optional/stm8spl/
 
 --------------------------------------------------------------------------------
 
