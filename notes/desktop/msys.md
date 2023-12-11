@@ -195,10 +195,9 @@ intercept-build make -j$(nproc)
 ```
 
 ```sh
-make --always-make --dry-run \
- | grep -wE 'gcc|g\+\+|clang|sdcc' \
- | grep -w '\-c' \
- | jq -nR '[inputs|{directory:".", command:., file: match(" [^ ]+$").string[1:]}]' \
- > compile_commands.json
+pip install compiledb
+
+compiledb gcc -o coba.exe coba.c
+compiledb make -j$(nproc)
 ```
 
