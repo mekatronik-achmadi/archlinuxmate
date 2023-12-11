@@ -278,8 +278,8 @@ cat "$VSCONFDIR/settings.json"
 ### configure clangd
 
 ```sh
-intercept-build gcc -o coba.exe coba.c
-intercept-build make -j$(nproc)
+bear -- gcc -o coba.exe coba.c
+bear -- make -j$(nproc)
 ```
 
 ```sh

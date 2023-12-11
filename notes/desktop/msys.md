@@ -46,7 +46,7 @@ pacman -Su --noconfirm
 pacman -S $(echo "
 base base-devel vim mc git tig
 winpty neofetch bash-completion
-tmux nano-syntax-highlighting
+bear tmux nano-syntax-highlighting
 ")
 ```
 
@@ -55,6 +55,7 @@ tmux nano-syntax-highlighting
 ```sh
 pacman -S $(echo "
 mingw-w64-x86_64-python
+mingw-w64-x86_64-python-pip
 mingw-w64-x86_64-toolchain
 mingw-w64-x86_64-clang-analyzer
 mingw-w64-x86_64-clang-tools-extra
@@ -190,8 +191,8 @@ vim +PlugClean
 ## Generate Clangd compile_commands.json
 
 ```sh
-intercept-build gcc -o coba.exe coba.c
-intercept-build make -j$(nproc)
+bear -- gcc -o coba.exe coba.c
+bear -- make -j$(nproc)
 ```
 
 ```sh
