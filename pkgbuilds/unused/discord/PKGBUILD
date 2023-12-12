@@ -1,4 +1,4 @@
-pkgname=discord-desktop
+pkgname=discord-bin
 _tarname=discord
 _pkgname=Discord
 pkgver=0.0.38
