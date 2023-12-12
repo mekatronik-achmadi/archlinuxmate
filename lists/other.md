@@ -30,7 +30,6 @@ python-tensorflow-cuda
 ### install internet programs
 
 - https://aur.archlinux.org/packages/teamviewer/
-- https://aur.archlinux.org/packages/discord_arch_electron/
 
 ### nvidia
 
@@ -63,6 +62,10 @@ python-tensorflow-cuda
 ### install youtube program
 
 - https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/unused/youtubemusic/
+
+### install discord client
+
+- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/unused/discord/
 
 --------------------------------------------------------------------------------
 
