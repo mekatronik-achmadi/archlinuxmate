@@ -21,7 +21,7 @@ md5sums=('f520ed276c659e07a858e1f1ff1a0580' 'SKIP' 'SKIP')
 
 prepare() {
   cd $_pkgname
-  sed -i "s|Exec=.*|Exec=/usr/bin/$_tarname|" $_tarname.desktop
+  sed -i "s|Exec=.*|Exec=/usr/bin/$pkgname|" $_tarname.desktop
 }
 
 package() {
@@ -36,7 +36,7 @@ package() {
   ln -s /opt/$pkgname/$_pkgname "$pkgdir"/usr/bin/$pkgname
 
   install -d "$pkgdir"/usr/share/applications
-  ln -s /opt/$pkgname/$pkgname.desktop "$pkgdir"/usr/share/applications/$pkgname.desktop
+  ln -s /opt/$pkgname/$_tarname.desktop "$pkgdir"/usr/share/applications/$pkgname.desktop
 
   install -d "$pkgdir"/usr/share/icons/hicolor/256x256/apps
   ln -s /opt/$pkgname/discord.png "$pkgdir"/usr/share/icons/hicolor/256x256/apps/$pkgname.png
