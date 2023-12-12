@@ -12,8 +12,9 @@
   + Conda
   + PyTest
   + Mono/C#
-  + Python-2
   + Linting
+  + AppImage
+  + Python-2
   + Nativefier
   + Checkdepends
 - User programs priorities:
