@@ -45,8 +45,8 @@ jre8-openjdk jdk8-openjdk
 
 ### install javacript programming
 
-npm nodejs yq
-yarn asar jq
+nodejs node-gyp yq
+npm yarn asar jq
 
 ### install rust programming
 
@@ -80,6 +80,11 @@ go-tools yaegi
 - https://aur.archlinux.org/packages/wxhexeditor/
 - https://aur.archlinux.org/packages/wxformbuilder/
 
+### install compiledb
+
+- https://aur.archlinux.org/packages/python-bashlex/
+- https://aur.archlinux.org/packages/compiledb/
+
 ### install vscodium
 
 - https://aur.archlinux.org/packages/vscodium-bin/
@@ -103,10 +108,6 @@ go-tools yaegi
 --------------------------------------------------------------------------------
 
 ## External
-
-### install clang tools
-
-- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/optional/compiledb/
 
 ### install doxygen tools
 

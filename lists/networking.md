@@ -37,6 +37,10 @@ mosquitto libwebsockets
 
 - https://aur.archlinux.org/packages/whatsdesk-bin/
 
+### install mastodon client
+
+- https://aur.archlinux.org/packages/hyperspace-bin/
+
 ### install remote pc
 
 - https://aur.archlinux.org/packages/anydesk-bin/

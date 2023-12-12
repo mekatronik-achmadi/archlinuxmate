@@ -21,11 +21,6 @@ python-tensorflow-cuda
 
 ## AUR
 
-### install stm8 tools
-
-- https://aur.archlinux.org/packages/stm8cubemx/
-- https://aur.archlinux.org/packages/stm8flash-git/
-
 ### install webrowser programs
 
 - https://aur.archlinux.org/packages/brave-bin/
@@ -35,7 +30,6 @@ python-tensorflow-cuda
 ### install internet programs
 
 - https://aur.archlinux.org/packages/teamviewer/
-- https://aur.archlinux.org/packages/whalebird-bin/
 - https://aur.archlinux.org/packages/discord_arch_electron/
 
 ### nvidia
@@ -52,11 +46,6 @@ python-tensorflow-cuda
 --------------------------------------------------------------------------------
 
 ## External
-
-### install stm8 tools
-
-- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/unused/stm8gal/
-- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/unused/stm8spl/
 
 ### install matlab binary
 

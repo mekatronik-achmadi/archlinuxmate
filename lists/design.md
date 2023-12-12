@@ -4,7 +4,7 @@
 
 ### install cad tools
 
-freecad openscad qcad
+freecad openscad
 povray netcdf-openmpi
 
 ### install kicad
