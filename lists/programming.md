@@ -298,10 +298,3 @@ Diagnostics:
 # Disable header cleaning
 sed -i 's@UnusedIncludes: Strict@UnusedIncludes: None@g' ~/.config/clangd/config.yaml
 ```
-
-### configure electron
-
-```sh
-rm -vf /usr/share/applications/electron*
-```
-

@@ -2,31 +2,44 @@
 
 ## MATE Desktop Guidelines
 
-- Avoided Toolkit/Libraries:
-  + GNOME-4
-  + GTK-4
-  + Qt-4
-  + WxGTK-2
-  + KDE
-  + Xfce
-  + Conda
-  + PyTest
-  + Mono/C#
-  + Linting
-  + AppImage
-  + Python-2
-  + Nativefier
-  + Checkdepends
-- User programs priorities:
-  + Both GUI/CLI
-  + Only CLI
-  + Only GUI
-- Usage of GNOME-3:
-  + no dependency to gnome-desktop or clutter-gtk
-  + for libraries (e.g glib2, gdk-pixbuf2, etc)
-  + for infrastructures (e.g gvfs, zenity, etc)
-  + for artworks (e.g gnome-themes-extra, etc)
-  + for tools (e.g dconf, glade, brasero, etc)
+### Avoided Toolkit/Libraries
+
+- GNOME-4
+- GTK-4
+- Qt-4
+- WxGTK-2
+- KDE
+- Xfce
+- Conda
+- PyTest
+- Mono/C#
+- Linting
+- AppImage
+- Python-2
+- Nativefier
+- Checkdepends
+
+### User programs priorities
+
+- Both GUI/CLI
+- Only CLI
+- Only GUI
+
+### Usage of GNOME-3
+
+- no dependency to gnome-desktop or clutter-gtk
+- for libraries (e.g glib2, gdk-pixbuf2, etc)
+- for infrastructures (e.g gvfs, zenity, etc)
+- for artworks (e.g gnome-themes-extra, etc)
+- for tools (e.g dconf, glade, brasero, etc)
+
+### General Configurations
+
+#### remove Electron menu
+
+```sh
+sudo rm -vf /usr/share/applications/electron*
+```
 
 ## Bash general
 
