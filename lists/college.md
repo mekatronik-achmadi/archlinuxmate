@@ -75,7 +75,12 @@ fftw liquid-dsp libsndfile
 - https://aur.archlinux.org/packages/mendeleydesktop-bundled/
 - https://aur.archlinux.org/packages/rstudio-desktop-bin/
 - https://aur.archlinux.org/packages/drawio-desktop-bin/
-- https://aur.archlinux.org/packages/onlyoffice-bin/
+
+### install wps office
+
+- https://aur.archlinux.org/packages/libtiff5/
+- https://aur.archlinux.org/packages/wps-office/
+- https://aur.archlinux.org/packages/ttf-wps-fonts/
 
 ### install python additionals
 
@@ -134,13 +139,18 @@ depends += 'python-lazy-loader' 'python-msgpack'
 sudo sed -i "s#Categories=Development#Categories=Education#g" /usr/share/applications/rstudio.desktop
 ```
 
-### configure onlyoffice
+### configure wps office
 
 ```sh
-sudo sed -i 's#desktopeditors %U#desktopeditors --system-title-bar %U#g' \
-/usr/share/applications/onlyoffice-desktopeditors.desktop
-sudo sed -i 's#desktopeditors --new#desktopeditors --system-title-bar --new#g' \
-/usr/share/applications/onlyoffice-desktopeditors.desktop
+for i in `pacman -Qlq wps-office | grep /usr/bin | tail -n +2`;do
+sudo sed -i -z 's#gOpt=\n#gOpt="-style=gtk+"\
+export GTK2_RC_FILES=\/usr/share/themes/Arc-Lighter-solid/gtk-2.0/gtkrc\n#g' $i
+done
+
+sudo rm -f /usr/share/applications/wps-office-pdf.desktop
+sudo rm -f /usr/share/applications/wps-office-prometheus.desktop
+sudo sed -i '/^$/d' /usr/share/desktop-directories/wps-office.directory
+echo 'NoDisplay=true' | sudo tee -a /usr/share/desktop-directories/wps-office.directory
 ```
 
 ### configure mendeley desktop

@@ -27,10 +27,6 @@ python-tensorflow-cuda
 - https://aur.archlinux.org/packages/google-chrome/
 - https://aur.archlinux.org/packages/microsoft-edge-stable-bin/
 
-### install internet programs
-
-- https://aur.archlinux.org/packages/teamviewer/
-
 ### nvidia
 
 #### nvidia-470 (utils,dkms,opencl)
@@ -70,15 +66,6 @@ python-tensorflow-cuda
 --------------------------------------------------------------------------------
 
 ## Configurations
-
-### configure teamviewer
-
-```sh
-sudo rm -f /usr/share/applications/teamviewerapi.desktop
-
-sudo systemctl enable teamviewerd
-sudo systemctl start teamviewerd
-```
 
 ### configure nvidia
 

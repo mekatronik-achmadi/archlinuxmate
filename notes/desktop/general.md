@@ -17,7 +17,6 @@
 - AppImage
 - Python-2
 - Nativefier
-- Checkdepends
 
 ### User programs priorities
 
@@ -32,6 +31,12 @@
 - for infrastructures (e.g gvfs, zenity, etc)
 - for artworks (e.g gnome-themes-extra, etc)
 - for tools (e.g dconf, glade, brasero, etc)
+
+### PKGBUILD Guidelines
+
+- PGP checks (--skippgpcheck)
+- Remove checkdepends arrays/lines
+- Skip check() functions (--nocheck)
 
 ### General Configurations
 

@@ -44,6 +44,7 @@ mosquitto libwebsockets
 ### install remote pc
 
 - https://aur.archlinux.org/packages/anydesk-bin/
+- https://aur.archlinux.org/packages/teamviewer/
 
 ### install http tools
 
@@ -148,6 +149,15 @@ sudo gpasswd -a $USER realtime
 ```sh
 sudo systemctl enable anydesk
 sudo systemctl start anydesk
+```
+
+### configure teamviewer
+
+```sh
+sudo rm -f /usr/share/applications/teamviewerapi.desktop
+
+sudo systemctl enable teamviewerd
+sudo systemctl start teamviewerd
 ```
 
 ### configure cisco packet simulator
