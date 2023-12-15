@@ -73,8 +73,11 @@ fftw liquid-dsp libsndfile
 ### install academic tools
 
 - https://aur.archlinux.org/packages/mendeleydesktop-bundled/
-- https://aur.archlinux.org/packages/rstudio-desktop-bin/
 - https://aur.archlinux.org/packages/drawio-desktop-bin/
+
+### install r programming
+
+- https://aur.archlinux.org/packages/rstudio-desktop-bin/
 
 ### install wps office
 
@@ -133,10 +136,25 @@ depends += 'python-lazy-loader' 'python-msgpack'
 
 ## Configurations
 
-### configure rstudio
+### configure r programming
 
 ```sh
 sudo sed -i "s#Categories=Development#Categories=Education#g" /usr/share/applications/rstudio.desktop
+```
+
+```sh
+echo '' | sudo tee /etc/rstudio/rserver.conf
+echo '' | sudo tee /etc/rstudio/rsession.conf
+
+sudo sed -i 's#rserver --server#rserver --auth-none 1 --server-user viblab --server#g' \
+/etc/systemd/system/rstudio-server.service
+sudo systemctl daemon-reload
+
+sudo systemctl enable rstudio-server
+sudo systemctl start rstudio-server
+
+firefox http://localhost:8787
+firefox http://<server-ip>:8787
 ```
 
 ### configure wps office
