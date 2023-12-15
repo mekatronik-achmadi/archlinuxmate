@@ -78,8 +78,8 @@ fftw liquid-dsp libsndfile
 ### install r programming
 
 - https://aur.archlinux.org/packages/rstudio-desktop-bin/
-- https://aur.archlinux.org/packages/rstudio-server-bin/
 - https://aur.archlinux.org/packages/python-rchitect/
+- https://aur.archlinux.org/packages/littler/
 - https://aur.archlinux.org/packages/radian/
 
 ### install wps office
@@ -139,25 +139,10 @@ depends += 'python-lazy-loader' 'python-msgpack'
 
 ## Configurations
 
-### configure r programming
+### configure rstudio
 
 ```sh
 sudo sed -i "s#Categories=Development#Categories=Education#g" /usr/share/applications/rstudio.desktop
-```
-
-```sh
-echo '' | sudo tee /etc/rstudio/rserver.conf
-echo '' | sudo tee /etc/rstudio/rsession.conf
-
-sudo sed -i 's#rserver --server#rserver --auth-none 1 --server-user viblab --server#g' \
-/etc/systemd/system/rstudio-server.service
-sudo systemctl daemon-reload
-
-sudo systemctl enable rstudio-server
-sudo systemctl start rstudio-server
-
-firefox http://localhost:8787
-firefox http://<server-ip>:8787
 ```
 
 ### configure wps office
