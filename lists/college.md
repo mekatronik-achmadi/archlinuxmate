@@ -141,6 +141,10 @@ depends += 'python-lazy-loader' 'python-msgpack'
 
 ### configure r programming
 
+- https://cran.r-project.org/mirrors.html
+- https://www.guru99.com/r-tutorial.html
+- https://pygments.org/styles/
+
 ```sh
 sudo sed -i "s#Categories=Development#Categories=Education#g" /usr/share/applications/rstudio.desktop
 echo '[Desktop Entry]
@@ -155,16 +159,34 @@ Categories=Math;Science;Education' | sudo tee /usr/share/applications/radian.des
 ```
 
 ```sh
-# https://cran.r-project.org/mirrors.html
-echo 'local({
+echo '.First <- function() {
+  message("Welcome back ", Sys.getenv("USER"),"!\n","Working directory is: ", getwd())
+}
+local({
   r <- getOption("repos")
   r["CRAN"] <- "https://mirror.aarnet.edu.au/pub/CRAN/"
   options(repos = r)
-})' | tee ~/.Rprofile
+})
+options(radian.color_scheme = "tango")
+options(radian.auto_match = TRUE)
+options(radian.highlight_matching_bracket = FALSE)
+options(radian.auto_indentation = TRUE)
+options(radian.tab_size = 4)' | tee ~/.Rprofile
+
+echo "R_HOME_USER = $HOME
+R_PROFILE_USER = $HOME/.Rprofile
+R_LIBS_USER=$HOME/R/library" | tee ~/.Renviron
 
 r -e 'install.packages("languageserver")'
 r -e 'install.packages("ggplot2")'
 r -e 'install.packages("httpgd")'
+r -e 'install.packages("haven")'
+r -e 'install.packages("dplyr")'
+r -e 'install.packages("tidyverse")'
+r -e 'install.packages("tidyr")'
+r -e 'install.packages("stringr")'
+r -e 'install.packages("lubridate")'
+
 ```
 
 ### configure wps office
