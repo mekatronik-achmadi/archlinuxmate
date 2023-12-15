@@ -185,6 +185,12 @@ r -e 'install.packages("tidyverse")'
 r -e 'install.packages("httpgd")'
 r -e 'install.packages("GGally")'
 r -e 'install.packages("haven")'
+
+sudo R CMD javareconf
+r -e 'install.packages("xlsx")'
+
+r -e 'print(.libPaths())'
+r -e 'print(library())'
 ```
 
 ### configure wps office
