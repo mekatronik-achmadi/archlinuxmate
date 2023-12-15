@@ -144,9 +144,7 @@ depends += 'python-lazy-loader' 'python-msgpack'
 - [CRAN MIRRORs](https://cran.r-project.org/mirrors.html)
 - [Packages](https://support.posit.co/hc/en-us/articles/201057987-Quick-list-of-useful-R-packages)
 - [Radian Themes](https://pygments.org/styles/)
-- Tutorials:
-    + [Guru99](https://www.guru99.com/r-tutorial.html)
-    + [TPoints](https://www.tutorialspoint.com/r/index.htm)
+- [Tutorial](https://www.tutorialspoint.com/r/index.htm)
 
 ```sh
 sudo sed -i "s#Categories=Development#Categories=Education#g" /usr/share/applications/rstudio.desktop
@@ -179,12 +177,9 @@ options(radian.auto_indentation = TRUE)
 options(radian.tab_size = 4)' | tee -a ~/.Rprofile
 
 r -e 'install.packages("languageserver")'
-r -e 'install.packages("ImportExport")'
-r -e 'install.packages("tidymodels")'
-r -e 'install.packages("tidyverse")'
-r -e 'install.packages("httpgd")'
-r -e 'install.packages("GGally")'
-r -e 'install.packages("haven")'
+r -e 'install.packages(c("ImportExport","tidymodels","tidyverse","plotrix"))'
+r -e 'install.packages(c("streamR","httpgd","GGally","haven","XML2R"))'
+r -e 'install.packages(c("randomForest","party","survival","plyr"))'
 
 sudo R CMD javareconf
 r -e 'install.packages("xlsx")'
