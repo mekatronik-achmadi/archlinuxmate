@@ -160,6 +160,8 @@ Categories=Math;Science;Education' | sudo tee /usr/share/applications/radian.des
 ```
 
 ```sh
+mkdir -p $HOME/R/library
+echo ".libPaths('$HOME/R/library')" | tee ~/.Rprofile
 echo '.First <- function() {
   message("Welcome back ", Sys.getenv("USER"),"!\n","Working directory is: ", getwd())
 }
@@ -172,16 +174,14 @@ options(radian.color_scheme = "tango")
 options(radian.auto_match = TRUE)
 options(radian.highlight_matching_bracket = FALSE)
 options(radian.auto_indentation = TRUE)
-options(radian.tab_size = 4)' | tee ~/.Rprofile
-
-echo "R_HOME_USER = $HOME
-R_PROFILE_USER = $HOME/.Rprofile
-R_LIBS_USER=$HOME/R/library" | tee ~/.Renviron
+options(radian.tab_size = 4)' | tee -a ~/.Rprofile
 
 r -e 'install.packages("languageserver")'
+r -e 'install.packages("ImportExport")'
 r -e 'install.packages("tidymodels")'
 r -e 'install.packages("tidyverse")'
 r -e 'install.packages("httpgd")'
+r -e 'install.packages("GGally")'
 r -e 'install.packages("haven")'
 ```
 
