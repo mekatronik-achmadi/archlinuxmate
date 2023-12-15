@@ -294,6 +294,8 @@ echo "en_US ISO-8859-1" >> /etc/locale.gen
 echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
 locale-gen
 
+echo "alias makepkg='makepkg --nocheck --skippgpcheck'" | tee -a ~/.bashrc
+
 sudo mkdir -vp /var/lib/pacman/sync/
 sudo mkdir -vp /var/cache/pacman/pkg/
 
@@ -392,6 +394,8 @@ ExecStart=-/sbin/agetty --autologin $USER --noissue --noclear %I 38400 linux
 git config --global init.defaultBranch main
 git config --global user.name "mekatronik-achmadi"
 git config --global user.email "mekatronik.achmadi@gmail.com"
+
+echo "export GITHUBTOKEN=$(cat ~/GithubToken.txt)" | tee -a ~/.bashrc
 ```
 
 #### create new user with/without password
@@ -475,6 +479,12 @@ vncviewer <ip_number>:0
 #### configure google drive
 
 - https://workspace.google.com/marketplace/app/file_checksum/982370769845
+
+#### configure electron menu
+
+```sh
+sudo rm -vf /usr/share/applications/electron*
+```
 
 --------------------------------------------------------------------------------
 

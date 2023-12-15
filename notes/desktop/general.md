@@ -26,25 +26,10 @@
 
 ### Usage of GNOME-3
 
-- no dependency to gnome-desktop or clutter-gtk
 - for libraries (e.g glib2, gdk-pixbuf2, etc)
 - for infrastructures (e.g gvfs, zenity, etc)
 - for artworks (e.g gnome-themes-extra, etc)
 - for tools (e.g dconf, glade, brasero, etc)
-
-### PKGBUILD Guidelines
-
-- PGP checks (--skippgpcheck)
-- Remove checkdepends arrays/lines
-- Skip check() functions (--nocheck)
-
-### General Configurations
-
-#### remove Electron menu
-
-```sh
-sudo rm -vf /usr/share/applications/electron*
-```
 
 ## Bash general
 
