@@ -78,6 +78,9 @@ fftw liquid-dsp libsndfile
 ### install r programming
 
 - https://aur.archlinux.org/packages/rstudio-desktop-bin/
+- https://aur.archlinux.org/packages/rstudio-server-bin/
+- https://aur.archlinux.org/packages/python-rchitect/
+- https://aur.archlinux.org/packages/radian/
 
 ### install wps office
 
