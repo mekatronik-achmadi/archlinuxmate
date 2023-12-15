@@ -94,6 +94,14 @@ export REPOURL='http://mirror.internode.on.net/pub/archlinux/'
 # sudo with preserve envars
 alias sudo='sudo -E'
 
+# package building envars
+export MAKEFLAGS=-j$(nproc)
+alias makepkg='makepkg --nocheck --skippgpcheck'
+
 # some light theme settings for bash shell
 alias bat='bat --theme=GitHub'
 PS1='\[\033[01m\][\u@\h \W]\$ \[\033[00m\]'
+
+# other useful envars
+#export GITHUBTOKEN=$(cat ~/GithubToken.txt)
+

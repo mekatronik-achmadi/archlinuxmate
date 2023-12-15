@@ -294,8 +294,6 @@ echo "en_US ISO-8859-1" >> /etc/locale.gen
 echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
 locale-gen
 
-echo "alias makepkg='makepkg --nocheck --skippgpcheck'" | tee -a ~/.bashrc
-
 sudo mkdir -vp /var/lib/pacman/sync/
 sudo mkdir -vp /var/cache/pacman/pkg/
 
