@@ -142,9 +142,11 @@ depends += 'python-lazy-loader' 'python-msgpack'
 ### configure r programming
 
 - [CRAN MIRRORs](https://cran.r-project.org/mirrors.html)
-- [Tutorial](https://www.guru99.com/r-tutorial.html)
 - [Packages](https://support.posit.co/hc/en-us/articles/201057987-Quick-list-of-useful-R-packages)
 - [Radian Themes](https://pygments.org/styles/)
+- Tutorials:
+    + [Guru99](https://www.guru99.com/r-tutorial.html)
+    + [TPoints](https://www.tutorialspoint.com/r/index.htm)
 
 ```sh
 sudo sed -i "s#Categories=Development#Categories=Education#g" /usr/share/applications/rstudio.desktop
