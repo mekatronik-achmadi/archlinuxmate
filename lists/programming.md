@@ -201,8 +201,8 @@ vim -c "CocInstall coc-pairs coc-snippets"
 vim -c "CocInstall coc-sh coc-ultisnips"
 vim -c "CocInstall coc-clangd coc-jedi"
 vim -c "CocInstall coc-json coc-yaml"
-vim -c "CocInstall coc-go coc-rust-analyzer"
-vim -c "CocInstall coc-tsserver coc-html"
+vim -c "CocInstall coc-tsserver coc-rust-analyzer"
+vim -c "CocInstall coc-go coc-r-lsp coc-html"
 vim +PlugClean
 
 echo "For editing PKGBUILD"
@@ -233,13 +233,14 @@ sudo rm -vf /usr/share/applications/codium-wayland.desktop
 ```sh
 vscodium --list-extensions
 
+vscodium --force --install-extension vscodevim.vim
 vscodium --force --install-extension cschlosser.doxdocgen
 vscodium --force --install-extension llvm-vs-code-extensions.vscode-clangd
 vscodium --force --install-extension rust-lang.rust-analyzer
 vscodium --force --install-extension golang.Go
+vscodium --force --install-extension REditorSupport.r
 vscodium --force --install-extension ms-python.python
 vscodium --force --install-extension ms-toolsai.jupyter
-vscodium --force --install-extension vscodevim.vim
 ```
 
 ```sh

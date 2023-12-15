@@ -139,10 +139,32 @@ depends += 'python-lazy-loader' 'python-msgpack'
 
 ## Configurations
 
-### configure rstudio
+### configure r programming
 
 ```sh
 sudo sed -i "s#Categories=Development#Categories=Education#g" /usr/share/applications/rstudio.desktop
+echo '[Desktop Entry]
+Name=Radian
+Comment=R console
+Exec=radian
+Icon=/usr/share/pixmaps/r.png
+StartupNotify=true
+Terminal=true
+Type=Application
+Categories=Math;Science;Education' | sudo tee /usr/share/applications/radian.desktop
+```
+
+```sh
+# https://cran.r-project.org/mirrors.html
+echo 'local({
+  r <- getOption("repos")
+  r["CRAN"] <- "https://mirror.aarnet.edu.au/pub/CRAN/"
+  options(repos = r)
+})' | tee ~/.Rprofile
+
+r -e 'install.packages("languageserver")'
+r -e 'install.packages("ggplot2")'
+r -e 'install.packages("httpgd")'
 ```
 
 ### configure wps office
