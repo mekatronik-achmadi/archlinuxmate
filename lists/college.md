@@ -141,9 +141,10 @@ depends += 'python-lazy-loader' 'python-msgpack'
 
 ### configure r programming
 
-- https://cran.r-project.org/mirrors.html
-- https://www.guru99.com/r-tutorial.html
-- https://pygments.org/styles/
+- [CRAN MIRRORs](https://cran.r-project.org/mirrors.html)
+- [Tutorial](https://www.guru99.com/r-tutorial.html)
+- [Packages](https://support.posit.co/hc/en-us/articles/201057987-Quick-list-of-useful-R-packages)
+- [Radian Themes](https://pygments.org/styles/)
 
 ```sh
 sudo sed -i "s#Categories=Development#Categories=Education#g" /usr/share/applications/rstudio.desktop
@@ -178,15 +179,10 @@ R_PROFILE_USER = $HOME/.Rprofile
 R_LIBS_USER=$HOME/R/library" | tee ~/.Renviron
 
 r -e 'install.packages("languageserver")'
-r -e 'install.packages("ggplot2")'
+r -e 'install.packages("tidymodels")'
+r -e 'install.packages("tidyverse")'
 r -e 'install.packages("httpgd")'
 r -e 'install.packages("haven")'
-r -e 'install.packages("dplyr")'
-r -e 'install.packages("tidyverse")'
-r -e 'install.packages("tidyr")'
-r -e 'install.packages("stringr")'
-r -e 'install.packages("lubridate")'
-
 ```
 
 ### configure wps office
