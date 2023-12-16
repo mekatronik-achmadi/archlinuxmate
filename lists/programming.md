@@ -85,12 +85,6 @@ go-tools yaegi
 - https://aur.archlinux.org/packages/python-bashlex/
 - https://aur.archlinux.org/packages/compiledb/
 
-### install vscodium
-
-- https://aur.archlinux.org/packages/vscodium-bin/
-- https://aur.archlinux.org/packages/vscodium-bin-features/
-- https://aur.archlinux.org/packages/vscodium-bin-marketplace/
-
 ### install system python bindings
 
 - https://aur.archlinux.org/packages/python-wifiwrapper/

@@ -12,7 +12,6 @@
 - Notepad++: https://notepad-plus-plus.org/downloads/
 - Git: https://git-scm.com/download/win
 - Git-Cola: https://git-cola.github.io/downloads.html
-- VSCodium: https://github.com/VSCodium/vscodium/releases/
 
 ## Installation
 
@@ -158,35 +157,6 @@ vim -c "CocInstall coc-json coc-yaml coc-html"
 vim -c "CocInstall coc-vimtex coc-tsserver"
 vim +PlugClean
 ```
-
-## Install VSCode
-
-- https://code.visualstudio.com/download
-
-### terminal settings
-
-```json
- "terminal.integrated.profiles.windows": {
-    "msys64": {
-        "path": "C:\\msys64\\usr\\bin\\bash.exe",
-        "args": [
-            "--login",
-            "-i"
-        ],
-          "env": {
-            "MSYSTEM": "MINGW64",
-            "CHERE_INVOKING": "1"
-        }
-    },
-},
-"terminal.integrated.defaultProfile.windows": "msys64",
-```
-
-### useful plugins
-
-- https://github.com/clangd/vscode-clangd/
-- https://github.com/cschlosser/doxdocgen/
-- https://github.com/VSCodeVim/Vim/
 
 ## Generate Clangd compile_commands.json
 

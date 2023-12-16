@@ -128,6 +128,25 @@ mv "$VSCONFDIR/temp.json" "$VSCONFDIR/settings.json"
 cat "$VSCONFDIR/settings.json"
 ```
 
+#### windows terminal settings
+
+```json
+ "terminal.integrated.profiles.windows": {
+    "msys64": {
+        "path": "C:\\msys64\\usr\\bin\\bash.exe",
+        "args": [
+            "--login",
+            "-i"
+        ],
+          "env": {
+            "MSYSTEM": "MINGW64",
+            "CHERE_INVOKING": "1"
+        }
+    },
+},
+"terminal.integrated.defaultProfile.windows": "msys64",
+```
+
 #### arduino-platformio
 
 ```sh
