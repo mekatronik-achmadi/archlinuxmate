@@ -21,6 +21,12 @@ python-tensorflow-cuda
 
 ## AUR
 
+### install vscodium
+
+- https://aur.archlinux.org/packages/vscodium-bin/
+- https://aur.archlinux.org/packages/vscodium-bin-features/
+- https://aur.archlinux.org/packages/vscodium-bin-marketplace/
+
 ### install webrowser programs
 
 - https://aur.archlinux.org/packages/brave-bin/
@@ -66,6 +72,91 @@ python-tensorflow-cuda
 --------------------------------------------------------------------------------
 
 ## Configurations
+
+### configure vscodium
+
+#### general programming
+
+```sh
+sudo rm -vf /usr/share/applications/codium-wayland.desktop
+```
+
+```sh
+vscodium --list-extensions
+
+vscodium --force --install-extension vscodevim.vim
+vscodium --force --install-extension cschlosser.doxdocgen
+vscodium --force --install-extension llvm-vs-code-extensions.vscode-clangd
+vscodium --force --install-extension rust-lang.rust-analyzer
+vscodium --force --install-extension golang.Go
+vscodium --force --install-extension REditorSupport.r
+vscodium --force --install-extension ms-python.python
+vscodium --force --install-extension ms-toolsai.jupyter
+```
+
+```sh
+VSCONFDIR=~/.config/VSCodium/User
+
+mkdir -p "$VSCONFDIR"
+echo "{}" > "$VSCONFDIR/settings.json"
+
+jq -n '
+."clangd.arguments"=["-header-insertion=never"] |
+."C_Cpp.intelliSenseEngine"="disabled" |
+."doxdocgen.file.customTag"=["@addtogroup ","@{"] |
+."doxdocgen.file.fileOrder"=["file","brief","empty","custom"] |
+."editor.fontFamily"="'\''Liberation Mono'\''" |
+."editor.fontSize"=10 |
+."editor.minimap.enabled"=false |
+."files.trimTrailingWhitespace"=true |
+."git.openRepositoryInParentFolders"="never" |
+."terminal.integrated.fontSize"=10 |
+."terminal.integrated.gpuAcceleration"="canvas" |
+."debug.console.wordWrap"=false |
+."workbench.startupEditor"="none" |
+."workbench.activityBar.visible"=false |
+."workbench.colorTheme"="Default Light+" |
+."security.workspace.trust.untrustedFiles"="open" |
+."window.restoreWindows"="none" |
+."telemetry.enableTelemetry"=false |
+."telemetry.enableCrashReporter"=false
+' | tee "$VSCONFDIR/temp.json"
+
+rm -f "$VSCONFDIR/settings.json"
+mv "$VSCONFDIR/temp.json" "$VSCONFDIR/settings.json"
+
+cat "$VSCONFDIR/settings.json"
+```
+
+#### arduino-platformio
+
+```sh
+vscodium --list-extensions
+
+# Make sure CLangd extension also disabled
+vscodium --force --install-extension ms-vscode.cpptools
+vscodium --force --install-extension platformio.platformio-ide
+vscodium --force --install-extension vsciot-vscode.vscode-arduino
+vscodium --force --install-extension ms-vscode.vscode-serial-monitor
+```
+
+```sh
+VSCONFDIR=~/.config/VSCodium/User
+
+jq '
+."C_Cpp.intelliSenseEngine"="default" |
+."arduino.commandPath"="arduino-cli" |
+."arduino.enableUSBDetection"=true |
+."arduino.logLevel"="verbose" |
+."arduino.path"="/usr/bin/" |
+."arduino.useArduinoCli"=true
+' "$VSCONFDIR/settings.json" | tee "$VSCONFDIR/temp.json"
+
+rm -f "$VSCONFDIR/settings.json"
+mv "$VSCONFDIR/temp.json" "$VSCONFDIR/settings.json"
+
+cat "$VSCONFDIR/settings.json"
+```
 
 ### configure nvidia
 

@@ -4,10 +4,10 @@
 
 ### Avoided Toolkit/Libraries
 
+- WxGTK-2
 - GNOME-4
 - GTK-4
 - Qt-4
-- WxGTK-2
 - KDE
 - Xfce
 - Conda
@@ -16,6 +16,7 @@
 - Linting
 - AppImage
 - Python-2
+- Microsoft
 - Nativefier
 
 ### User programs priorities
