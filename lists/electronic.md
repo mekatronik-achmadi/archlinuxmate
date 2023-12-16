@@ -384,6 +384,7 @@ void setup(){}
 void loop(){}' | tee src/main.c
 
 bear -- make
+compiledb make
 
 vim src/main.c
 ```
