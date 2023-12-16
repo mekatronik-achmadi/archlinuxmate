@@ -301,3 +301,90 @@ make app-flash
 ```sh
 make monitor # CTRL+] to exit
 ```
+
+### configure platformio
+
+#### install requirements
+
+```sh
+sudo pacman -S clangd python-pipenv python-virtualenv
+```
+
+#### install inside virtualenv
+
+```sh
+cd $HOME
+virtualenv platformio --system-site-packages
+source $HOME/platformio/bin/activate
+
+mkdir -p $HOME/.platformio/
+pip install platformio
+
+deactivate
+```
+
+#### install udev
+
+```sh
+UDEV=https://raw.githubusercontent.com/platformio/platformio-core/develop/platformio/assets/system/99-platformio-udev.rules
+curl -fsSL $UDEV | sudo tee /etc/udev/rules.d/99-platformio-udev.rules
+
+sudo gpasswd -a $USER lock
+sudo gpasswd -a $USER uucp
+
+sudo udevadm control --reload-rules
+sudo udevadm trigger
+```
+
+#### manager webserver
+
+```sh
+source $HOME/platformio/bin/activate
+pio home
+```
+
+#### example arduino avr
+
+```sh
+source $HOME/platformio/bin/activate
+```
+
+```sh
+mkdir -p blink/;cd blink/
+
+pio project init --ide vim --board nanoatmega328
+pio project config
+
+echo -e '#PlatformIO Makefile
+all:
+\tpio -f -c vim run
+
+upload:
+\tpio -f -c vim run --target upload
+
+clean:
+\tpio -f -c vim run --target clean
+
+program:
+\tpio -f -c vim run --target program
+
+uploadfs:
+\tpio -f -c vim run --target uploadfs
+
+update:
+\tpio -f -c vim update
+' | tee Makefile
+```
+
+```sh
+echo '#include "Arduino.h"
+
+void setup(){}
+
+void loop(){}' | tee src/main.c
+
+bear -- make
+
+vim src/main.c
+```
+
