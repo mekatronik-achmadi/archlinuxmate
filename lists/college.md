@@ -177,15 +177,17 @@ options(radian.auto_indentation = TRUE)
 options(radian.tab_size = 4)' | tee -a ~/.Rprofile
 
 r -e 'install.packages("languageserver")'
-r -e 'install.packages(c("ImportExport","tidymodels","tidyverse","plotrix"))'
-r -e 'install.packages(c("streamR","httpgd","GGally","haven","XML2R"))'
-r -e 'install.packages(c("randomForest","party","survival","plyr"))'
-
-sudo R CMD javareconf
-r -e 'install.packages("xlsx")'
+r -e 'install.packages(c("ImportExport","tidymodels","tidyverse","markdown"))'
+r -e 'install.packages(c("randomForest","party","survival","plyr","plotrix"))'
+r -e 'install.packages(c("streamR","shiny","httpgd","GGally","haven","XML2R"))'
 
 r -e 'print(.libPaths())'
 r -e 'print(library())'
+
+sudo R CMD javareconf
+r -e 'install.packages("xlsx")'
+r -e 'options(java.parameters = c("-XX:+UseConcMarkSweepGC", "-Xmx2048m"))'
+r -e 'library(xlsx)'
 ```
 
 ### configure wps office
