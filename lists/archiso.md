@@ -160,7 +160,8 @@ cython0 pybind11 python-setuptools
 
 ### install internet tools
 
-firefox filezilla uget aria2
+filezilla uget aria2
+firefox vimb qutebrowser
 qbittorrent-nox qbittorrent
 
 ### install bluetooth support

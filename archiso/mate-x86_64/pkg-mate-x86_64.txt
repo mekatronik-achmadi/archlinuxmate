@@ -118,7 +118,8 @@ python-pipenv python-virtualenv
 python-pip python-distutils-extra
 cython0 pybind11 python-setuptools
 
-firefox filezilla uget aria2
+filezilla uget aria2
+firefox vimb qutebrowser
 qbittorrent-nox qbittorrent
 
 blueman bluez
