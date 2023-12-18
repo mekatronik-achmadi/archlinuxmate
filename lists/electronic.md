@@ -354,11 +354,8 @@ pio home --host=0.0.0.0 --no-open
 
 ```sh
 source $HOME/platformio/bin/activate
-```
 
-```sh
 mkdir -p blink/;cd blink/
-
 pio project init --ide vim --board nanoatmega328
 pio project config
 
@@ -384,15 +381,27 @@ update:
 ```
 
 ```sh
-echo '#include "Arduino.h"
+echo '#include <Arduino.h>
 
-void setup(){}
+void setup(){
+    Serial.begin(9600);
+}
 
-void loop(){}' | tee src/main.c
+void loop(){
+    delay(250);
+}
+' | tee src/main.cpp
 
-bear -- make
-compiledb make
+bear -- make all
 
 vim src/main.c
+```
+
+#### run a serial monitor
+
+```sh
+source $HOME/platformio/bin/activate
+
+pio device monitor -p /dev/ttyUSB0 -b 9600
 ```
 
