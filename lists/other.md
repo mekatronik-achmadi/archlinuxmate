@@ -27,7 +27,6 @@ python-tensorflow-cuda
 
 - https://aur.archlinux.org/packages/brave-bin/
 - https://aur.archlinux.org/packages/google-chrome/
-- https://aur.archlinux.org/packages/microsoft-edge-stable-bin/
 
 ### nvidia
 
