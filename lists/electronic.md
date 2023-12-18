@@ -32,6 +32,7 @@ python-pyserial python-pyusb
 
 - https://aur.archlinux.org/packages/cutecom/
 - https://aur.archlinux.org/packages/interceptty/
+- https://aur.archlinux.org/packages/serialplot-hg/
 
 ### install stm32 tools
 
@@ -90,7 +91,6 @@ sed -i "s#'python2-pyserial' 'python2-cryptography' 'python2-pyparsing'##g" PKGB
 
 ### install stm32 tools
 
-- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/optional/wxserterm/
 - https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/optional/stlink-updater/
 
 ### install atmega tools
