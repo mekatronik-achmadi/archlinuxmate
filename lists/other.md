@@ -2,10 +2,6 @@
 
 ## Official
 
-### install webrowser programs
-
-chromium midori
-
 ### install latest nvidia driver
 
 nvidia-dkms nvidia-utils opencl-nvidia
