@@ -340,6 +340,9 @@ sudo udevadm trigger
 
 ```sh
 source $HOME/platformio/bin/activate
+
+sed -i "s@'dark'@'light'@g" $HOME/.platformio/packages/contrib-piohome/index.html
+
 pio home --host=0.0.0.0 --no-open
 
 #xdg-mime default vimb.desktop x-scheme-handler/http
