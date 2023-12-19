@@ -171,7 +171,7 @@ vim +PlugStatus
 ```sh
 echo -e "call plug#begin('~/.vim/pack/plug/start')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-\"Plug 'ryanoasis/vim-devicons'
+Plug 'tpope/vim-commentary'
 Plug 'honza/vim-snippets'
 Plug 'chrisbra/csv.vim'
 Plug 'SirVer/ultisnips'

@@ -109,11 +109,13 @@ call plug#begin('~/.vim/pack/plug/start')
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
     Plug 'tpope/vim-surround'
+    Plug 'tpope/vim-commentary'
     Plug 'airblade/vim-gitgutter'
     Plug 'godlygeek/tabular'
     Plug 'preservim/tagbar'
     Plug 'lervag/vimtex'
     Plug 'chrisbra/csv.vim'
+\"    Plug 'ryanoasis/vim-devicons'
 \"    Plug 'SirVer/ultisnips'
 \"    Plug 'honza/vim-snippets'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
