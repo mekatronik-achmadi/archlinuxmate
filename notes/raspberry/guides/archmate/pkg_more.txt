@@ -5,7 +5,7 @@ xinput_calibrator
 xsel xclip xterm
 xorg-fonts-misc
 
-tk ttf-liberation-mono-nerd
+tk ttf-droid ttf-liberation-mono-nerd
 fontforge ttf-liberation ttf-dejavu
 
 gtk3 wxgtk3 gtk2

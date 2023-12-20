@@ -75,8 +75,9 @@ python-gobject
 
 ### install desktop basic
 
+tk ttf-liberation onboard
 ttf-liberation-mono-nerd
-ttf-liberation onboard
+ttf-droid gnome-keyring
 dconf-editor trash-cli
 xdg-desktop-portal-gtk
 fontforge ttf-dejavu
@@ -84,7 +85,6 @@ redshift python-xdg
 archlinux-wallpaper
 xdg-desktop-portal
 xdg-user-dirs-gtk
-tk gnome-keyring
 
 ### install desktop tools
 
