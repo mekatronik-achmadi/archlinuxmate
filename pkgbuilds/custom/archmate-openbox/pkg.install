@@ -1,0 +1,13 @@
+openbox_symlink() {
+    ln -sf /usr/share/openbox/openboxrc.xml /etc/xdg/openbox/rc.xml
+    ln -sf /usr/share/openbox/openboxmenu.xml /etc/xdg/openbox/menu.xml
+    ln -sf /usr/share/openbox/openboxautostart /etc/xdg/openbox/autostart
+}
+
+post_install() {
+	openbox_symlink
+}
+
+post_upgrade() {
+	openbox_symlink
+}

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openbox_menu xmlns="http://openbox.org/3.4/menu">
+
+<menu id="apps-devel-menu" label="Development">
+ <item label="Xterm" icon="/usr/share/icons/Papirus/32x32/apps/xterm-color_48x48.svg">
+    <action name="Execute"><command>xterm</command></action>
+ </item>
+
+ <item label="MC FM" icon="/usr/share/icons/Papirus/32x32/apps/mc.svg">
+    <action name="Execute"><command>xterm -e mc</command></action>
+ </item>
+
+ <item label="Geany" icon="/usr/share/icons/Papirus/32x32/apps/geany.svg">
+    <action name="Execute"><command>geany</command></action>
+ </item>
+</menu>
+
+<menu id="apps-net-menu" label="Internet">
+  <item label="Firefox" icon="/usr/share/icons/Papirus/32x32/apps/firefox.svg">
+    <action name="Execute"><command>firefox</command></action>
+  </item>
+
+  <item label="Nyxt" icon="/usr/share/icons/hicolor/32x32/apps/nyxt.png">
+    <action name="Execute"><command>nyxt</command></action>
+  </item>
+
+  <item label="UGet" icon="/usr/share/icons/Papirus/32x32/apps/uget.svg">
+    <action name="Execute"><command>uget-gtk</command></action>
+  </item>
+</menu>
+
+<menu id="apps-media-menu" label="Multimedia">
+  <item label="PulseAudio" icon="/usr/share/icons/Papirus/32x32/apps/multimedia-volume-control.svg">
+    <action name="Execute"><command>pavucontrol</command></action>
+  </item>
+
+  <item label="Music Console" icon="/usr/share/icons/Papirus/32x32/apps/gnome-music.svg">
+    <action name="Execute"><command>xterm -e mocp</command></action>
+  </item>
+
+  <item label="VLC Player" icon="/usr/share/icons/Papirus/32x32/apps/vlc.svg">
+    <action name="Execute"><command>vlc</command></action>
+  </item>
+</menu>
+
+<menu id="background" label="Background">
+  <item label="Redraw">
+    <action name="Execute"><command>bash /usr/share/openbox/openboxfehbg</command></action>
+  </item>
+  <item label="Script">
+    <action name="Execute"><command>xterm -e vim /usr/share/openbox/openboxfehbg</command></action>
+  </item>
+</menu>
+
+<menu id="workspaces" label="Workspace">
+  <item label="Display" icon="/usr/share/icons/Papirus/32x32/apps/preferences-desktop-display.svg">
+    <action name="Execute"><command>arandr</command></action>
+  </item>
+
+  <item label="Configurations" icon="/usr/share/icons/Papirus/32x32/apps/obconf.svg">
+    <action name="Execute"><command>obconf</command></action>
+  </item>
+
+  <menu id="background" icon="/usr/share/icons/Papirus/32x32/apps/background.svg"/>
+
+  <menu id="client-list-menu" icon="/usr/share/icons/Papirus/32x32/apps/workspace-switcher.svg"/>
+</menu>
+
+<menu id="root-menu" label="Openbox">
+  <separator label="Applications" />
+  <menu id="apps-devel-menu" icon="/usr/share/icons/Papirus/32x32/apps/applications-development.svg"/>
+  <menu id="apps-net-menu" icon="/usr/share/icons/Papirus/32x32/apps/applications-internet.svg"/>
+  <menu id="apps-media-menu" icon="/usr/share/icons/Papirus/32x32/apps/applications-multimedia.svg"/>
+
+  <separator label="Openbox" />
+  <item label="Digital Clock" icon="/usr/share/icons/Papirus/32x32/apps/xclock.svg">
+    <action name="Execute"><command>xclock -digital -update 1</command></action>
+  </item>
+  <item label="Onboard" icon="/usr/share/icons/Papirus/32x32/apps/onboard.svg">
+    <action name="Execute"><command>onboard</command></action>
+  </item>
+  <menu id="workspaces" icon="/usr/share/icons/Papirus/32x32/places/desktop.svg"/>
+  <item label="Reload" icon="/usr/share/icons/Papirus/24x24/actions/reload.svg">
+    <action name="Execute"><command>openbox --restart</command></action>
+  </item>
+
+  <separator label="Exit" />
+  <item label="Logout" icon="/usr/share/icons/Papirus/32x32/apps/xfsm-logout.svg">
+    <action name="Exit"><prompt>yes</prompt></action>
+  </item>
+  <item label="Suspend" icon="/usr/share/icons/Papirus/32x32/apps/xfsm-suspend.svg">
+    <action name="Execute"><command>systemctl suspend</command></action>
+  </item>
+  <item label="Reboot" icon="/usr/share/icons/Papirus/32x32/apps/xfsm-reboot.svg">
+    <action name="Execute"><command>systemctl reboot</command></action>
+  </item>
+  <item label="Shutdown" icon="/usr/share/icons/Papirus/32x32/apps/xfsm-shutdown.svg">
+    <action name="Execute"><command>systemctl poweroff</command></action>
+  </item>
+</menu>
+
+</openbox_menu>

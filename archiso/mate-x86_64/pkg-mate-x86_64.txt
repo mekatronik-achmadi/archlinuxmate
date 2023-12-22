@@ -192,6 +192,7 @@ vim-devicons-git
 
 archmate-font
 archmate-theme
+archmate-openbox
 archmate-default
 archmate-archiso
 archmate-install

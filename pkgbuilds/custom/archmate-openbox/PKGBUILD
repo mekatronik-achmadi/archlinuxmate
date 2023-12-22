@@ -1,0 +1,20 @@
+pkgname=archmate-openbox
+pkgver=0.1
+pkgrel=1
+pkgdesc="alternative Openbox session"
+arch=('any')
+url="https://github.com/mekatronik-achmadi/archlinuxmate/"
+license=('custom')
+depends=('openbox' 'xterm' 'trayer' 'obconf'
+        'xorg-xclock' 'feh' 'xpdf' 'xarchiver')
+install=pkg.install
+options=('!makeflags' '!strip')
+
+package() {
+    cd $srcdir/
+    mkdir -p $pkgdir/usr/share/openbox/
+    cp -f ../openboxfehbg $pkgdir/usr/share/openbox/
+    cp -f ../openboxrc.xml $pkgdir/usr/share/openbox/
+    cp -f ../openboxmenu.xml $pkgdir/usr/share/openbox/
+    cp -f ../openboxautostart $pkgdir/usr/share/openbox/
+}
