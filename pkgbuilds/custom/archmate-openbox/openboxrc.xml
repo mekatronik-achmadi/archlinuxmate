@@ -306,9 +306,14 @@
   </keybind>
 
   <!-- Keybindings for running applications -->
+  <keybind key="C-A-u">
+    <action name="Execute">
+      <command>vimb</command>
+    </action>
+  </keybind>
   <keybind key="C-A-y">
     <action name="Execute">
-      <command>geany</command>
+      <command>nyxt</command>
     </action>
   </keybind>
   <keybind key="C-A-t">
@@ -333,7 +338,7 @@
   </keybind>
   <keybind key="C-A-q">
     <action name="Execute">
-      <command>nyxt</command>
+      <command>geany</command>
     </action>
   </keybind>
 </keyboard>
