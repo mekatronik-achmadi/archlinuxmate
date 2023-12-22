@@ -328,12 +328,12 @@
   </keybind>
   <keybind key="C-A-w">
     <action name="Execute">
-      <command>nyxt</command>
+      <command>firefox</command>
     </action>
   </keybind>
   <keybind key="C-A-q">
     <action name="Execute">
-      <command>vimb</command>
+      <command>nyxt</command>
     </action>
   </keybind>
 </keyboard>

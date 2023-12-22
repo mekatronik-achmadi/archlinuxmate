@@ -25,22 +25,8 @@
     <action name="Execute"><command>nyxt</command></action>
   </item>
 
-  <item label="UGet" icon="/usr/share/icons/Papirus/32x32/apps/uget.svg">
-    <action name="Execute"><command>uget-gtk</command></action>
-  </item>
-</menu>
-
-<menu id="apps-media-menu" label="Multimedia">
-  <item label="PulseAudio" icon="/usr/share/icons/Papirus/32x32/apps/multimedia-volume-control.svg">
-    <action name="Execute"><command>pavucontrol</command></action>
-  </item>
-
-  <item label="Music Console" icon="/usr/share/icons/Papirus/32x32/apps/gnome-music.svg">
-    <action name="Execute"><command>xterm -e mocp</command></action>
-  </item>
-
-  <item label="VLC Player" icon="/usr/share/icons/Papirus/32x32/apps/vlc.svg">
-    <action name="Execute"><command>vlc</command></action>
+  <item label="Vimb" icon="/usr/share/icons/Papirus/32x32/apps/browser.svg">
+    <action name="Execute"><command>vimb</command></action>
   </item>
 </menu>
 
@@ -58,6 +44,10 @@
     <action name="Execute"><command>arandr</command></action>
   </item>
 
+  <item label="Sound" icon="/usr/share/icons/Papirus/32x32/apps/multimedia-volume-control.svg">
+    <action name="Execute"><command>pavucontrol</command></action>
+  </item>
+
   <item label="Configurations" icon="/usr/share/icons/Papirus/32x32/apps/obconf.svg">
     <action name="Execute"><command>obconf</command></action>
   </item>
@@ -71,7 +61,6 @@
   <separator label="Applications" />
   <menu id="apps-devel-menu" icon="/usr/share/icons/Papirus/32x32/apps/applications-development.svg"/>
   <menu id="apps-net-menu" icon="/usr/share/icons/Papirus/32x32/apps/applications-internet.svg"/>
-  <menu id="apps-media-menu" icon="/usr/share/icons/Papirus/32x32/apps/applications-multimedia.svg"/>
 
   <separator label="Openbox" />
   <item label="Digital Clock" icon="/usr/share/icons/Papirus/32x32/apps/xclock.svg">
@@ -80,6 +69,7 @@
   <item label="Onboard" icon="/usr/share/icons/Papirus/32x32/apps/onboard.svg">
     <action name="Execute"><command>onboard</command></action>
   </item>
+
   <menu id="workspaces" icon="/usr/share/icons/Papirus/32x32/places/desktop.svg"/>
   <item label="Reload" icon="/usr/share/icons/Papirus/24x24/actions/reload.svg">
     <action name="Execute"><command>openbox --restart</command></action>
