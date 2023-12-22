@@ -453,6 +453,12 @@ let g:NERDTreeWinSize=30
 syntax on' | sudo tee -a /etc/vimrc
 ```
 
+#### configure openbox as default
+
+```sh
+sudo sed -i 's#session=mate#session=openbox#g' /etc/lightdm/lightdm.conf
+```
+
 #### configure vnc server
 
 ```sh

@@ -308,12 +308,12 @@
   <!-- Keybindings for running applications -->
   <keybind key="C-A-y">
     <action name="Execute">
-      <command>xterm</command>
+      <command>geany</command>
     </action>
   </keybind>
   <keybind key="C-A-t">
     <action name="Execute">
-      <command>mate-terminal</command>
+      <command>xterm</command>
     </action>
   </keybind>
   <keybind key="C-A-r">
@@ -323,12 +323,17 @@
   </keybind>
   <keybind key="C-A-e">
     <action name="Execute">
-      <command>caja</command>
+      <command>xterm -e mc</command>
     </action>
   </keybind>
   <keybind key="C-A-w">
     <action name="Execute">
-      <command>firefox</command>
+      <command>nyxt</command>
+    </action>
+  </keybind>
+  <keybind key="C-A-q">
+    <action name="Execute">
+      <command>vimb</command>
     </action>
   </keybind>
 </keyboard>

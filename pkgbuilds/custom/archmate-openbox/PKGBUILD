@@ -5,8 +5,8 @@ pkgdesc="alternative Openbox session"
 arch=('any')
 url="https://github.com/mekatronik-achmadi/archlinuxmate/"
 license=('custom')
-depends=('openbox' 'xterm' 'trayer' 'obconf'
-        'xorg-xclock' 'feh' 'xpdf' 'xarchiver')
+depends=('openbox' 'xterm' 'trayer' 'obconf' 'vimb' 'geany'
+        'xorg-xclock' 'feh' 'xpdf' 'xarchiver' 'nyxt' 'mc')
 install=pkg.install
 options=('!makeflags' '!strip')
 
