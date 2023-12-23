@@ -84,7 +84,7 @@ bluetoothctl
 #### Install I2S Mic Driver
 
 - https://aur.archlinux.org/packages/python-pyalsaaudio/
-- https://github.com/mekatronik-achmadi/archmate/tree/master/embedded/raspberrypi/drivers/i2smems/
+- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/notes/raspberry/drivers/i2smems/
 
 ```sh
 # list audio capture

@@ -148,7 +148,7 @@ ftp localhost
 vncpasswd
 
 mkdir -p ~/.vnc/
-echo 'session=mate
+echo 'session=openbox
 geometry=1024x768
 alwaysshared
 ' | tee ~/.vnc/config
