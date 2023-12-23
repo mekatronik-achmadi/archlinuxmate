@@ -14,8 +14,8 @@ options=('!makeflags' '!strip')
 package() {
     cd $srcdir/
     mkdir -p $pkgdir/usr/share/openbox/
-    cp -f ../openboxfehbg $pkgdir/usr/share/openbox/
-    cp -f ../openboxrc.xml $pkgdir/usr/share/openbox/
-    cp -f ../openboxmenu.xml $pkgdir/usr/share/openbox/
-    cp -f ../openboxautostart $pkgdir/usr/share/openbox/
+    cp -f ../openboxfehbg $pkgdir/usr/share/openbox/fehbg
+    cp -f ../openboxrc.xml $pkgdir/usr/share/openbox/rc.xml
+    cp -f ../openboxmenu.xml $pkgdir/usr/share/openbox/menu.xml
+    cp -f ../openboxautostart $pkgdir/usr/share/openbox/autostart
 }

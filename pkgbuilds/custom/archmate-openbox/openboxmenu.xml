@@ -31,10 +31,10 @@
 </menu>
 
 <menu id="background" label="Background">
-  <item label="Redraw">
+  <item label="Draw">
     <action name="Execute"><command>bash /usr/share/openbox/openboxfehbg</command></action>
   </item>
-  <item label="Script">
+  <item label="Edit">
     <action name="Execute"><command>xterm -e vim /usr/share/openbox/openboxfehbg</command></action>
   </item>
 </menu>
