@@ -9,10 +9,6 @@ vulkan-icd-loader lib32-vulkan-icd-loader
 lib32-vulkan-intel lib32-vulkan-mesa-layers
 vulkan-tools vulkan-intel vulkan-mesa-layers
 
-### install acpi tools
-
-acpi acpid acpi_call-dkms
-
 ### install intel-nvidia driver
 
 ```sh

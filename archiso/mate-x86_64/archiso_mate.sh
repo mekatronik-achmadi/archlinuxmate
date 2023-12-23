@@ -219,7 +219,11 @@ fi' | tee airootfs/etc/skel/.bash_profile
 ######################### GUI Configs ############################
 
 mkdir -pv airootfs/etc/X11/xorg.conf.d/
-echo 'Section "ServerFlags"
+echo 'Section "Monitor"
+    Option "DPMS" "false"
+EndSection
+
+Section "ServerFlags"
     Option "StandbyTime" "0"
     Option "SuspendTime" "0"
     Option "OffTime" "0"

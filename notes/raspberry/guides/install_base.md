@@ -514,7 +514,11 @@ EndSection' > /etc/X11/xorg.conf.d/99-fbdev.conf
 ### xorg no blank (qemu-chroot)
 
 ```sh
-echo 'Section "ServerFlags"
+echo 'Section "Monitor"
+    Option "DPMS" "false"
+EndSection
+
+Section "ServerFlags"
     Option "StandbyTime" "0"
     Option "SuspendTime" "0"
     Option "OffTime" "0"
