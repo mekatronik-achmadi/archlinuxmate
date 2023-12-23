@@ -5,7 +5,7 @@ openbox_symlink() {
 }
 
 editable_fehbg() {
-    chmod a+w /usr/openbox/fehbg
+    chmod a+w /usr/share/openbox/fehbg
 }
 
 post_install() {
