@@ -174,10 +174,10 @@ pacman -Su --noconfirm
 ### copy install packages list (host-pc)
 
 ```sh
-cp -vf ../archmate/pkg_basic.txt /mnt/mmc/root/home/alarm/basiclist.txt
-cp -vf ../archmate/pkg_more.txt /mnt/mmc/root/home/alarm/morelist.txt
-cp -vf ../archmate/pkg_server.txt /mnt/mmc/root/home/alarm/serverlist.txt
-cp -vf ../archmate/pkg_mate.txt /mnt/mmc/root/home/alarm/matelist.txt
+cp -vf ../archrpi/pkg_basic.txt /mnt/mmc/root/home/alarm/basiclist.txt
+cp -vf ../archrpi/pkg_more.txt /mnt/mmc/root/home/alarm/morelist.txt
+cp -vf ../archrpi/pkg_server.txt /mnt/mmc/root/home/alarm/serverlist.txt
+cp -vf ../archrpi/pkg_openbox.txt /mnt/mmc/root/home/alarm/openboxlist.txt
 ```
 
 ### generate basic packages urls (qemu-chroot)
@@ -211,31 +211,31 @@ pacman -S --noconfirm $(cat /home/alarm/basiclist.txt)
 #pacman -S --noconfirm --cachedir $CACHEDIR $(cat /home/alarm/basiclist.txt)
 ```
 
-### generate server/mate packages urls (qemu-chroot)
+### generate server/openbox packages urls (qemu-chroot)
 
 ```sh
 pacman -Sp $(cat /home/alarm/morelist.txt) > /home/alarm/more_pkgs.txt
 pacman -Sp $(cat /home/alarm/serverlist.txt) > /home/alarm/server_pkgs.txt
-pacman -Sp $(cat /home/alarm/matelist.txt) > /home/alarm/mate_pkgs.txt
+pacman -Sp $(cat /home/alarm/openboxlist.txt) > /home/alarm/openbox_pkgs.txt
 ```
 
-### download server/mate packages (host-pc)
+### download server/openbox packages (host-pc)
 
 ```sh
 cp -vf /mnt/mmc/root/home/alarm/more_pkgs.txt ./
 cp -vf /mnt/mmc/root/home/alarm/server_pkgs.txt ./
-cp -vf /mnt/mmc/root/home/alarm/mate_pkgs.txt ./
+cp -vf /mnt/mmc/root/home/alarm/openbox_pkgs.txt ./
 
 mkdir -p packages/official/;cd packages/official/
 wget -c -i ../../more_pkgs.txt
 wget -c -i ../../server_pkgs.txt
-wget -c -i ../../mate_pkgs.txt
+wget -c -i ../../openbox_pkgs.txt
 cd ../../
 
 sudo rsync -avh packages/official/ /mnt/mmc/root/var/cache/pacman/pkg/
 ```
 
-### install server/mate packages (qemu-chroot)
+### install server/openbox packages (qemu-chroot)
 
 ```sh
 sed -i "s#= Required DatabaseOptional#= Never#g" /etc/pacman.conf
@@ -245,20 +245,25 @@ sed -i "s#= Optional#= Never#g" /etc/pacman.conf
 pacman -S --noconfirm \
 $(cat /home/alarm/morelist.txt) \
 $(cat /home/alarm/serverlist.txt) \
-$(cat /home/alarm/matelist.txt)
+$(cat /home/alarm/openboxlist.txt)
 
 #export CACHEDIR=/mnt/pkgs/packages/official/
 #pacman -S --noconfirm --cachedir $CACHEDIR \
 #$(cat /home/alarm/morelist.txt) \
 #$(cat /home/alarm/serverlist.txt) \
-#$(cat /home/alarm/matelist.txt)
+#$(cat /home/alarm/openboxlist.txt)
 ```
 
-### copy some mate desktop defaults (host-pc)
+### copy openbox default package (host-pc)
 
 ```sh
-sudo cp -vf ../archmate/archmate-rpi.gschema.override /mnt/mmc/root/usr/share/glib-2.0/schemas/
-sudo cp -vf ../archmate/archlinux.layout /mnt/mmc/root/usr/share/mate-panel/layouts/fedora.layout
+sudo cp -vf ../archrpi/archmate-openbox* /mnt/mmc/root/home/alarm/
+```
+
+### install openbox default package (qemu-chroot)
+
+```sh
+pacman -U noconfirm /home/alarm/archmate-openbox*
 ```
 
 --------------------------------------------------------------------------------
@@ -421,7 +426,7 @@ export PAGER=most
 export VIEWER=most
 export FREETYPE_PROPERTIES="truetype:interpreter-version=40"
 export FT2_SUBPIXEL_HINTING=2
-' | tee /etc/profile.d/archmate-profile.sh
+' | tee /etc/profile.d/archrpi-profile.sh
 ```
 
 ### vim modify (qemu-chroot)
@@ -571,7 +576,7 @@ gtk-application-prefer-dark-theme = false
 ### configure startx (qemu-chroot)
 
 ```sh
-echo "exec mate-session" | tee /home/alarm/.xinitrc
+echo "exec openbox-session" | tee /home/alarm/.xinitrc
 chown -vf alarm:alarm /home/alarm/.xinitrc
 ```
 
@@ -635,7 +640,7 @@ rm -vf /home/alarm/{upgrade_pkgs.txt}
 rm -vf /home/alarm/{basic_pkgs.txt,basiclist.txt}
 rm -vf /home/alarm/{more_pkgs.txt,morelist.txt}
 rm -vf /home/alarm/{server_pkgs.txt,serverlist.txt}
-rm -vf /home/alarm/{mate_pkgs.txt,matelist.txt}
+rm -vf /home/alarm/{openbox_pkgs.txt,openboxlist.txt}
 rm -vf /var/cache/pacman/pkg/*
 ```
 
@@ -660,5 +665,5 @@ sudo umount /mnt/mmc/root/
 ```sh
 rm -vf dbase.txt upgrade_pkgs.txt \
 basic_pkgs.txt more_pkgs.txt \
-server_pkgs.txt mate_pkgs.txt
+server_pkgs.txt openbox_pkgs.txt
 ```
