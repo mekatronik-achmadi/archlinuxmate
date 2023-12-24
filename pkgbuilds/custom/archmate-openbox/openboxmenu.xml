@@ -35,20 +35,20 @@
 <!-- ########################## Tools Menu ########################## -->
 
 <menu id="brightness" label="Brightness">
-  <item label="90%">
-    <action name="Execute"><command>light -S 90</command></action>
+  <item label="85%">
+    <action name="Execute"><command>light -S 85</command></action>
   </item>
-  <item label="70%">
-    <action name="Execute"><command>light -S 70</command></action>
+  <item label="65%">
+    <action name="Execute"><command>light -S 65</command></action>
   </item>
-  <item label="50%">
-    <action name="Execute"><command>light -S 50</command></action>
+  <item label="45%">
+    <action name="Execute"><command>light -S 45</command></action>
   </item>
-  <item label="30%">
-    <action name="Execute"><command>light -S 30</command></action>
+  <item label="25%">
+    <action name="Execute"><command>light -S 25</command></action>
   </item>
-  <item label="10%">
-    <action name="Execute"><command>light -S 10</command></action>
+  <item label="5%">
+    <action name="Execute"><command>light -S 5</command></action>
   </item>
 </menu>
 
