@@ -6,8 +6,8 @@ arch=('any')
 url="https://github.com/mekatronik-achmadi/archlinuxmate/"
 license=('custom')
 depends=('openbox' 'xterm' 'trayer' 'obconf' 'vimb' 'geany'
-        'xorg-xclock' 'feh' 'xpdf' 'xarchiver' 'nyxt' 'mc'
-        'archlinux-wallpaper' 'pavucontrol' 'volumeicon')
+        'xorg-xclock' 'xpdf' 'xarchiver' 'nyxt' 'mc' 'light'
+        'feh' 'archlinux-wallpaper' 'pavucontrol' 'volumeicon')
 install=pkg.install
 options=('!makeflags' '!strip')
 

@@ -148,6 +148,8 @@ live:x:1000:984:live:/home/live:/bin/bash
 ' | tee airootfs/etc/passwd
 
 echo 'root:x:0:root
+tty:x:5:live
+video:x:985:live
 power:x:98:live
 wheel:x:998:live
 storage:x:987:live
@@ -160,6 +162,8 @@ live::18740:0:99999:7:::
 ' | tee airootfs/etc/shadow
 
 echo 'root:::root
+tty:!*::live
+video:!*::live
 power:!*::live
 wheel:!*::live
 storage:!*::live

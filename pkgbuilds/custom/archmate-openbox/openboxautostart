@@ -1,4 +1,5 @@
 volumeicon &
 trayer --edge top --align center --widthtype request &
 bash /usr/share/openbox/fehbg &
+light -S 50 &
 

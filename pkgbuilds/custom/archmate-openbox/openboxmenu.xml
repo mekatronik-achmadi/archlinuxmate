@@ -2,6 +2,8 @@
 
 <openbox_menu xmlns="http://openbox.org/3.4/menu">
 
+<!-- ################### Applications Menu #################### -->
+
 <menu id="apps-devel-menu" label="Development">
  <item label="Xterm" icon="/usr/share/icons/Papirus/32x32/apps/xterm-color_48x48.svg">
     <action name="Execute"><command>xterm</command></action>
@@ -30,32 +32,60 @@
   </item>
 </menu>
 
-<menu id="background" label="Background">
-  <item label="Draw">
-    <action name="Execute"><command>bash /usr/share/openbox/openboxfehbg</command></action>
+<!-- ########################## Tools Menu ########################## -->
+
+<menu id="brightness" label="Brightness">
+  <item label="90%">
+    <action name="Execute"><command>light -S 90</command></action>
   </item>
-  <item label="Edit">
-    <action name="Execute"><command>xterm -e vim /usr/share/openbox/openboxfehbg</command></action>
+  <item label="70%">
+    <action name="Execute"><command>light -S 70</command></action>
+  </item>
+  <item label="50%">
+    <action name="Execute"><command>light -S 50</command></action>
+  </item>
+  <item label="30%">
+    <action name="Execute"><command>light -S 30</command></action>
+  </item>
+  <item label="10%">
+    <action name="Execute"><command>light -S 10</command></action>
   </item>
 </menu>
 
-<menu id="workspaces" label="Workspace">
+<menu id="background" label="Background">
+  <item label="Redraw" icon="/usr/share/icons/Papirus/32x32/apps/image-viewer.svg">
+    <action name="Execute"><command>bash /usr/share/openbox/fehbg</command></action>
+  </item>
+  <item label="Choose" icon="/usr/share/icons/Papirus/32x32/places/folder-images.svg">
+    <action name="Execute"><command>xterm -e vim /usr/share/openbox/fehbg</command></action>
+  </item>
+</menu>
+
+<menu id="tools" label="Tools">
   <item label="Display" icon="/usr/share/icons/Papirus/32x32/apps/preferences-desktop-display.svg">
     <action name="Execute"><command>arandr</command></action>
   </item>
+
+  <menu id="brightness" icon="/usr/share/icons/Papirus/32x32/apps/brightnesssettings.svg"/>
 
   <item label="Sound" icon="/usr/share/icons/Papirus/32x32/apps/multimedia-volume-control.svg">
     <action name="Execute"><command>pavucontrol</command></action>
   </item>
 
+  <menu id="background" icon="/usr/share/icons/Papirus/32x32/apps/background.svg"/>
+</menu>
+
+<!-- #################### Workspace Menu ##################### -->
+
+<menu id="workspaces" label="Workspace">
   <item label="Configurations" icon="/usr/share/icons/Papirus/32x32/apps/obconf.svg">
     <action name="Execute"><command>obconf</command></action>
   </item>
 
-  <menu id="background" icon="/usr/share/icons/Papirus/32x32/apps/background.svg"/>
-
   <menu id="client-list-menu" icon="/usr/share/icons/Papirus/32x32/apps/workspace-switcher.svg"/>
 </menu>
+
+<!-- ####################### Main Menu List ####################### -->
 
 <menu id="root-menu" label="Openbox">
   <separator label="Applications" />
@@ -63,13 +93,7 @@
   <menu id="apps-net-menu" icon="/usr/share/icons/Papirus/32x32/apps/applications-internet.svg"/>
 
   <separator label="Openbox" />
-  <item label="Digital Clock" icon="/usr/share/icons/Papirus/32x32/apps/xclock.svg">
-    <action name="Execute"><command>xclock -digital -update 1</command></action>
-  </item>
-  <item label="Onboard" icon="/usr/share/icons/Papirus/32x32/apps/onboard.svg">
-    <action name="Execute"><command>onboard</command></action>
-  </item>
-
+  <menu id="tools" icon="/usr/share/icons/Papirus/24x24/actions/tools.svg"/>
   <menu id="workspaces" icon="/usr/share/icons/Papirus/32x32/places/desktop.svg"/>
   <item label="Reload" icon="/usr/share/icons/Papirus/24x24/actions/reload.svg">
     <action name="Execute"><command>openbox --restart</command></action>
