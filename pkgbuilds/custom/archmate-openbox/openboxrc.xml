@@ -306,14 +306,9 @@
   </keybind>
 
   <!-- Keybindings for running applications -->
-  <keybind key="C-A-u">
-    <action name="Execute">
-      <command>vimb</command>
-    </action>
-  </keybind>
   <keybind key="C-A-y">
     <action name="Execute">
-      <command>nyxt</command>
+      <command>gmrun</command>
     </action>
   </keybind>
   <keybind key="C-A-t">
@@ -383,6 +378,7 @@
       <action name="Unfocus"/>
     </mousebind>
 
+<!--
     <mousebind button="A-Up" action="Click">
       <action name="GoToDesktop"><to>previous</to></action>
     </mousebind>
@@ -401,6 +397,7 @@
     <mousebind button="A-S-Down" action="Click">
       <action name="SendToDesktop"><to>next</to></action>
     </mousebind>
+-->
   </context>
 
   <context name="Titlebar">
@@ -592,6 +589,7 @@
     </mousebind>
   </context>
 
+<!--
   <context name="Desktop">
     <mousebind button="Up" action="Click">
       <action name="GoToDesktop"><to>previous</to></action>
@@ -622,6 +620,7 @@
       <action name="Raise"/>
     </mousebind>
   </context>
+-->
 
   <context name="Root">
     <!-- Menus -->
@@ -633,6 +632,7 @@
     </mousebind>
   </context>
 
+<!--
   <context name="MoveResize">
     <mousebind button="Up" action="Click">
       <action name="GoToDesktop"><to>previous</to></action>
@@ -647,6 +647,7 @@
       <action name="GoToDesktop"><to>next</to></action>
     </mousebind>
   </context>
+-->
 </mouse>
 
 <menu>
@@ -677,6 +678,9 @@
 </menu>
 
 <applications>
+  <fullscreen>no</fullscreen>
+  <maximized>false</maximized>
+  <focus>yes</focus>
 <!--
   # this is an example with comments through out. use these to make your
   # own rules, but without the comments of course.
