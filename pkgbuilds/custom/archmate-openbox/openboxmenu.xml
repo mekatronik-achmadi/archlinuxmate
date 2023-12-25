@@ -27,7 +27,7 @@
     <action name="Execute"><command>geany</command></action>
  </item>
 
- <item label="Midnight Commander" icon="/usr/share/icons/Papirus/32x32/apps/mc.svg">
+ <item label="MC File" icon="/usr/share/icons/Papirus/32x32/apps/mc.svg">
     <action name="Execute"><command>xterm -e mc</command></action>
  </item>
 </menu>
