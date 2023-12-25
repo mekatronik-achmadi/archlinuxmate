@@ -1,7 +1,7 @@
 libappindicator-gtk3
 
-openbox trayer obconf feh volumeicon
-xpdf xorg-xclock xarchiver gmrun light
+openbox tint2 obconf feh volumeicon
+xpdf zenity xarchiver gmrun light
 
 dconf-editor trash-cli
 xdg-desktop-portal-gtk

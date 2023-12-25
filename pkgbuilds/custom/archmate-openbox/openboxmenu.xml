@@ -68,10 +68,12 @@
     <action name="Execute"><command>arandr</command></action>
   </item>
 
-  <menu id="brightness" icon="/usr/share/icons/Papirus/32x32/apps/brightnesssettings.svg"/>
-
   <item label="Sound" icon="/usr/share/icons/Papirus/32x32/apps/multimedia-volume-control.svg">
     <action name="Execute"><command>pavucontrol</command></action>
+  </item>
+
+  <item label="Onboard" icon="/usr/share/icons/Papirus/32x32/apps/onboard.svg">
+    <action name="Execute"><command>onboard</command></action>
   </item>
 </menu>
 
@@ -86,30 +88,23 @@
   </item>
 </menu>
 
-<!-- #################### Workspace Menu ##################### -->
-
-<menu id="workspaces" label="Workspace">
-  <item label="Digital Clock" icon="/usr/share/icons/Papirus/32x32/apps/xclock.svg">
-    <action name="Execute"><command>xclock -digital -update 1</command></action>
-  </item>
-
-  <item label="Onboard" icon="/usr/share/icons/Papirus/32x32/apps/onboard.svg">
-    <action name="Execute"><command>onboard</command></action>
-  </item>
-
-  <menu id="background" icon="/usr/share/icons/Papirus/32x32/apps/background.svg"/>
-</menu>
-
 <!-- #################### Configuration Menu ##################### -->
 
 <menu id="configuration" label="Configuration">
+  <menu id="background" icon="/usr/share/icons/Papirus/32x32/apps/background.svg"/>
+
+  <item label="Tint2Conf" icon="/usr/share/icons/Papirus/32x32/apps/tint2conf.svg">
+    <action name="Execute"><command>tint2conf</command></action>
+  </item>
+
   <item label="OBConf" icon="/usr/share/icons/Papirus/32x32/apps/obconf.svg">
     <action name="Execute"><command>obconf</command></action>
   </item>
-
+<!--
   <item label="Reload" icon="/usr/share/icons/Papirus/24x24/actions/reload.svg">
     <action name="Execute"><command>openbox --reconfigure</command></action>
   </item>
+-->
 </menu>
 
 <!-- ####################### Main Menu List ####################### -->
@@ -125,10 +120,9 @@
   <item label="Run a Program" icon="/usr/share/icons/ePapirus/24x24/actions/system-run.svg">
     <action name="Execute"><command>gmrun -g 300x</command></action>
   </item>
-  <menu id="workspaces" icon="/usr/share/icons/Papirus/32x32/places/desktop.svg"/>
-  <menu id="configuration" icon="/usr/share/icons/Papirus/32x32/apps/preferences-system-windows-actions.svg"/>
+  <menu id="brightness" icon="/usr/share/icons/Papirus/32x32/apps/brightnesssettings.svg"/>
+  <menu id="configuration" icon="/usr/share/icons/Papirus/24x24/actions/configuration.svg"/>
   <menu id="client-list-menu" icon="/usr/share/icons/Papirus/32x32/apps/workspace-switcher.svg"/>
-
 
   <separator label="Exit" />
   <item label="Logout" icon="/usr/share/icons/Papirus/32x32/apps/xfsm-logout.svg">

@@ -5,8 +5,8 @@ pkgdesc="alternative Openbox session"
 arch=('any')
 url="https://github.com/mekatronik-achmadi/archlinuxmate/"
 license=('GPL')
-depends=('openbox' 'xterm' 'trayer' 'obconf'
-        'mc' 'xorg-xclock' 'geany' 'xpdf'
+depends=('openbox' 'mc' 'xterm' 'tint2'
+        'zenity' 'obconf' 'geany' 'xpdf'
         'xarchiver' 'light' 'gmrun' 'vimb'
         'nyxt' 'scrot' 'feh' 'pavucontrol'
         'archlinux-wallpaper' 'volumeicon')
@@ -19,5 +19,6 @@ package() {
     cp -f ../openboxfehbg $pkgdir/usr/share/openbox/fehbg
     cp -f ../openboxrc.xml $pkgdir/usr/share/openbox/rc.xml
     cp -f ../openboxmenu.xml $pkgdir/usr/share/openbox/menu.xml
+    cp -f ../openboxtint2.rc $pkgdir/usr/share/openbox/tint2.rc
     cp -f ../openboxautostart $pkgdir/usr/share/openbox/autostart
 }

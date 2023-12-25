@@ -1,5 +1,5 @@
 volumeicon &
-trayer --edge bottom --align center --widthtype request &
+tint2 -c /usr/share/openbox/tint2.rc &
 bash /usr/share/openbox/fehbg &
-light -S 25 &
+light -S 15 &
 
