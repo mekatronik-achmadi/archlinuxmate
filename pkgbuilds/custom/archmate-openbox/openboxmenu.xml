@@ -23,26 +23,26 @@
     <action name="Execute"><command>xterm</command></action>
  </item>
 
- <item label="MC FM" icon="/usr/share/icons/Papirus/32x32/apps/mc.svg">
-    <action name="Execute"><command>xterm -e mc</command></action>
- </item>
-
  <item label="Geany" icon="/usr/share/icons/Papirus/32x32/apps/geany.svg">
     <action name="Execute"><command>geany</command></action>
+ </item>
+
+ <item label="Midnight Commander" icon="/usr/share/icons/Papirus/32x32/apps/mc.svg">
+    <action name="Execute"><command>xterm -e mc</command></action>
  </item>
 </menu>
 
 <menu id="apps-net-menu" label="Internet">
-  <item label="Firefox" icon="/usr/share/icons/Papirus/32x32/apps/firefox.svg">
-    <action name="Execute"><command>firefox</command></action>
-  </item>
-
   <item label="Nyxt" icon="/usr/share/icons/hicolor/32x32/apps/nyxt.png">
     <action name="Execute"><command>nyxt</command></action>
   </item>
 
   <item label="Vimb" icon="/usr/share/icons/Papirus/32x32/apps/browser.svg">
     <action name="Execute"><command>vimb</command></action>
+  </item>
+
+  <item label="Firefox" icon="/usr/share/icons/Papirus/32x32/apps/firefox.svg">
+    <action name="Execute"><command>firefox</command></action>
   </item>
 </menu>
 

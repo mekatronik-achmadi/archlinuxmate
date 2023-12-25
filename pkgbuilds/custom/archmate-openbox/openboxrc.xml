@@ -306,11 +306,6 @@
   </keybind>
 
   <!-- Keybindings for running applications -->
-  <keybind key="C-A-y">
-    <action name="Execute">
-      <command>gmrun</command>
-    </action>
-  </keybind>
   <keybind key="C-A-t">
     <action name="Execute">
       <command>xterm</command>
@@ -318,7 +313,7 @@
   </keybind>
   <keybind key="C-A-r">
     <action name="Execute">
-      <command>obconf</command>
+      <command>gmrun</command>
     </action>
   </keybind>
   <keybind key="C-A-e">
@@ -328,12 +323,7 @@
   </keybind>
   <keybind key="C-A-w">
     <action name="Execute">
-      <command>firefox</command>
-    </action>
-  </keybind>
-  <keybind key="C-A-q">
-    <action name="Execute">
-      <command>geany</command>
+      <command>nyxt</command>
     </action>
   </keybind>
 </keyboard>
@@ -624,9 +614,11 @@
 
   <context name="Root">
     <!-- Menus -->
+<!--
     <mousebind button="Middle" action="Press">
       <action name="ShowMenu"><menu>client-list-combined-menu</menu></action>
     </mousebind>
+-->
     <mousebind button="Right" action="Press">
       <action name="ShowMenu"><menu>root-menu</menu></action>
     </mousebind>
@@ -681,6 +673,12 @@
   <fullscreen>no</fullscreen>
   <maximized>false</maximized>
   <focus>yes</focus>
+
+  <application class="*">
+    <fullscreen>no</fullscreen>
+    <maximized>false</maximized>
+    <focus>yes</focus>
+  </application>
 <!--
   # this is an example with comments through out. use these to make your
   # own rules, but without the comments of course.
