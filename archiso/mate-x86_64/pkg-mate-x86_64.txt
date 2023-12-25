@@ -69,6 +69,9 @@ parcellite meld
 zenity xdotool
 shotwell xchm
 
+openbox obconf tint2 gmrun xpdf
+feh light volumeicon xarchiver
+
 networkmanager nm-connection-editor
 network-manager-applet modemmanager
 mobile-broadband-provider-info iftop

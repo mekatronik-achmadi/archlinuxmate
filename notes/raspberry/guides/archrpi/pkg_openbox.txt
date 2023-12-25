@@ -1,5 +1,3 @@
-libappindicator-gtk3
-
 openbox tint2 obconf feh volumeicon
 xpdf zenity xarchiver gmrun light
 

@@ -95,6 +95,11 @@ parcellite meld
 zenity xdotool
 shotwell xchm
 
+### install openbox session
+
+openbox obconf tint2 gmrun xpdf
+feh light volumeicon xarchiver
+
 ### install networking system
 
 networkmanager nm-connection-editor

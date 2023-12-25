@@ -13,9 +13,6 @@ python-wxpython
 python-gobject
 gtkmm gtkmm3
 
-android-file-transfer
-android-udev python-pyudev
-
 pulseaudio portaudio
 jack2 pulseaudio-jack
 alsa-utils alsa-firmware

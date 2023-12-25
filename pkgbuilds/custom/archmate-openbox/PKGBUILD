@@ -1,15 +1,13 @@
 pkgname=archmate-openbox
 pkgver=0.1
 pkgrel=1
-pkgdesc="alternative Openbox session"
+pkgdesc="alternative session using OpenBox"
 arch=('any')
 url="https://github.com/mekatronik-achmadi/archlinuxmate/"
 license=('GPL')
-depends=('openbox' 'mc' 'xterm' 'tint2'
-        'zenity' 'obconf' 'geany' 'xpdf'
-        'xarchiver' 'light' 'gmrun' 'vimb'
-        'nyxt' 'scrot' 'feh' 'pavucontrol'
-        'archlinux-wallpaper' 'volumeicon')
+depends=('openbox' 'obconf' 'tint2' 'volumeicon'
+        'archlinux-wallpaper' 'zenity' 'arandr'
+        'nyxt' 'feh' 'mc' 'xterm' 'gmrun' 'light')
 install=pkg.install
 options=('!makeflags' '!strip')
 
