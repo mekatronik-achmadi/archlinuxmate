@@ -5,9 +5,17 @@ pkgdesc="alternative session using OpenBox"
 arch=('any')
 url="https://github.com/mekatronik-achmadi/archlinuxmate/"
 license=('GPL')
-depends=('openbox' 'obconf' 'tint2' 'volumeicon'
-        'archlinux-wallpaper' 'zenity' 'arandr'
-        'nyxt' 'feh' 'mc' 'xterm' 'gmrun' 'light')
+depends=(
+'mc' 'papirus-icon-theme' 'pavucontrol' 'volumeicon' 'htop'
+'openbox' 'obconf' 'tint2' 'scrot' 'onboard' 'xterm' 'gmrun'
+'archlinux-wallpaper' 'zenity' 'arandr' 'nyxt' 'feh' 'light')
+optdepends=(
+'vim: cli editor'
+'geany: gui editor'
+'firefox: full web browser'
+'vimb: minimal web browser'
+'xpdf: pdf reader'
+'xarchiver: archive tool')
 install=pkg.install
 options=('!makeflags' '!strip')
 

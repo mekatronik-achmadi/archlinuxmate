@@ -2,51 +2,37 @@
 
 <openbox_menu xmlns="http://openbox.org/3.4/menu">
 
-<!-- ################### Applications Menu #################### -->
+<!-- ########################## Screenshot Menu ########################## -->
 
-<menu id="apps-acces-menu" label="Accessories">
- <item label="Xarchiver" icon="/usr/share/icons/Papirus/32x32/apps/xarchiver.svg">
-    <action name="Execute"><command>xarchiver</command></action>
- </item>
-
- <item label="XPdf" icon="/usr/share/icons/Papirus/32x32/apps/xpdf.svg">
-    <action name="Execute"><command>xpdf</command></action>
- </item>
-
- <item label="Htop" icon="/usr/share/icons/Papirus/32x32/apps/htop.svg">
-    <action name="Execute"><command>xterm -e htop</command></action>
+<menu id="screenshot" label="Screenshot">
+  <item label="Desktop">
+    <action name="Execute"><execute>
+      scrot -z 'screenshot-%Y-%m-%dT%H%M%S.png' -e 'feh $f'
+    </execute></action>
+  </item>
+  <item label="Desktop (5s)">
+    <action name="Execute"><execute>
+      scrot -z -d 5 'screenshot-%Y-%m-%dT%H%M%S.png' -e 'feh $f'
+    </execute></action>
+  </item>
+  <item label="Window">
+    <action name="Execute"><execute>
+      scrot -z -d 1 -u 'screenshot-%Y-%m-%dT%H%M%S.png' -e 'feh $f'
+    </execute></action>
+  </item>
+  <item label="Window (5s)">
+    <action name="Execute"><execute>
+      scrot -z -d 5 -u 'screenshot-%Y-%m-%dT%H%M%S.png' -e 'feh $f'
+    </execute></action>
+  </item>
+  <item label="Selection">
+    <action name="Execute"><execute>
+      scrot -z -s 'screenshot-%Y-%m-%dT%H%M%S.png' -e 'feh $f'
+    </execute></action>
   </item>
 </menu>
 
-<menu id="apps-devel-menu" label="Development">
- <item label="Xterm" icon="/usr/share/icons/Papirus/32x32/apps/xterm-color_48x48.svg">
-    <action name="Execute"><command>xterm</command></action>
- </item>
-
- <item label="Geany" icon="/usr/share/icons/Papirus/32x32/apps/geany.svg">
-    <action name="Execute"><command>geany</command></action>
- </item>
-
- <item label="MC File" icon="/usr/share/icons/Papirus/32x32/apps/mc.svg">
-    <action name="Execute"><command>xterm -e mc</command></action>
- </item>
-</menu>
-
-<menu id="apps-net-menu" label="Internet">
-  <item label="Nyxt" icon="/usr/share/icons/hicolor/32x32/apps/nyxt.png">
-    <action name="Execute"><command>nyxt</command></action>
-  </item>
-
-  <item label="Vimb" icon="/usr/share/icons/Papirus/32x32/apps/browser.svg">
-    <action name="Execute"><command>vimb</command></action>
-  </item>
-
-  <item label="Firefox" icon="/usr/share/icons/Papirus/32x32/apps/firefox.svg">
-    <action name="Execute"><command>firefox</command></action>
-  </item>
-</menu>
-
-<!-- ########################## Tools Menu ########################## -->
+<!-- ########################## Brightness Menu ########################## -->
 
 <menu id="brightness" label="Brightness">
   <item label="35%">
@@ -63,27 +49,13 @@
   </item>
 </menu>
 
-<menu id="apps-system-menu" label="System">
-  <item label="Display" icon="/usr/share/icons/Papirus/32x32/apps/preferences-desktop-display.svg">
-    <action name="Execute"><command>arandr</command></action>
-  </item>
-
-  <item label="Sound" icon="/usr/share/icons/Papirus/32x32/apps/multimedia-volume-control.svg">
-    <action name="Execute"><command>pavucontrol</command></action>
-  </item>
-
-  <item label="Onboard" icon="/usr/share/icons/Papirus/32x32/apps/onboard.svg">
-    <action name="Execute"><command>onboard</command></action>
-  </item>
-</menu>
-
 <!-- ####################### Background ####################### -->
 
 <menu id="background" label="Background">
-  <item label="Redraw" icon="/usr/share/icons/Papirus/32x32/apps/image-viewer.svg">
+  <item label="Redraw">
     <action name="Execute"><command>bash /usr/share/openbox/fehbg</command></action>
   </item>
-  <item label="Choose" icon="/usr/share/icons/Papirus/32x32/places/folder-images.svg">
+  <item label="Choose">
     <action name="Execute"><command>xterm -e vim /usr/share/openbox/fehbg</command></action>
   </item>
 </menu>
@@ -91,7 +63,13 @@
 <!-- #################### Configuration Menu ##################### -->
 
 <menu id="configuration" label="Configuration">
-  <menu id="background" icon="/usr/share/icons/Papirus/32x32/apps/background.svg"/>
+  <item label="Display" icon="/usr/share/icons/Papirus/32x32/apps/preferences-desktop-display.svg">
+    <action name="Execute"><command>arandr</command></action>
+  </item>
+
+  <item label="Sound" icon="/usr/share/icons/Papirus/32x32/apps/multimedia-volume-control.svg">
+    <action name="Execute"><command>pavucontrol</command></action>
+  </item>
 
   <item label="Tint2Conf" icon="/usr/share/icons/Papirus/32x32/apps/tint2conf.svg">
     <action name="Execute"><command>tint2conf</command></action>
@@ -110,19 +88,21 @@
 <!-- ####################### Main Menu List ####################### -->
 
 <menu id="root-menu" label="Openbox">
-  <separator label="Applications" />
-  <menu id="apps-acces-menu" icon="/usr/share/icons/Papirus/32x32/apps/applications-accessories.svg"/>
-  <menu id="apps-devel-menu" icon="/usr/share/icons/Papirus/32x32/apps/applications-development.svg"/>
-  <menu id="apps-net-menu" icon="/usr/share/icons/Papirus/32x32/apps/applications-internet.svg"/>
-  <menu id="apps-system-menu" icon="/usr/share/icons/Papirus/32x32/apps/applications-system.svg"/>
-
   <separator label="Openbox" />
   <item label="Run a Program" icon="/usr/share/icons/ePapirus/24x24/actions/system-run.svg">
     <action name="Execute"><command>gmrun -g 300x</command></action>
   </item>
+  <item label="Task Manager" icon="/usr/share/icons/Papirus/32x32/apps/htop.svg">
+    <action name="Execute"><command>xterm -e htop</command></action>
+  </item>
+  <item label="Onboard" icon="/usr/share/icons/Papirus/32x32/apps/onboard.svg">
+    <action name="Execute"><command>onboard</command></action>
+  </item>
+  <menu id="screenshot" icon="/usr/share/icons/Papirus/32x32/apps/accessories-screenshot.svg"/>
+  <menu id="background" icon="/usr/share/icons/Papirus/32x32/apps/background.svg"/>
   <menu id="brightness" icon="/usr/share/icons/Papirus/32x32/apps/brightnesssettings.svg"/>
-  <menu id="configuration" icon="/usr/share/icons/Papirus/24x24/actions/configuration.svg"/>
   <menu id="client-list-menu" icon="/usr/share/icons/Papirus/32x32/apps/workspace-switcher.svg"/>
+  <menu id="configuration" icon="/usr/share/icons/Papirus/24x24/actions/configuration.svg"/>
 
   <separator label="Exit" />
   <item label="Logout" icon="/usr/share/icons/Papirus/32x32/apps/xfsm-logout.svg">
