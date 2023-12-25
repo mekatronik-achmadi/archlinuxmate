@@ -49,17 +49,14 @@
 <!-- ########################## Tools Menu ########################## -->
 
 <menu id="brightness" label="Brightness">
-  <item label="85%">
-    <action name="Execute"><command>light -S 85</command></action>
-  </item>
-  <item label="65%">
-    <action name="Execute"><command>light -S 65</command></action>
-  </item>
-  <item label="45%">
-    <action name="Execute"><command>light -S 45</command></action>
+  <item label="35%">
+    <action name="Execute"><command>light -S 35</command></action>
   </item>
   <item label="25%">
     <action name="Execute"><command>light -S 25</command></action>
+  </item>
+  <item label="15%">
+    <action name="Execute"><command>light -S 15</command></action>
   </item>
   <item label="5%">
     <action name="Execute"><command>light -S 5</command></action>
@@ -126,7 +123,7 @@
 
   <separator label="Openbox" />
   <item label="Run a Program" icon="/usr/share/icons/ePapirus/24x24/actions/system-run.svg">
-    <action name="Execute"><command>gmrun</command></action>
+    <action name="Execute"><command>gmrun -g 300x</command></action>
   </item>
   <menu id="workspaces" icon="/usr/share/icons/Papirus/32x32/places/desktop.svg"/>
   <menu id="configuration" icon="/usr/share/icons/Papirus/32x32/apps/preferences-system-windows-actions.svg"/>
@@ -138,13 +135,13 @@
     <action name="Exit"><prompt>yes</prompt></action>
   </item>
   <item label="Suspend" icon="/usr/share/icons/Papirus/32x32/apps/xfsm-suspend.svg">
-    <action name="Execute"><command>systemctl suspend</command></action>
+      <action name="Execute"><command>systemctl suspend</command><prompt>Suspend now?</prompt></action>
   </item>
   <item label="Reboot" icon="/usr/share/icons/Papirus/32x32/apps/xfsm-reboot.svg">
-    <action name="Execute"><command>systemctl reboot</command></action>
+    <action name="Execute"><command>systemctl reboot</command><prompt>Reboot now?</prompt></action>
   </item>
   <item label="Shutdown" icon="/usr/share/icons/Papirus/32x32/apps/xfsm-shutdown.svg">
-    <action name="Execute"><command>systemctl poweroff</command></action>
+    <action name="Execute"><command>systemctl poweroff</command><prompt>Poweroff now?</prompt></action>
   </item>
 </menu>
 

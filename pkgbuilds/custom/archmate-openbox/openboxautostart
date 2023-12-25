@@ -2,4 +2,5 @@ volumeicon &
 trayer --edge bottom --align center --widthtype request &
 bash /usr/share/openbox/fehbg &
 light -S 25 &
+xclock -digital -update 1 &
 
