@@ -466,6 +466,7 @@ syntax on' | sudo tee -a /etc/vimrc
 
 ```sh
 sudo sed -i 's#session=mate#session=openbox#g' /etc/lightdm/lightdm.conf
+sudo systemctl start lightdm
 ```
 
 #### configure vnc server
