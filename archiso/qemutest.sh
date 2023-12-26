@@ -1,7 +1,8 @@
 #!/usr/bin/bash
 
-qemu-system-x86_64 -m 2048M -vga virtio -machine type=q35,accel=kvm \
--display gtk,zoom-to-fit=on,grab-on-hover=off,show-menubar=off \
+qemu-system-x86_64 -m 2048M -vga virtio \
+-machine type=q35,accel=kvm \
+-display gtk,zoom-to-fit=on,grab-on-hover=on \
 -cpu host -smp 2 -monitor stdio -enable-kvm \
 -nic user,model=virtio-net-pci \
 -global isa-fdc.fdtypeA=none \
