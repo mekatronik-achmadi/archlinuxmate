@@ -1,3 +1,5 @@
+lightdm lightdm-gtk-greeter
+
 openbox tint2 obconf feh volumeicon
 xpdf zenity xarchiver gmrun light
 

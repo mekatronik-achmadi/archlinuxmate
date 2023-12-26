@@ -284,6 +284,35 @@ Out ${HOME}/PDF
 ' | tee airootfs/etc/cups/cups-pdf.conf
 ln -svf /usr/lib/systemd/system/cups.service ${SYSTEMD}/cups.service
 
+######################### Archiso LightDM #########################
+
+mkdir -pv airootfs/etc/lightdm
+
+echo '[Seat:*]
+pam-service=lightdm
+pam-autologin-service=lightdm-autologin
+allow-guest=false
+session-wrapper=/etc/lightdm/Xsession
+greeter-session=lightdm-gtk-greeter
+autologin-user-timeout=0
+autologin-session=openbox
+autologin-user=live
+' | tee airootfs/etc/lightdm/lightdm.conf
+
+echo '[greeter]
+panel-position = top
+icon-theme-name = Papirus-Light
+theme-name = Arc-Lighter-solid
+background = /usr/share/backgrounds/archlinux/conference.png
+font-name = Liberation Sans 8
+xft-dpi = 96
+xft-antialias = true
+xft-rgba = rgb
+xft-hintstyle = hintslight
+hide-user-image = true
+keyboard = onboard
+' | tee airootfs/etc/lightdm/lightdm-gtk-greeter.conf
+
 ######################### Archiso Packages #########################
 
 mkdir -pv work/x86_64/airootfs/etc/

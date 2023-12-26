@@ -580,10 +580,35 @@ echo "exec openbox-session" | tee /home/alarm/.xinitrc
 chown -vf alarm:alarm /home/alarm/.xinitrc
 ```
 
-### rebuild gschema (qemu-chroot)
+### configure lightdm (qemu-chroot)
 
 ```sh
-glib-compile-schemas /usr/share/glib-2.0/schemas/
+mkdir -pv airootfs/etc/lightdm
+
+echo '[Seat:*]
+pam-service=lightdm
+pam-autologin-service=lightdm-autologin
+allow-guest=false
+session-wrapper=/etc/lightdm/Xsession
+greeter-session=lightdm-gtk-greeter
+autologin-user-timeout=0
+autologin-session=openbox
+autologin-user=alarm
+' | tee /etc/lightdm/lightdm.conf
+
+echo '[greeter]
+panel-position = top
+icon-theme-name = Papirus-Light
+theme-name = Arc-Lighter-solid
+background = /usr/share/backgrounds/archlinux/conference.png
+font-name = Liberation Sans 8
+xft-dpi = 96
+xft-antialias = true
+xft-rgba = rgb
+xft-hintstyle = hintslight
+hide-user-image = true
+keyboard = onboard
+' | tee /etc/lightdm/lightdm-gtk-greeter.conf
 ```
 
 ### clean unused themes

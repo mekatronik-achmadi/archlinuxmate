@@ -34,6 +34,8 @@ xorg-xinit xorg-fonts
 xsel xclip xterm
 xorg-fonts-misc
 
+lightdm lightdm-gtk-greeter
+
 gnome-icon-theme-extras gnome-themes-extra
 gtk-update-icon-cache icon-naming-utils
 arc-solid-gtk-theme papirus-icon-theme
