@@ -1,0 +1,41 @@
+pkgname=archopenbox-archiso
+pkgver=58
+pkgrel=1
+pkgdesc="Tools for creating Arch Linux live and install ISO images"
+arch=('any')
+url="https://gitlab.archlinux.org/archlinux/archiso"
+license=('GPL')
+provides=('archiso')
+conflicts=('archiso' 'archmate-archiso')
+makedepends=('git')
+depends=(
+'squashfs-tools' 'libarchive' 'syslinux' 'edk2-ovmf'
+'patch' 'rsync' 'cdrtools' 'libisoburn' 'bash-completion'
+'dosfstools' 'e2fsprogs' 'sed' 'curl' 'wget' 'mkinitcpio'
+'arch-install-scripts' 'erofs-utils' 'mkinitcpio-archiso')
+options=('!makeflags')
+install=pkg.install
+source=(
+    'pkg-openbox-x86_64.txt'
+    'archiso_openbox.sh'
+    'pacstrap_modify'
+    'custompkg.sh'
+    'qemutest.sh'
+    'newpkgs.md'
+	"git+https://gitlab.archlinux.org/archlinux/archiso.git#tag=v$pkgver")
+sha256sums=('SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP')
+
+package() {
+	cd ../
+
+	install -d $pkgdir/usr/share/archopenbox-archiso/
+	install -m 644 ./pkg-openbox-x86_64.txt $pkgdir/usr/share/archopenbox-archiso/
+	install -m 644 ./archiso_openbox.sh $pkgdir/usr/share/archopenbox-archiso/
+	install -m 644 ./pacstrap_modify $pkgdir/usr/share/archopenbox-archiso/
+	install -m 644 ./custompkg.sh $pkgdir/usr/share/archopenbox-archiso/
+	install -m 644 ./qemutest.sh $pkgdir/usr/share/archopenbox-archiso/
+	install -m 644 ./newpkgs.md $pkgdir/usr/share/archopenbox-archiso/
+
+	cd $srcdir/
+	make DESTDIR="$pkgdir" PREFIX=/usr install -C archiso
+}

@@ -15,6 +15,7 @@ sudo sed -i 's#-Sy#-Sp#g' /usr/bin/pacstrap_pkgurl
 ```sh
 echo $REPOURL
 export PKGLIST='pkg-mate-x86_64.txt'
+#export PKGLIST='pkg-openbox-x86_64.txt'
 export PKGCUSTOM='true'
 ```
 
