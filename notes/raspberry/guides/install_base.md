@@ -490,9 +490,6 @@ else
 
         # for runnable scripts
         #bash ~/script.sh
-
-        # for actual display
-        #exec startx
     fi
 fi' | tee /home/alarm/.bash_profile
 chown -vf alarm:alarm /home/alarm/.bash_profile
@@ -571,13 +568,6 @@ gtk-theme-name = Menta
 gtk-font-name = Liberation Sans 8
 gtk-application-prefer-dark-theme = false
 ' | tee /etc/gtk-3.0/settings.ini
-```
-
-### configure startx (qemu-chroot)
-
-```sh
-echo "exec openbox-session" | tee /home/alarm/.xinitrc
-chown -vf alarm:alarm /home/alarm/.xinitrc
 ```
 
 ### configure lightdm (qemu-chroot)

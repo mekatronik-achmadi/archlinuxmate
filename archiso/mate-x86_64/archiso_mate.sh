@@ -216,7 +216,6 @@ if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
 else
     if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
         true
-        #exec startx
     fi
 fi' | tee airootfs/etc/skel/.bash_profile
 
@@ -245,8 +244,6 @@ Xft.hintstyle: hintslight
 Xft.dpi: 96
 Xft.rgba: rgb
 Xft.lcdfilter: lcddefault" | tee airootfs/etc/skel/.Xdefaults
-
-echo "exec mate-session" | tee airootfs/etc/skel/.xinitrc
 
 mkdir -pv airootfs/etc/skel/.config/git/
 echo 'set mainfont {{Liberation Sans} 8}

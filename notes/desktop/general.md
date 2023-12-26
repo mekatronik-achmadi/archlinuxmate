@@ -217,18 +217,6 @@ Section "Device"
 EndSection
 ```
 
-### start mate-desktop without lightdm
-
-```sh
-echo -e "exec mate-session" >> ~/.xinitrc
-startx
-```
-
-```sh
-xinit /usr/bin/mate-session
-startx /usr/bin/mate-session
-```
-
 ### gpu utilization script
 
 ```sh
