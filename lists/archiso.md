@@ -279,6 +279,10 @@ edk2-ovmf
 - archmate-archiso: https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/custom/archmate-archiso/
 - archmate-install: https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/custom/archmate-install/
 
+### install archiso openbox
+
+- archopenbox-archiso: https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/custom/archopenbox-archiso/
+
 --------------------------------------------------------------------------------
 
 ## Configurations

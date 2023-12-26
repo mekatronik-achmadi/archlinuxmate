@@ -9,11 +9,12 @@ fi
 
 echo $REPOURL
 export ISOVER='mate_102023'
+export OBVER='openbox_102023'
 export DIRPATH="/home/developments/Packages/ArchMate-x86_64/$ISOVER"
 export DBPATH="$DIRPATH/databases"
 export PKGPATH="$DIRPATH/packages/official"
 export CSTPATH="$DIRPATH/packages/custom"
-export PKGLIST='../pkg-mate-x86_64.txt'
+export PKGLIST='../pkg-openbox-x86_64.txt'
 export PKGCUSTOM='true'
 
 mkdir -pv archlive/
@@ -26,7 +27,7 @@ sed -i 's/ /\n/g' ./packages.x86_64
 mkdir -pv work/x86_64/airootfs/
 
 sed -i 's#iso_label="ARCH_$(date +%Y%m)"#iso_label="ARCH_LINUX"#g' profiledef.sh
-sed -i 's#iso_version="$(date +%Y.%m.%d)"#iso_version="$ISOVER"#g' profiledef.sh
+sed -i 's#iso_version="$(date +%Y.%m.%d)"#iso_version="$OBVER"#g' profiledef.sh
 sed -i "s#'-comp' 'xz' '-Xbcj' 'x86' '-b' '1M' '-Xdict-size' '1M'#'-limit' '75' '-comp' 'zstd' '-b' '1M'#g" profiledef.sh
 
 ######################### Archiso Configs #########################
@@ -139,7 +140,10 @@ echo "[Service]
 TTYVTDisallocate=no
 " | tee airootfs/etc/systemd/system/getty@tty1.service.d/noclear.conf
 
-rm -vf airootfs/etc/systemd/system/getty@tty1.service.d/autologin.conf
+echo "[Service]
+ExecStart=
+ExecStart=-/sbin/agetty --autologin live --noissue --noclear %I 38400 linux
+" | tee airootfs/etc/systemd/system/getty@tty1.service.d/autologin.conf
 
 ######################### User Configs ############################
 
@@ -269,8 +273,6 @@ gtk-font-name = Liberation Sans 8
 gtk-application-prefer-dark-theme = false
 ' | tee airootfs/etc/gtk-3.0/settings.ini
 
-######################### Archiso Mate #########################
-
 mkdir -pv airootfs/etc/X11/xorg.conf.d/
 export SYNAPTICCONF=$(ls /usr/share/X11/xorg.conf.d/ | grep -i synaptic)
 cp -vf /usr/share/X11/xorg.conf.d/${SYNAPTICCONF} airootfs/etc/X11/xorg.conf.d/
@@ -280,35 +282,6 @@ echo '
 Grp cups
 Out ${HOME}/PDF
 ' | tee airootfs/etc/cups/cups-pdf.conf
-
-mkdir -pv airootfs/etc/lightdm
-
-echo '[Seat:*]
-pam-service=lightdm
-pam-autologin-service=lightdm-autologin
-allow-guest=false
-session-wrapper=/etc/lightdm/Xsession
-greeter-session=lightdm-gtk-greeter
-autologin-user-timeout=0
-autologin-session=mate
-autologin-user=live
-' | tee airootfs/etc/lightdm/lightdm.conf
-
-echo '[greeter]
-panel-position = top
-icon-theme-name = Papirus-Light
-theme-name = Arc-Lighter-solid
-background = /usr/share/backgrounds/archlinux/conference.png
-font-name = Liberation Sans 8
-xft-dpi = 96
-xft-antialias = true
-xft-rgba = rgb
-xft-hintstyle = hintslight
-hide-user-image = true
-keyboard = onboard
-' | tee airootfs/etc/lightdm/lightdm-gtk-greeter.conf
-
-ln -svf /usr/lib/systemd/system/lightdm.service ${SYSTEMD}/lightdm.service
 ln -svf /usr/lib/systemd/system/cups.service ${SYSTEMD}/cups.service
 
 ######################### Archiso Packages #########################

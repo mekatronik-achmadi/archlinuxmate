@@ -34,12 +34,6 @@ xorg-xinit xorg-fonts
 xsel xclip xterm
 xorg-fonts-misc
 
-mate mate-extra
-libappindicator-gtk3
-mate-common gnome-common
-lightdm lightdm-gtk-greeter
-lightdm-gtk-greeter-settings
-
 gnome-icon-theme-extras gnome-themes-extra
 gtk-update-icon-cache icon-naming-utils
 arc-solid-gtk-theme papirus-icon-theme
@@ -94,10 +88,6 @@ alsa-ucm-conf sof-firmware
 alsa-oss alsa-lib alsa-plugins
 pulseaudio-equalizer pavucontrol
 pulseaudio-alsa pulseaudio-bluetooth
-
-gvfs gvfs-mtp gvfs-google
-gvfs-gphoto2 gvfs-afc
-gvfs-smb gvfs-nfs
 
 tar atool xz libarchive unrar unarj
 lhasa rpmextract lxsplit unrar-free
@@ -194,9 +184,7 @@ vi-vim-symlink
 vim-devicons-git
 
 archmate-font
-archmate-theme
 archmate-openbox
-archmate-default
-archmate-archiso
 archmate-install
+archopenbox-archiso
 

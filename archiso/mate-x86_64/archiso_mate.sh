@@ -269,8 +269,6 @@ gtk-font-name = Liberation Sans 8
 gtk-application-prefer-dark-theme = false
 ' | tee airootfs/etc/gtk-3.0/settings.ini
 
-######################### Archiso Mate #########################
-
 mkdir -pv airootfs/etc/X11/xorg.conf.d/
 export SYNAPTICCONF=$(ls /usr/share/X11/xorg.conf.d/ | grep -i synaptic)
 cp -vf /usr/share/X11/xorg.conf.d/${SYNAPTICCONF} airootfs/etc/X11/xorg.conf.d/
@@ -280,6 +278,9 @@ echo '
 Grp cups
 Out ${HOME}/PDF
 ' | tee airootfs/etc/cups/cups-pdf.conf
+ln -svf /usr/lib/systemd/system/cups.service ${SYSTEMD}/cups.service
+
+######################### Archiso LightDM #########################
 
 mkdir -pv airootfs/etc/lightdm
 
@@ -309,7 +310,6 @@ keyboard = onboard
 ' | tee airootfs/etc/lightdm/lightdm-gtk-greeter.conf
 
 ln -svf /usr/lib/systemd/system/lightdm.service ${SYSTEMD}/lightdm.service
-ln -svf /usr/lib/systemd/system/cups.service ${SYSTEMD}/cups.service
 
 ######################### Archiso Packages #########################
 
