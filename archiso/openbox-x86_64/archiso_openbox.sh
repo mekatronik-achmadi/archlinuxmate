@@ -250,7 +250,7 @@ Xft.dpi: 96
 Xft.rgba: rgb
 Xft.lcdfilter: lcddefault" | tee airootfs/etc/skel/.Xdefaults
 
-echo "exec mate-session" | tee airootfs/etc/skel/.xinitrc
+echo "exec openbox-session" | tee airootfs/etc/skel/.xinitrc
 
 mkdir -pv airootfs/etc/skel/.config/git/
 echo 'set mainfont {{Liberation Sans} 8}
