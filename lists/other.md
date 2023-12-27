@@ -56,10 +56,6 @@ python-tensorflow-cuda
 - https://aur.archlinux.org/packages/openssl-1.0/
 - https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/unused/eaglecad/
 
-### install youtube program
-
-- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/unused/youtubemusic/
-
 ### install discord client
 
 - https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/unused/discord/

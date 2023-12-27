@@ -52,14 +52,6 @@ mosquitto libwebsockets
 
 --------------------------------------------------------------------------------
 
-## External
-
-### install chat program
-
-- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/optional/telegram-bin/
-
---------------------------------------------------------------------------------
-
 ## Configurations
 
 ### configure apache
@@ -136,12 +128,6 @@ sudo systemctl enable mosquitto
 ```sh
 mosquitto_sub -t hello/world
 mosquitto_pub -t hello/world -m "MQTT on ArchLinux"
-```
-
-### configure telegram-desktop
-
-```sh
-sudo gpasswd -a $USER realtime
 ```
 
 ### configure anydesk
