@@ -462,6 +462,22 @@ let g:NERDTreeWinSize=30
 syntax on' | sudo tee -a /etc/vimrc
 ```
 
+#### configure profile
+
+```sh
+sudo mkdir -p /etc/profile.d/
+echo '
+export PATH=$PATH:~/.local/bin
+export QT_QPA_PLATFORMTHEME=qt5ct
+export VISUAL=vim
+export EDITOR=vim
+export PAGER=most
+export VIEWER=most
+export FREETYPE_PROPERTIES="truetype:interpreter-version=40"
+export FT2_SUBPIXEL_HINTING=2
+' | sudo tee /etc/profile.d/arch-profile.sh
+```
+
 #### configure openbox as default
 
 ```sh
