@@ -208,7 +208,10 @@ set wrap!
 set mouse=a
 let g:tagbar_width=30
 let g:NERDTreeWinSize=30
-syntax on' | tee -a airootfs/etc/vimrc
+syntax on
+if has("gui_running")
+  set guifont=LiterationMono\ Nerd\ Font\ Mono\ 8
+endif' | tee -a airootfs/etc/vimrc
 
 mkdir -pv airootfs/etc/skel/
 echo '

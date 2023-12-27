@@ -39,7 +39,7 @@ moc fdupes w3m lynx
 
 ### install vim editor
 
-vim vim-nerdtree vim-surround
+gvim vim-nerdtree vim-surround
 vim-nerdcommenter vim-gitgutter
 vim-airline vim-tagbar vim-tabular
 
@@ -149,11 +149,11 @@ bear hub subversion
 autoconf meson ninja
 vala autogen automake
 cblas openblas lapack
+gobject-introspection
 pkgconf gendesk help2man
 mercurial breezy cvs cloc
 cmake extra-cmake-modules
 dos2unix doxygen graphviz
-tcsh gobject-introspection
 
 ### install python installer
 
@@ -459,7 +459,10 @@ set wrap!
 set mouse=a
 let g:tagbar_width=30
 let g:NERDTreeWinSize=30
-syntax on' | sudo tee -a /etc/vimrc
+syntax on
+if has("gui_running")
+  set guifont=LiterationMono\ Nerd\ Font\ Mono\ 8
+endif' | sudo tee -a /etc/vimrc
 ```
 
 #### configure profile

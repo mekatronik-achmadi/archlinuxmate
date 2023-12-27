@@ -25,7 +25,7 @@ python lua perl
 hexedit most bat
 moc fdupes w3m lynx
 
-vim vim-nerdtree vim-surround
+gvim vim-nerdtree vim-surround
 vim-nerdcommenter vim-gitgutter
 vim-airline vim-tagbar vim-tabular
 
@@ -101,11 +101,11 @@ bear hub subversion
 autoconf meson ninja
 vala autogen automake
 cblas openblas lapack
+gobject-introspection
 pkgconf gendesk help2man
 mercurial breezy cvs cloc
 cmake extra-cmake-modules
 dos2unix doxygen graphviz
-tcsh gobject-introspection
 
 python-pkgconfig python-wheel
 python-build python-installer

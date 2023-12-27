@@ -7,7 +7,7 @@ arch=('any')
 url="http://www.vim.org/scripts/script.php?script_id=987"
 license=('GPL')
 groups=('vim-plugins')
-depends=('vim-minimal')
+depends=('vim')
 provides=('vim-doxygentoolkit')
 conflicts=('vim-doxygentoolkit')
 source=(DoxygenToolkit.vim)
