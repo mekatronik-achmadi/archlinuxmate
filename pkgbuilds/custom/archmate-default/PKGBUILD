@@ -37,9 +37,6 @@ package() {
 	cp -f ./panel/archmate.layout $pkgdir/usr/share/mate-panel/layouts/
 	cp -f ./panel/archdefault.layout $pkgdir/usr/share/mate-panel/layouts/
 
-	install -d $pkgdir/etc/profile.d/
-	install -m 755 ./archmate-profile.sh $pkgdir/etc/profile.d/
-
 	install -d $pkgdir/usr/share/archmate-default/
 	cp -f ./userset/archmate_bashrc $pkgdir/usr/share/archmate-default/
 	cp -f ./userset/redshift.conf $pkgdir/usr/share/archmate-default/

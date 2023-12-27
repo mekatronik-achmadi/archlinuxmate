@@ -12,6 +12,7 @@ depends=(
 optdepends=(
 'vim: cli editor'
 'geany: gui editor'
+'most: cli viewer'
 'firefox: full web browser'
 'vimb: minimal web browser'
 'xpdf: pdf reader'

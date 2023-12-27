@@ -418,7 +418,6 @@ TTYVTDisallocate=no
 mkdir -p /etc/profile.d/
 echo '
 export PATH=$PATH:~/.local/bin
-export BROWSER=w3m
 export QT_QPA_PLATFORMTHEME=qt5ct
 export VISUAL=vim
 export EDITOR=vim
@@ -490,6 +489,9 @@ else
 
         # for runnable scripts
         #bash ~/script.sh
+
+        # for runnable gui
+        #startx /path/program
     fi
 fi' | tee /home/alarm/.bash_profile
 chown -vf alarm:alarm /home/alarm/.bash_profile

@@ -219,6 +219,17 @@ else
     fi
 fi' | tee airootfs/etc/skel/.bash_profile
 
+mkdir -pv airootfs/etc/profile.d/
+echo 'export PATH=$PATH:~/.local/bin
+export QT_QPA_PLATFORMTHEME=qt5ct
+export VISUAL=vim
+export EDITOR=vim
+export PAGER=most
+export VIEWER=most
+export FREETYPE_PROPERTIES="truetype:interpreter-version=40"
+export FT2_SUBPIXEL_HINTING=2
+' | tee airootfs/etc/profile.d/arch-profile.sh
+
 ######################### GUI Configs ############################
 
 mkdir -pv airootfs/etc/X11/xorg.conf.d/
@@ -236,7 +247,6 @@ XTerm*foreground: black
 XTerm*selectToClipboard: true
 XTerm*eightBitInput: false
 XTerm*eightBitOutput: true
-XClock.Clock.face: Liberation Sans:size=9
 Xft.autohint: 0
 Xft.antialias: 1
 Xft.hinting: true
