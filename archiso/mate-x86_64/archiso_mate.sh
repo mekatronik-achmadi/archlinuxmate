@@ -141,6 +141,12 @@ TTYVTDisallocate=no
 
 rm -vf airootfs/etc/systemd/system/getty@tty1.service.d/autologin.conf
 
+rm -vf airootfs/etc/systemd/logind.conf.d/do-not-suspend.conf
+echo '[login]
+HandleLidSwitch=suspend
+HandleLidSwitchDocked=suspend
+' | tee airootfs/etc/systemd/logind.conf.d/lid-suspend.conf
+
 ######################### User Configs ############################
 
 echo 'root:x:0:0:root:/root:/bin/bash
@@ -231,6 +237,8 @@ export PAGER=most
 export VIEWER=most
 export FREETYPE_PROPERTIES="truetype:interpreter-version=40"
 export FT2_SUBPIXEL_HINTING=2
+export GTK_CSD=0
+export LD_PRELOAD=/usr/lib/libgtk3-nocsd.so.0:$LD_PRELOAD
 ' | tee airootfs/etc/profile.d/arch-profile.sh
 
 ######################### GUI Configs ############################

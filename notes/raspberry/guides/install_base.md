@@ -425,6 +425,8 @@ export PAGER=most
 export VIEWER=most
 export FREETYPE_PROPERTIES="truetype:interpreter-version=40"
 export FT2_SUBPIXEL_HINTING=2
+export GTK_CSD=0
+export LD_PRELOAD=/usr/lib/libgtk3-nocsd.so.0:$LD_PRELOAD
 ' | tee /etc/profile.d/archrpi-profile.sh
 ```
 

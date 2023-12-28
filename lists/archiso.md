@@ -478,12 +478,20 @@ export PAGER=most
 export VIEWER=most
 export FREETYPE_PROPERTIES="truetype:interpreter-version=40"
 export FT2_SUBPIXEL_HINTING=2
+export GTK_CSD=0
+export LD_PRELOAD=/usr/lib/libgtk3-nocsd.so.0:$LD_PRELOAD
 ' | sudo tee /etc/profile.d/arch-profile.sh
 ```
 
 #### configure openbox as default
 
 ```sh
+sudo rm -vf /etc/systemd/logind.conf.d/do-not-suspend.conf
+echo '[login]
+HandleLidSwitch=suspend
+HandleLidSwitchDocked=suspend
+' | sudo tee /etc/systemd/logind.conf.d/lid-suspend.conf
+
 sudo sed -i 's#session=mate#session=openbox#g' /etc/lightdm/lightdm.conf
 sudo systemctl start lightdm
 ```
