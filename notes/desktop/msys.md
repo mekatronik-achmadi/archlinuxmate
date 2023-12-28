@@ -149,6 +149,7 @@ let g:NERDTreeWinSize=30
 syntax on
 if has(\"gui_running\")
   set guifont=LiterationMono\ Nerd\ Font\ Mono\ 8
+\"  colorscheme evening
 endif" | tee ~/.vimrc
 ```
 
