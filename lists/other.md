@@ -23,11 +23,6 @@ python-tensorflow-cuda
 - https://aur.archlinux.org/packages/vscodium-bin-features/
 - https://aur.archlinux.org/packages/vscodium-bin-marketplace/
 
-### install webrowser programs
-
-- https://aur.archlinux.org/packages/brave-bin/
-- https://aur.archlinux.org/packages/google-chrome/
-
 ### nvidia
 
 #### nvidia-470 (utils,dkms,opencl)
@@ -59,6 +54,10 @@ python-tensorflow-cuda
 ### install discord client
 
 - https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/unused/discord/
+
+### install youtube program
+
+- https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/unused/youtubemusic/
 
 --------------------------------------------------------------------------------
 

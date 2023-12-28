@@ -49,6 +49,7 @@ mosquitto libwebsockets
 ### install http tools
 
 - https://aur.archlinux.org/packages/postman-bin/
+- https://aur.archlinux.org/packages/google-chrome/
 
 --------------------------------------------------------------------------------
 
