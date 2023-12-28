@@ -43,8 +43,8 @@ pacman -Su --noconfirm
 
 ```sh
 pacman -S $(echo "
-base base-devel vim mc git tig
-winpty neofetch bash-completion
+base base-devel gvim mc git tig openssh
+winpty neofetch bash-completion rsync
 bear tmux nano-syntax-highlighting
 ")
 ```
@@ -54,10 +54,12 @@ bear tmux nano-syntax-highlighting
 ```sh
 pacman -S $(echo "
 mingw-w64-x86_64-python
+mingw-w64-x86_64-cython0
 mingw-w64-x86_64-python-pip
 mingw-w64-x86_64-toolchain
 mingw-w64-x86_64-clang-analyzer
 mingw-w64-x86_64-clang-tools-extra
+mingw-w64-x86_64-ttf-liberation-mono-nerd
 ")
 ```
 
@@ -65,6 +67,7 @@ mingw-w64-x86_64-clang-tools-extra
 
 ```sh
 echo "
+export PATH=$PATH:~/.local/bin
 export VISUAL=vim
 export EDITOR=vim
 export PAGER=less
@@ -155,11 +158,16 @@ cat ~/.vimrc
 ls ~/.vim/pack/plug/start/
 
 vim +PlugInstall
-vim -c "CocInstall coc-snippets coc-ultisnips"
-vim -c "CocInstall coc-sh coc-clangd coc-jedi"
-vim -c "CocInstall coc-json coc-yaml coc-html"
-vim -c "CocInstall coc-vimtex coc-tsserver"
+vim -c "CocInstall coc-pairs coc-snippets"
+vim -c "CocInstall coc-sh coc-ultisnips"
+vim -c "CocInstall coc-clangd coc-jedi"
+vim -c "CocInstall coc-vimtex coc-json coc-yaml"
+vim -c "CocInstall coc-tsserver coc-rust-analyzer"
+vim -c "CocInstall coc-go coc-r-lsp coc-html"
 vim +PlugClean
+
+echo "For editing PKGBUILD"
+echo ":set ft=PKGBUILD"
 ```
 
 ## Generate Clangd compile_commands.json
@@ -175,4 +183,3 @@ pip install compiledb
 compiledb gcc -o coba.exe coba.c
 compiledb make -j$(nproc)
 ```
-
