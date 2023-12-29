@@ -475,9 +475,10 @@ gpasswd -a alarm tty
 ### configure bash (qemu-chroot)
 
 ```sh
-echo "
-alias sudo='sudo -E'
-
+echo "alias sudo='sudo -E'
+export MAKEFLAGS=-j$(nproc)
+alias makepkg='makepkg --nocheck --skippgpcheck'
+alias htop='htop -C'
 alias bat='bat --theme=GitHub'
 PS1='\[\033[01m\][\u@\h \W]\$ \[\033[00m\]'
 " | tee -a /home/alarm/.bashrc

@@ -6,7 +6,7 @@ arch=('any')
 url="https://gitlab.archlinux.org/archlinux/archiso"
 license=('GPL')
 provides=('archiso')
-conflicts=('archiso' 'archmate-archiso')
+conflicts=('archiso' 'archmate-archiso' 'archmate-default')
 makedepends=('git')
 depends=(
 'squashfs-tools' 'libarchive' 'syslinux' 'edk2-ovmf'
@@ -15,15 +15,8 @@ depends=(
 'arch-install-scripts' 'erofs-utils' 'mkinitcpio-archiso')
 options=('!makeflags')
 install=pkg.install
-source=(
-    'pkg-openbox-x86_64.txt'
-    'archiso_openbox.sh'
-    'pacstrap_modify'
-    'custompkg.sh'
-    'qemutest.sh'
-    'newpkgs.md'
-	"git+https://gitlab.archlinux.org/archlinux/archiso.git#tag=v$pkgver")
-sha256sums=('SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP')
+source=("git+https://gitlab.archlinux.org/archlinux/archiso.git#tag=v$pkgver")
+sha256sums=('SKIP')
 
 package() {
 	cd ../
@@ -38,4 +31,15 @@ package() {
 
 	cd $srcdir/
 	make DESTDIR="$pkgdir" PREFIX=/usr install -C archiso
+
+	#######################################################################
+
+	install -d $pkgdir/usr/share/archopenbox/
+	cp -f ./userset/archmate_bashrc $pkgdir/usr/share/archopenbox/
+	cp -f ./userset/redshift.conf $pkgdir/usr/share/archopenbox/
+	cp -f ./userset/mimeapps.list $pkgdir/usr/share/archopenbox/
+	cp -f ./userset/qt5ct.conf $pkgdir/usr/share/archopenbox/
+	cp -f ./userset/qt6ct.conf $pkgdir/usr/share/archopenbox/
+	cp -f ./userset/geany.conf $pkgdir/usr/share/archopenbox/
+	cp -f ./userset/gitconfig $pkgdir/usr/share/archopenbox/
 }
