@@ -63,6 +63,10 @@
 <!-- #################### Configuration Menu ##################### -->
 
 <menu id="configuration" label="Configuration">
+  <menu id="background" icon="/usr/share/icons/Papirus/32x32/apps/background.svg"/>
+
+  <menu id="brightness" icon="/usr/share/icons/Papirus/32x32/apps/brightnesssettings.svg"/>
+
   <item label="Display" icon="/usr/share/icons/Papirus/32x32/apps/preferences-desktop-display.svg">
     <action name="Execute"><command>arandr</command></action>
   </item>
@@ -93,14 +97,12 @@
     <action name="Execute"><command>gmrun -g 300x</command></action>
   </item>
   <item label="Task Manager" icon="/usr/share/icons/Papirus/32x32/apps/htop.svg">
-    <action name="Execute"><command>xterm -e htop</command></action>
+    <action name="Execute"><command>xterm -e htop -C</command></action>
   </item>
   <item label="Onboard" icon="/usr/share/icons/Papirus/32x32/apps/onboard.svg">
     <action name="Execute"><command>onboard</command></action>
   </item>
   <menu id="screenshot" icon="/usr/share/icons/Papirus/32x32/apps/accessories-screenshot.svg"/>
-  <menu id="background" icon="/usr/share/icons/Papirus/32x32/apps/background.svg"/>
-  <menu id="brightness" icon="/usr/share/icons/Papirus/32x32/apps/brightnesssettings.svg"/>
   <menu id="client-list-menu" icon="/usr/share/icons/Papirus/32x32/apps/workspace-switcher.svg"/>
   <menu id="configuration" icon="/usr/share/icons/Papirus/24x24/actions/configuration.svg"/>
 
