@@ -9,11 +9,11 @@ editable_fehbg() {
 }
 
 post_install() {
-	openbox_symlink
+    openbox_symlink
     editable_fehbg
 }
 
 post_upgrade() {
-	openbox_symlink
+    openbox_symlink
     editable_fehbg
 }

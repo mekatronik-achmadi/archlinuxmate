@@ -29,6 +29,8 @@ panel_config() {
 }
 
 vim_settings() {
+    echo 'vim settings'
+
     mkdir -p /etc
     echo '" /usr/share/vim/vimfiles/archlinux.vim' | sudo tee /etc/vimrc
     echo 'runtime! archlinux.vim
@@ -50,13 +52,14 @@ colorscheme shine
 syntax on
 if has("gui_running")
   set guifont=LiterationMono\ Nerd\ Font\ Mono\ 8
-endif' | tee -a /etc/vimrc
+endif' >> /etc/vimrc
 }
 
 arch_profile() {
+    echo 'default profile'
+
     echo 'export PATH=$PATH:~/.local/bin
 export QT_QPA_PLATFORMTHEME=qt5ct
-export MC_SKIN=dark
 export VISUAL=vim
 export EDITOR=vim
 export PAGER=most
@@ -65,7 +68,7 @@ export FREETYPE_PROPERTIES="truetype:interpreter-version=40"
 export FT2_SUBPIXEL_HINTING=2
 export GTK_CSD=0
 export LD_PRELOAD=/usr/lib/libgtk3-nocsd.so.0:$LD_PRELOAD
-' | tee /etc/profile.d/arch-profile.sh
+' > /etc/profile.d/arch-profile.sh
 }
 
 skel_config() {

@@ -316,12 +316,12 @@
   </keybind>
   <keybind key="C-A-e">
     <action name="Execute">
-      <command>xterm -e mc -S dark</command>
+      <command>xterm -e mc</command>
     </action>
   </keybind>
   <keybind key="C-A-w">
     <action name="Execute">
-      <command>vimb</command>
+      <command>nyxt</command>
     </action>
   </keybind>
 </keyboard>

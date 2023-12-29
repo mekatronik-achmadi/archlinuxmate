@@ -122,7 +122,7 @@ python-pip python-distutils-extra
 cython0 pybind11 python-setuptools
 
 firefox filezilla uget aria2
-vimb qbittorrent-nox qbittorrent
+nyxt qbittorrent-nox qbittorrent
 
 blueman bluez
 bluez-utils

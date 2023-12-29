@@ -345,7 +345,7 @@ sed -i "s@'dark'@'light'@g" $HOME/.platformio/packages/contrib-piohome/index.htm
 
 pio home --host=0.0.0.0 --no-open
 
-#xdg-mime default vimb.desktop x-scheme-handler/http
+#xdg-mime default nyxt.desktop x-scheme-handler/http
 #pio home --host=0.0.0.0
 ```
 
