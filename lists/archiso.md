@@ -279,10 +279,6 @@ edk2-ovmf
 - archmate-archiso: https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/custom/archmate-archiso/
 - archmate-install: https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/custom/archmate-install/
 
-### install archiso openbox
-
-- archopenbox-archiso: https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/custom/archopenbox-archiso/
-
 --------------------------------------------------------------------------------
 
 ## Configurations
@@ -409,7 +405,7 @@ echo "export GITHUBTOKEN=$(cat ~/GithubToken.txt)" | tee -a ~/.bashrc
 #### create new user with/without password
 
 ```sh
-sudo useradd -m -g users -G wheel,storage,power -s /bin/bash -c username username
+sudo useradd -m -g users -G wheel,storage,power,tty,video -s /bin/bash -c username username
 
 # change password
 sudo passwd username
