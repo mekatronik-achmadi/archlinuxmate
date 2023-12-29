@@ -82,11 +82,6 @@
   <item label="OBConf" icon="/usr/share/icons/Papirus/32x32/apps/obconf.svg">
     <action name="Execute"><command>obconf</command></action>
   </item>
-<!--
-  <item label="Reload" icon="/usr/share/icons/Papirus/24x24/actions/reload.svg">
-    <action name="Execute"><command>openbox --reconfigure</command></action>
-  </item>
--->
 </menu>
 
 <!-- ####################### Main Menu List ####################### -->
@@ -97,7 +92,7 @@
     <action name="Execute"><command>gmrun -g 300x</command></action>
   </item>
   <item label="Task Manager" icon="/usr/share/icons/Papirus/32x32/apps/htop.svg">
-    <action name="Execute"><command>xterm -e htop -C</command></action>
+    <action name="Execute"><command>xterm -e htop</command></action>
   </item>
   <item label="Onboard" icon="/usr/share/icons/Papirus/32x32/apps/onboard.svg">
     <action name="Execute"><command>onboard</command></action>

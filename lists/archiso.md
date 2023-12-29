@@ -473,6 +473,7 @@ sudo mkdir -p /etc/profile.d/
 echo '
 export PATH=$PATH:~/.local/bin
 export QT_QPA_PLATFORMTHEME=qt5ct
+export MC_SKIN=dark
 export VISUAL=vim
 export EDITOR=vim
 export PAGER=most
