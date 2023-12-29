@@ -321,7 +321,7 @@
   </keybind>
   <keybind key="C-A-w">
     <action name="Execute">
-      <command>nyxt</command>
+      <command>vimb</command>
     </action>
   </keybind>
 </keyboard>

@@ -165,8 +165,8 @@ cython0 pybind11 python-setuptools
 
 ### install internet tools
 
-firefox filezilla uget vimb nyxt
-aria2 qbittorrent-nox qbittorrent
+firefox filezilla uget aria2
+vimb qbittorrent-nox qbittorrent
 
 ### install bluetooth support
 
@@ -457,12 +457,12 @@ set ic is hls
 set number
 set wrap!
 set mouse=a
-let g:tagbar_width=30
-let g:NERDTreeWinSize=30
+let g:tagbar_width=20
+let g:NERDTreeWinSize=20
+colorscheme shine
 syntax on
 if has("gui_running")
   set guifont=LiterationMono\ Nerd\ Font\ Mono\ 8
-\"  colorscheme evening
 endif' | sudo tee -a /etc/vimrc
 ```
 
@@ -473,6 +473,7 @@ sudo mkdir -p /etc/profile.d/
 echo '
 export PATH=$PATH:~/.local/bin
 export QT_QPA_PLATFORMTHEME=qt5ct
+export MC_SKIN=dark
 export VISUAL=vim
 export EDITOR=vim
 export PAGER=most
