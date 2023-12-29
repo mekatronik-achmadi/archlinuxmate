@@ -494,7 +494,6 @@ HandleLidSwitchDocked=suspend
 ' | sudo tee /etc/systemd/logind.conf.d/lid-suspend.conf
 
 sudo sed -i 's#session=mate#session=openbox#g' /etc/lightdm/lightdm.conf
-sudo systemctl start lightdm
 ```
 
 #### configure vnc server
