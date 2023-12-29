@@ -419,7 +419,6 @@ mkdir -p /etc/profile.d/
 echo '
 export PATH=$PATH:~/.local/bin
 export QT_QPA_PLATFORMTHEME=qt5ct
-export MC_SKIN=dark
 export VISUAL=vim
 export EDITOR=vim
 export PAGER=most
@@ -478,6 +477,7 @@ gpasswd -a alarm tty
 echo "alias sudo='sudo -E'
 export MAKEFLAGS=-j$(nproc)
 alias makepkg='makepkg --nocheck --skippgpcheck'
+alias mc='mc -S dark'
 alias htop='htop -C'
 alias bat='bat --theme=GitHub'
 PS1='\[\033[01m\][\u@\h \W]\$ \[\033[00m\]'

@@ -1,3 +1,33 @@
+update_mime_cache() {
+    echo 'update mime database'
+    update-mime-database /usr/share/mime/
+}
+
+remove_autostart() {
+    echo 'remove some autostart'
+    rm -f /etc/xdg/autostart/onboard-autostart.desktop
+}
+
+skel_config() {
+    echo 'modify /etc/skel/ contents'
+
+    cp -f /usr/share/archopenbox/archmate_bashrc /etc/skel/.bashrc
+    cp -f /usr/share/archopenbox/gitconfig /etc/skel/.gitconfig
+
+    mkdir -p /etc/skel/.config
+    cp -f /usr/share/archopenbox/mimeapps.list /etc/skel/.config
+    cp -f /usr/share/archopenbox/redshift.conf /etc/skel/.config
+
+    mkdir -p /etc/skel/.config/qt5ct/
+    cp -f /usr/share/archopenbox/qt5ct.conf /etc/skel/.config/qt5ct/
+
+    mkdir -p /etc/skel/.config/qt6ct/
+    cp -f /usr/share/archopenbox/qt6ct.conf /etc/skel/.config/qt6ct/
+
+    mkdir -p /etc/skel/.config/geany/
+    cp -f /usr/share/archopenbox/geany.conf /etc/skel/.config/geany/
+}
+
 archiso_modify() {
 	cp -f /usr/bin/pacstrap /usr/bin/pacstrap_install
 	cp -f /usr/bin/pacstrap /usr/bin/pacstrap_pkgurl
@@ -29,11 +59,17 @@ pacman_nocustom() {
 }
 
 post_install() {
+	update_mime_cache
+	remove_autostart
+	skel_config
 	archiso_modify
 	pacman_nocustom
 }
 
 post_upgrade() {
+	update_mime_cache
+	remove_autostart
+	skel_config
 	archiso_modify
 	pacman_nocustom
 }
