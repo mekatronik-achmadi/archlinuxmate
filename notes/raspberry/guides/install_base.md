@@ -403,13 +403,13 @@ include "/usr/share/nano-syntax-highlighting/*.nanorc"
 mkdir -p /etc/systemd/system/getty@tty1.service.d/
 
 echo "[Service]
+TTYVTDisallocate=no
+" > /etc/systemd/system/getty@tty1.service.d/noclear.conf
+
+echo "[Service]
 ExecStart=
 ExecStart=-/sbin/agetty --autologin alarm --noissue --noclear %I 38400 linux
 " > /etc/systemd/system/getty@tty1.service.d/autologin.conf
-
-echo "[Service]
-TTYVTDisallocate=no
-" > /etc/systemd/system/getty@tty1.service.d/noclear.conf
 ```
 
 ### some profiles (qemu-chroot)
@@ -475,6 +475,8 @@ gpasswd -a alarm tty
 
 ```sh
 echo "alias sudo='sudo -E'
+alias htop='htop -C'
+alias mc='mc --nocolor'
 export MAKEFLAGS=-j$(nproc)
 alias makepkg='makepkg --nocheck --skippgpcheck'
 alias bat='bat --theme=GitHub'

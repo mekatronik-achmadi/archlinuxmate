@@ -316,7 +316,7 @@
   </keybind>
   <keybind key="C-A-e">
     <action name="Execute">
-      <command>xterm -e mc</command>
+      <command>xterm -e mc --nocolor</command>
     </action>
   </keybind>
   <keybind key="C-A-w">

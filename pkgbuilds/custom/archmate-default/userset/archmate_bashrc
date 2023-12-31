@@ -98,6 +98,10 @@ alias sudo='sudo -E'
 export MAKEFLAGS=-j$(nproc)
 alias makepkg='makepkg --nocheck --skippgpcheck'
 
+# disable colors
+alias htop='htop -C'
+alias mc='mc --nocolor'
+
 # some light theme settings for bash shell
 alias bat='bat --theme=GitHub'
 PS1='\[\033[01m\][\u@\h \W]\$ \[\033[00m\]'

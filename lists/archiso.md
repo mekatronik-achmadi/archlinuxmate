@@ -384,6 +384,11 @@ echo "UUID=$SWAPUUID none swap defaults 0 0" | sudo tee -a /etc/fstab
 sudo systemctl disable lightdm
 
 sudo mkdir -p /etc/systemd/system/getty@tty1.service.d/
+
+echo "[Service]
+TTYVTDisallocate=no
+" | sudo tee /etc/systemd/system/getty@tty1.service.d/noclear.conf
+
 echo -e "[Service]
 ExecStart=
 ExecStart=-/sbin/agetty --autologin $USER --noissue --noclear %I 38400 linux

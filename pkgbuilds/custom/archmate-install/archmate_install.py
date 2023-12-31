@@ -474,13 +474,15 @@ class ArchMateInstall(archmate_gui.frmArchInstall):
         self.ConsoleLog(p)
 
         sed_login = 's@'
-        sed_login += 'autologin-user=live'
+        sed_login += 'live'
         sed_login += '@'
-        sed_login += 'autologin-user='
         sed_login += self.User
         sed_login += '@g'
 
         p = subprocess.Popen(["sed", "-i", sed_login, "/target/etc/lightdm/lightdm.conf"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, bufsize=-1)
+        self.ConsoleLog(p)
+
+        p = subprocess.Popen(["sed", "-i", sed_login, "/target/etc/systemd/system/getty@tty1.service.d/autologin.conf"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, bufsize=-1)
         self.ConsoleLog(p)
 
         if self.UseHome:
