@@ -62,12 +62,11 @@ archlinux-wallpaper
 xdg-desktop-portal
 xdg-user-dirs-gtk
 
+xdotool shotwell xchm
 geany geany-plugins
 qt5-base qt6-base
 qt5ct qt6ct scrot
 parcellite meld
-zenity xdotool
-shotwell xchm
 
 openbox obconf tint2 gmrun xpdf
 feh light volumeicon xarchiver

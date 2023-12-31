@@ -1,7 +1,7 @@
 lightdm lightdm-gtk-greeter
 
 openbox tint2 obconf feh volumeicon
-xpdf zenity xarchiver gmrun light
+xpdf gsimplecal xarchiver gmrun light
 
 dconf-editor trash-cli
 xdg-desktop-portal-gtk

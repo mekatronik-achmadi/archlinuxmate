@@ -88,12 +88,11 @@ xdg-user-dirs-gtk
 
 ### install desktop tools
 
+xdotool shotwell xchm
 geany geany-plugins
 qt5-base qt6-base
 qt5ct qt6ct scrot
 parcellite meld
-zenity xdotool
-shotwell xchm
 
 ### install openbox session
 
