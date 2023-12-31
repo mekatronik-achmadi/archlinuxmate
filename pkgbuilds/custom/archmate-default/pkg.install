@@ -32,7 +32,7 @@ vim_settings() {
     echo 'vim settings'
 
     mkdir -p /etc
-    echo '" /usr/share/vim/vimfiles/archlinux.vim' | sudo tee /etc/vimrc
+    echo '" /usr/share/vim/vimfiles/archlinux.vim' > /etc/vimrc
     echo 'runtime! archlinux.vim
 autocmd BufWritePre * %s/\s\+$//e
 filetype plugin on
