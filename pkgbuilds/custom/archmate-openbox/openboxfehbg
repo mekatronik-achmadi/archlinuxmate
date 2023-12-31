@@ -1,4 +1,4 @@
 #!/bin/sh
 
-feh --no-fehbg --bg-fill /usr/share/backgrounds/archlinux/conference.png
+feh --no-fehbg --bg-fill /usr/share/backgrounds/archlinux/small.png
 

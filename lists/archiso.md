@@ -21,9 +21,9 @@ pacman-contrib mlocate
 virtualbox-guest-utils
 intel-ucode amd-ucode
 mkinitcpio-archiso
+zsh pv archinstall
 cdrtools syslinux
 libxcrypt-compat
-pv archinstall
 
 ### install posix meta
 

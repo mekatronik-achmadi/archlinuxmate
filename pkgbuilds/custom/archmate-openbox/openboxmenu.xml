@@ -87,11 +87,11 @@
 <!-- ####################### Background Menu ####################### -->
 
 <menu id="background" label="Background">
-  <item label="Redraw">
-    <action name="Execute"><command>bash /usr/share/openbox/fehbg</command></action>
-  </item>
   <item label="Choose">
     <action name="Execute"><command>xterm -e vim /usr/share/openbox/fehbg</command></action>
+  </item>
+  <item label="Redraw">
+    <action name="Execute"><command>bash /usr/share/openbox/fehbg</command></action>
   </item>
 </menu>
 

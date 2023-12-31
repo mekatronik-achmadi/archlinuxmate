@@ -1,9 +1,5 @@
 volumeicon &
 tint2 -c /usr/share/openbox/tint2.rc &
-
 #bash ~/.screenlayout/dual_monitor.sh &
-#bash /path/additional_setup_scripts &
-
 bash /usr/share/openbox/fehbg &
 light -S 15 &
-
