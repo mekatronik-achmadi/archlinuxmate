@@ -10,6 +10,8 @@ export DEVDISK='/dev/sdb'
 ```
 
 ```sh
+echo ${DEVDISK}
+
 sudo parted ${DEVDISK} mklabel msdos
 ```
 
@@ -36,6 +38,8 @@ export DEVDISK='/dev/sdb'
 ```
 
 ```sh
+echo ${DEVDISK}
+
 sudo mkdir -p /mnt/mmc/{boot,root}
 sudo mount ${DEVDISK}1 /mnt/mmc/boot
 sudo mount ${DEVDISK}2 /mnt/mmc/root

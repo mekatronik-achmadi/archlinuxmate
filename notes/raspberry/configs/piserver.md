@@ -73,6 +73,6 @@ node app.js
 test on local webrowser:
 
 ```sh
-nyxt http://localhost:3000
-nyxt http://10.124.4.252:3000
+vimb http://localhost:3000
+vimb http://10.124.4.252:3000
 ```

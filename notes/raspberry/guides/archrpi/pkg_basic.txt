@@ -35,7 +35,7 @@ gnu-netcat nmap termshark
 tcpdump fping inetutils
 
 lm_sensors xsensors hddtemp
-htop atop dstat libstatgrab
+htop atop libstatgrab
 lsof nmon sysstat procps-ng
 usbutils dmidecode hwdetect
 hdparm sdparm smartmontools

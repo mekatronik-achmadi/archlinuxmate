@@ -17,13 +17,13 @@
   <item label="MC FileMan" icon="/usr/share/icons/Papirus/32x32/apps/mc.svg">
     <action name="Execute"><command>xterm -e mc --nocolor</command></action>
   </item>
-  <item label="Nyxt" icon=" /usr/share/icons/Papirus/32x32/apps/web-browser.svg">
-    <action name="Execute"><command>nyxt</command></action>
+  <item label="VimBrowser" icon=" /usr/share/icons/Papirus/32x32/apps/web-browser.svg">
+    <action name="Execute"><command>vimb</command></action>
   </item>
   <item label="Onboard" icon="/usr/share/icons/Papirus/32x32/apps/onboard.svg">
     <action name="Execute"><command>onboard</command></action>
   </item>
-  <item label="Task Man" icon="/usr/share/icons/Papirus/32x32/apps/htop.svg">
+  <item label="TaskManager" icon="/usr/share/icons/Papirus/32x32/apps/htop.svg">
     <action name="Execute"><command>xterm -e htop -C</command></action>
   </item>
   <item label="XTerminal" icon="/usr/share/icons/Papirus/32x32/apps/terminal.svg">

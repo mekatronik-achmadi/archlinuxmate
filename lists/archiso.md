@@ -166,7 +166,7 @@ cython0 pybind11 python-setuptools
 ### install internet tools
 
 firefox filezilla uget aria2
-nyxt qbittorrent-nox qbittorrent
+vimb qbittorrent-nox qbittorrent
 
 ### install bluetooth support
 
@@ -223,10 +223,10 @@ lm_sensors xsensors hddtemp
 lsof nmon sysstat procps-ng
 usbutils dmidecode hwdetect
 hdparm sdparm smartmontools
+htop ltrace strace mesa-demos
 linux-tools arandr read-edid
 hwloc hwinfo lshw mesa-utils
-dstat ltrace strace mesa-demos
-ccze htop inxi atop libstatgrab
+ccze inxi atop libstatgrab
 
 ### install disk tools
 
