@@ -564,18 +564,18 @@ chown -vf alarm:alarm /home/alarm/.Xdefaults
 ### configure gtk theme (qemu-chroot)
 
 ```sh
-mkdir -p /etc/gtk-2.0/
+mkdir -pv /etc/gtk-2.0/
 echo '
-gtk-icon-theme-name = "menta"
-gtk-theme-name = "Menta"
+gtk-icon-theme-name = "Papirus-Light"
+gtk-theme-name = "Arc-Lighter-solid"
 gtk-font-name = "Liberation Sans 8"
 ' | tee /etc/gtk-2.0/gtkrc
 
-mkdir -p /etc/gtk-3.0/
+mkdir -pv /etc/gtk-3.0/
 echo '
 [Settings]
-gtk-icon-theme-name = menta
-gtk-theme-name = Menta
+gtk-icon-theme-name = Papirus-Light
+gtk-theme-name = Arc-Lighter-solid
 gtk-font-name = Liberation Sans 8
 gtk-application-prefer-dark-theme = false
 ' | tee /etc/gtk-3.0/settings.ini
@@ -610,6 +610,8 @@ xft-hintstyle = hintslight
 hide-user-image = true
 keyboard = onboard
 ' | tee /etc/lightdm/lightdm-gtk-greeter.conf
+
+systemctl disable lightdm
 ```
 
 ### clean unused themes

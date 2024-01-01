@@ -484,6 +484,26 @@ export LD_PRELOAD=/usr/lib/libgtk3-nocsd.so.0:$LD_PRELOAD
 ' | sudo tee /etc/profile.d/arch-profile.sh
 ```
 
+#### configure gtk theme
+
+```sh
+sudo mkdir -pv /etc/gtk-2.0/
+echo '
+gtk-icon-theme-name = "Papirus-Light"
+gtk-theme-name = "Arc-Lighter-solid"
+gtk-font-name = "Liberation Sans 8"
+' | sudo tee /etc/gtk-2.0/gtkrc
+
+sudo mkdir -pv /etc/gtk-3.0/
+echo '
+[Settings]
+gtk-icon-theme-name = Papirus-Light
+gtk-theme-name = Arc-Lighter-solid
+gtk-font-name = Liberation Sans 8
+gtk-application-prefer-dark-theme = false
+' | sudo tee /etc/gtk-3.0/settings.ini
+```
+
 #### configure openbox as default
 
 ```sh
