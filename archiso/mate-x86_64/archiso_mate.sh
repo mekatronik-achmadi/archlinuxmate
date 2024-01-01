@@ -142,7 +142,7 @@ TTYVTDisallocate=no
 echo "[Service]
 ExecStart=
 ExecStart=-/sbin/agetty --autologin live --noissue --noclear %I 38400 linux
-" > /etc/systemd/system/getty@tty1.service.d/autologin.conf
+" | tee airootfs/etc/systemd/system/getty@tty1.service.d/autologin.conf
 
 rm -vf airootfs/etc/systemd/logind.conf.d/do-not-suspend.conf
 echo '[login]
