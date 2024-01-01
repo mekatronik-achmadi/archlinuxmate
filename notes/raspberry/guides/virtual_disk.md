@@ -16,6 +16,7 @@ yes | sudo parted rpi.img mkpart primary 200 100%
 sudo losetup --partscan --find --show rpi.img
 yes | sudo mkfs.vfat -F 32 /dev/loop0p1
 yes | sudo parted rpi.img set 1 boot on
+yes | sudo parted rpi.img set 1 lba on
 yes | sudo mkfs.ext4 /dev/loop0p2
 sudo losetup -d /dev/loop0
 ```

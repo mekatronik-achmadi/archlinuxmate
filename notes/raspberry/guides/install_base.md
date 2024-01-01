@@ -21,6 +21,7 @@ yes | sudo parted ${DEVDISK} mkpart primary 200 100%
 
 yes | sudo mkfs.vfat -F 32 ${DEVDISK}1
 yes | sudo parted ${DEVDISK} set 1 boot on
+yes | sudo parted ${DEVDISK} set 1 lba on
 yes | sudo mkfs.ext4 ${DEVDISK}2
 ```
 
@@ -267,7 +268,7 @@ sudo cp -vf ../archrpi/archmate-openbox* /mnt/mmc/root/home/alarm/
 ### install openbox default package (qemu-chroot)
 
 ```sh
-pacman -U noconfirm /home/alarm/archmate-openbox*
+pacman -U --noconfirm /home/alarm/archmate-openbox*
 ```
 
 --------------------------------------------------------------------------------
@@ -277,8 +278,7 @@ pacman -U noconfirm /home/alarm/archmate-openbox*
 ### basic config.txt (qemu-chroot)
 
 ```sh
-echo 'gpu_mem=256
-dtoverlay=vc4-kms-v3d
+echo 'gpu_mem=128
 initramfs initramfs-linux.img followkernel
 
 hdmi_force_hotplug=1
@@ -286,17 +286,19 @@ max_framebuffers=2
 disable_overscan=1
 display_auto_detect=1
 
-camera_auto_detect=1
 dtparam=audio=on
+camera_auto_detect=1
+dtoverlay=disable-bt
 
-[cm4]
-otg_mode=1
+[pi3]
+dtoverlay=vc4-kms-v3d
 
 [pi4]
 arm_boost=1
+dtoverlay=vc4-fkms-v3d
 
 [all]
-dtoverlay=disable-bt' > /boot/config.txt
+' > /boot/config.txt
 ```
 
 ### set hostname (qemu-chroot)
@@ -312,9 +314,7 @@ echo '
 boot_delay=0
 disable_splash=1
 avoid_warnings=1' >> /boot/config.txt
-
 sed -i '$s/$/ audit=0 quiet loglevel=0/' /boot/cmdline.txt
-echo 'kernel.printk = 3 3 3 3' > /etc/sysctl.d/20-quiet-printk.conf
 ```
 
 ### sudoers no password (qemu-chroot)
@@ -429,8 +429,6 @@ export PAGER=most
 export VIEWER=most
 export FREETYPE_PROPERTIES="truetype:interpreter-version=40"
 export FT2_SUBPIXEL_HINTING=2
-export GTK_CSD=0
-export LD_PRELOAD=/usr/lib/libgtk3-nocsd.so.0:$LD_PRELOAD
 ' | tee /etc/profile.d/archrpi-profile.sh
 ```
 
@@ -454,9 +452,9 @@ set wrap!
 set mouse=a
 let g:tagbar_width=20
 let g:NERDTreeWinSize=20
-colorscheme shine
 syntax on
 if has("gui_running")
+  colorscheme shine
   set guifont=LiterationMono\ Nerd\ Font\ Mono\ 8
 endif' >> /etc/vimrc
 ```
@@ -625,36 +623,10 @@ rm -rf /usr/share/themes/Raleigh
 rm -rf /usr/share/themes/Redmond
 rm -rf /usr/share/themes/ThinIce
 
-rm -rf /usr/share/themes/Blue-Submarine
-rm -rf /usr/share/themes/Green-Submarine
-rm -rf /usr/share/themes/BlueLaguna
-rm -rf /usr/share/themes/GreenLaguna
-rm -rf /usr/share/themes/TraditionalOkTest
-
 rm -rf /usr/share/themes/HighContrast
 rm -rf /usr/share/themes/HighContrastInverse
 rm -rf /usr/share/themes/ContrastHigh
 rm -rf /usr/share/themes/ContrastHighInverse
-
-rm -rf /usr/share/themes/Spidey*
-rm -rf /usr/share/themes/Splint*
-rm -rf /usr/share/themes/Dopple*
-rm -rf /usr/share/themes/ClearlooksRe
-rm -rf /usr/share/themes/DustBlue
-rm -rf /usr/share/themes/Shiny
-rm -rf /usr/share/themes/WinMe
-rm -rf /usr/share/themes/eOS
-rm -rf /usr/share/themes/Atlanta
-rm -rf /usr/share/themes/Gorilla
-rm -rf /usr/share/themes/Motif
-rm -rf /usr/share/themes/Esco
-
-rm -rf /usr/share/themes/TraditionalGreen
-rm -rf /usr/share/themes/TraditionalOk
-rm -rf /usr/share/themes/YaruGreen
-rm -rf /usr/share/themes/YaruOk
-
-rm -rf /usr/share/themes/*-border
 ```
 
 --------------------------------------------------------------------------------
@@ -664,7 +636,8 @@ rm -rf /usr/share/themes/*-border
 ### clean-up package cache (qemu-chroot)
 
 ```sh
-rm -vf /home/alarm/{upgrade_pkgs.txt}
+rm -vf /home/alarm/archmate-openbox*
+rm -vf /home/alarm/upgrade_pkgs.txt
 rm -vf /home/alarm/{basic_pkgs.txt,basiclist.txt}
 rm -vf /home/alarm/{more_pkgs.txt,morelist.txt}
 rm -vf /home/alarm/{server_pkgs.txt,serverlist.txt}
