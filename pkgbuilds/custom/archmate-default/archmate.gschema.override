@@ -96,7 +96,7 @@ exit-with-last-window=false
 
 [org.mate.caja.window-state]
 start-with-status-bar=true
-start-with-toolbar=true
+start-with-toolbar=false
 start-with-sidebar=true
 
 [org.mate.caja-open-terminal]
