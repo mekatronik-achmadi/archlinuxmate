@@ -64,6 +64,10 @@ fftw liquid-dsp libsndfile
 
 ## AUR
 
+### install pandoc
+
+- https://aur.archlinux.org/packages/pandoc-bin/
+
 ### install ms fonts
 
 - https://aur.archlinux.org/packages/ttf-tahoma/

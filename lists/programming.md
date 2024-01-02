@@ -63,11 +63,6 @@ go-tools yaegi
 
 ## AUR
 
-### install markdown editor
-
-- https://aur.archlinux.org/packages/pandoc-bin/
-- https://aur.archlinux.org/packages/marktext-bin/
-
 ### install qt5 qwt additionals
 
 - https://aur.archlinux.org/packages/qwt5-qt5/
