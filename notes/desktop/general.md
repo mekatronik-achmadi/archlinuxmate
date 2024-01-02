@@ -14,6 +14,7 @@
 - PyTest
 - Mono/C#
 - Linting
+- Wayland
 - AppImage
 - Python-2
 - Microsoft
