@@ -8,12 +8,10 @@ license=('custom')
 depends=(
 	'gtk-engines' 'gtk-engine-murrine'
 	'mate-themes' 'gnome-themes-extra'
-	'inkscape' 'sassc'
 	'arc-solid-gtk-theme'
 	'gtk-update-icon-cache' 'icon-naming-utils'
     'papirus-icon-theme' 'gnome-icon-theme-extras'
-    'mate-icon-theme' 'mate-icon-theme-faenza'
-    'bluementa-icon-theme' 'chicago95-gtk-theme-git')
+    'mate-icon-theme' 'mate-icon-theme-faenza')
 install=pkg.install
 options=('!makeflags' '!strip')
 
@@ -21,7 +19,7 @@ package() {
     ####################### Theme Index ####################
 
 	cd ../
-    for i in Black Classic Dark Faenza Light Mate Menta;do
+    for i in Black Dark Faenza Light Mate;do
 	    install -d $pkgdir/usr/share/themes/Standard-$i/;
 	    cp -f ./Standard-$i.theme $pkgdir/usr/share/themes/Standard-$i/index.theme;
     done

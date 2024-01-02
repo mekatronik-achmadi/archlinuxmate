@@ -9,34 +9,15 @@ remove_themes() {
 	rm -rf /usr/share/themes/Redmond
 	rm -rf /usr/share/themes/ThinIce
 
-	rm -rf /usr/share/themes/Blue-Submarine
-	rm -rf /usr/share/themes/Green-Submarine
-	rm -rf /usr/share/themes/BlueLaguna
-	rm -rf /usr/share/themes/GreenLaguna
-	rm -rf /usr/share/themes/TraditionalOkTest
-
-	rm -rf /usr/share/themes/YaruGreen
-	rm -rf /usr/share/themes/YaruOk
-
-	rm -rf /usr/share/themes/HighContrast
-	rm -rf /usr/share/themes/HighContrastInverse
-	rm -rf /usr/share/themes/ContrastHigh
-	rm -rf /usr/share/themes/ContrastHighInverse
-
-	rm -rf /usr/share/themes/Spidey*
-	rm -rf /usr/share/themes/Splint*
-	rm -rf /usr/share/themes/Dopple*
-	rm -rf /usr/share/themes/ClearlooksRe
-	rm -rf /usr/share/themes/DustBlue
-	rm -rf /usr/share/themes/Shiny
-	rm -rf /usr/share/themes/WinMe
-	rm -rf /usr/share/themes/eOS
-	rm -rf /usr/share/themes/Atlanta
-	rm -rf /usr/share/themes/Gorilla
-	rm -rf /usr/share/themes/Motif
-	rm -rf /usr/share/themes/Esco
+	rm -rf /usr/share/themes/Blue*
+	rm -rf /usr/share/themes/Green*
+	rm -rf /usr/share/themes/Traditional*
+	rm -rf /usr/share/themes/Yaru*
 
 	rm -rf /usr/share/themes/*-border
+
+	rm -rf /usr/share/themes/HighContrast*
+	rm -rf /usr/share/themes/ContrastHigh*
 }
 
 remove_menus() {

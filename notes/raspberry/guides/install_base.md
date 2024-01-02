@@ -627,10 +627,8 @@ rm -rf /usr/share/themes/Raleigh
 rm -rf /usr/share/themes/Redmond
 rm -rf /usr/share/themes/ThinIce
 
-rm -rf /usr/share/themes/HighContrast
-rm -rf /usr/share/themes/HighContrastInverse
-rm -rf /usr/share/themes/ContrastHigh
-rm -rf /usr/share/themes/ContrastHighInverse
+rm -rf /usr/share/themes/HighContrast*
+rm -rf /usr/share/themes/ContrastHigh*
 ```
 
 --------------------------------------------------------------------------------
