@@ -22,7 +22,8 @@ depends=(
 	'mate-session-manager'
 	'vi-vim-symlink'
 	'archmate-font'
-	'archmate-theme')
+	'archmate-theme'
+	'archmate-openbox')
 options=('!makeflags')
 install=pkg.install
 

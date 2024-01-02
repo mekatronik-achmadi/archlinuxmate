@@ -584,6 +584,9 @@ gtk-application-prefer-dark-theme = false
 ### configure lightdm (qemu-chroot)
 
 ```sh
+groupadd -r autologin
+gpasswd -a alarm autologin
+
 mkdir -pv airootfs/etc/lightdm
 
 echo '[Seat:*]
