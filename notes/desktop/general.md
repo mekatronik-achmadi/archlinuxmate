@@ -4,9 +4,8 @@
 
 ### Avoided Toolkit/Libraries
 
-- WxGTK-2
 - GNOME-4
-- GTK-4
+- WxGTK-2
 - Qt-4
 - KDE
 - Xfce
