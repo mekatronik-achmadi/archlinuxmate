@@ -481,7 +481,6 @@ alias htop='htop -C'
 alias mc='mc --nocolor'
 export MAKEFLAGS=-j$(nproc)
 alias makepkg='makepkg --nocheck --skippgpcheck'
-alias bat='bat --theme=GitHub'
 PS1='\[\033[01m\][\u@\h \W]\$ \[\033[00m\]'
 " | tee -a /home/alarm/.bashrc
 chown -vf alarm:alarm /home/alarm/.bashrc

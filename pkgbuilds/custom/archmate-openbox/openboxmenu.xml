@@ -117,7 +117,7 @@
 <menu id="root-menu" label="Main Menu">
   <separator label="Main Menu" />
   <item label="Run a Program" icon="/usr/share/icons/Papirus/32x32/apps/gnome-panel-launcher.svg">
-    <action name="Execute"><command>gmrun -g 300x</command></action>
+    <action name="Execute"><command>bashrun</command></action>
   </item>
   <menu id="programs" icon="/usr/share/icons/Papirus/32x32/apps/app-launcher.svg"/>
   <menu id="screenshot" icon="/usr/share/icons/Papirus/32x32/apps/accessories-screenshot.svg"/>

@@ -4,15 +4,13 @@
 
 ### install basic system
 
-linux base base-devel
-linux-headers linux-firmware
-multilib-devel terminus-font
+linux linux-headers linux-firmware
+base base-devel multilib-devel
 
 ### install basic tools
 
 bash-completion mkinitcpio
-squashfs-tools rsync zsync
-dkms arch-install-scripts
+squashfs-tools rsync dkms
 neofetch lsb-release dtc
 nano dialog bc tmux tree
 nano-syntax-highlighting
@@ -20,10 +18,13 @@ curl wget openssh sshfs
 pacman-contrib mlocate
 virtualbox-guest-utils
 intel-ucode amd-ucode
+arch-install-scripts
 mkinitcpio-archiso
-zsh pv archinstall
 cdrtools syslinux
 libxcrypt-compat
+zsh-completions
+pv archinstall
+terminus-font
 
 ### install posix meta
 
@@ -32,10 +33,8 @@ posix-xsi posix-c-development
 
 ### install cli tools
 
-mc highlight
-python lua perl
-hexedit most bat
-moc fdupes w3m lynx
+most highlight
+mc fdupes w3m
 
 ### install vim editor
 
@@ -49,6 +48,7 @@ xorg xorg-apps xorg-drivers
 xorg-xinit xorg-fonts
 xsel xclip xterm
 xorg-fonts-misc
+xorg-xmessage
 
 ### install mate desktop
 
@@ -96,8 +96,8 @@ parcellite meld
 
 ### install openbox session
 
-openbox obconf tint2 gmrun xpdf
-feh light volumeicon xarchiver
+openbox obconf tint2 feh bashrun
+light volumeicon xarchiver xpdf
 
 ### install networking system
 
@@ -143,12 +143,11 @@ lrzip lzip lzop zstd cpio
 
 ### install build tools
 
-git tig github-cli
-bear hub subversion
 autoconf meson ninja
 vala autogen automake
 cblas openblas lapack
 gobject-introspection
+git tig bear subversion
 pkgconf gendesk help2man
 mercurial breezy cvs cloc
 cmake extra-cmake-modules
@@ -174,9 +173,8 @@ bluez-utils
 
 ### install multimedia
 
+vlc ffmpegthumbnailer
 gstreamer gst-libav
-vlc rhythmbox mpv
-ffmpegthumbnailer
 gst-plugins-base
 gst-plugins-good
 gst-plugins-ugly
@@ -254,6 +252,7 @@ edk2-ovmf
 - gtk3-nocsd-git: https://aur.archlinux.org/packages/gtk3-nocsd-git/
 - chicago95-gtk-theme-git: https://aur.archlinux.org/packages/chicago95-gtk-theme-git/
 - mate-tweak: https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/custom/mate-tweak/
+- mate-zenity: https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/custom/mate-zenity/
 - bluementa-icon-theme: https://github.com/mekatronik-achmadi/archlinuxmate/tree/main/pkgbuilds/custom/bluementa-icons/
 
 ### install additional tools

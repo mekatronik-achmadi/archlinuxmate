@@ -1,10 +1,8 @@
-linux base base-devel
-linux-headers linux-firmware
-multilib-devel terminus-font
+linux linux-headers linux-firmware
+base base-devel multilib-devel
 
 bash-completion mkinitcpio
-squashfs-tools rsync zsync
-dkms arch-install-scripts
+squashfs-tools rsync dkms
 neofetch lsb-release dtc
 nano dialog bc tmux tree
 nano-syntax-highlighting
@@ -12,18 +10,19 @@ curl wget openssh sshfs
 pacman-contrib mlocate
 virtualbox-guest-utils
 intel-ucode amd-ucode
+arch-install-scripts
 mkinitcpio-archiso
-zsh pv archinstall
 cdrtools syslinux
 libxcrypt-compat
+zsh-completions
+pv archinstall
+terminus-font
 
 posix posix-software-development
 posix-xsi posix-c-development
 
-mc highlight
-python lua perl
-hexedit most bat
-moc fdupes w3m lynx
+most highlight
+mc fdupes w3m
 
 gvim vim-nerdtree vim-surround
 vim-nerdcommenter vim-gitgutter
@@ -33,6 +32,7 @@ xorg xorg-apps xorg-drivers
 xorg-xinit xorg-fonts
 xsel xclip xterm
 xorg-fonts-misc
+xorg-xmessage
 
 mate mate-extra
 libappindicator-gtk3
@@ -68,8 +68,8 @@ qt5-base qt6-base
 qt5ct qt6ct scrot
 parcellite meld
 
-openbox obconf tint2 gmrun xpdf
-feh light volumeicon xarchiver
+openbox obconf tint2 feh bashrun
+light volumeicon xarchiver xpdf
 
 networkmanager nm-connection-editor
 network-manager-applet modemmanager
@@ -103,12 +103,11 @@ lhasa rpmextract lxsplit unrar-free
 bzip2 gzip lz4 p7zip zip unzip
 lrzip lzip lzop zstd cpio
 
-git tig github-cli
-bear hub subversion
 autoconf meson ninja
 vala autogen automake
 cblas openblas lapack
 gobject-introspection
+git tig bear subversion
 pkgconf gendesk help2man
 mercurial breezy cvs cloc
 cmake extra-cmake-modules
@@ -126,9 +125,8 @@ vimb qbittorrent-nox qbittorrent
 blueman bluez
 bluez-utils
 
+vlc ffmpegthumbnailer
 gstreamer gst-libav
-vlc rhythmbox mpv
-ffmpegthumbnailer
 gst-plugins-base
 gst-plugins-good
 gst-plugins-ugly
@@ -183,7 +181,8 @@ edk2-ovmf
 qt5gtk2 qt6gtk2
 chicago95-gtk-theme-git
 brisk-menu gtk3-nocsd-git
-mate-tweak bluementa-icon-theme
+mate-tweak mate-zenity
+bluementa-icon-theme
 
 downgrade fake-hwclock
 git-cola hardinfo-git
